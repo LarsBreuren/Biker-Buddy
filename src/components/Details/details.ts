@@ -5,8 +5,34 @@ export default class Headless extends Vue {
     protected voorNaam = "Voornaam"
     protected leefTijd = "leeftijd"
     protected rijbewijs = "rijbewijs"
+    protected info = "info"
 
     protected step1Done = false;
     protected step2Done = false;
     protected step3Done = false;
+
+    protected step1active = true;
+    protected step2active = false;
+    protected step3active = false;
+
+    protected resetSteps(){
+        this.step1Done = false;
+        this.step2Done = false;
+        this.step3Done = false;
+    
+        this.step1active = true;
+        this.step2active = false;
+        this.step3active = false;
+    }
+
+    protected next1(){
+        this.step1Done = true;
+        this.step1active = false;
+        this.step2active = true;
+    }
+    protected next2(){
+        this.step2Done = true;
+        this.step2active = false;
+        this.step3active = true;
+    }
 }
