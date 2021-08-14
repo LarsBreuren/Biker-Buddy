@@ -1,7 +1,7 @@
 <template>
   <div class="container ">
     <h1 class="text-white pt-64 mb-32"> Details </h1>
-    <div class="stepWrapper">
+    <div class="stepWrapper" v-if="!detailsDone">
       <v-icon @click="resetSteps" size="35" class="
           backButton
           ">mdi-menu-left</v-icon>
@@ -18,7 +18,7 @@
       </div>
 
       <div class="step2" v-if="step2active">
-        <label for="rijbewijs">Rijbewijs:</label><br>
+        <label for="rijbewijs">Welk rijbewijs heb je?</label><br>
 
         <select v-model="rijbewijs" id="rijbewijs" class="select">
           <option disabled value="">Kies een optie</option>
@@ -45,7 +45,7 @@
           <option>Rijbewijs</option>
         </select>
 
-        <div class="ctaNext ctaButton" @click="step2Done = !step2Done">
+        <div class="ctaNext ctaButton" @click="next3">
           Afronden
         </div>
       </div>
@@ -57,13 +57,16 @@
       <div class="progressWrapper">
         <div v-bind:class="(step1Done)?'greenCircle':'circle'">1</div>
         <div v-bind:class="(step2Done)?'greenCircle':'circle'">2</div>
-        <div class="circle">3</div>
+        <div v-bind:class="(step3Done)?'greenCircle':'circle'">2</div> 
       </div>
 
     </div>
 
     <div class="profile mt-64 w-1/2 mx-auto py-32" style="border: 2px solid white;">
       <h2 class="mb-32">Jouw biker profiel:</h2>
+       <v-icon v-if="detailsDone" @click="resetSteps" size="35" class="
+          backButton
+          ">mdi-menu-left</v-icon>
       <p><b>Voornaam:</b> {{ voorNaam }}</p>
       <p><b>Leeftijd:</b> {{ leefTijd }}</p>
       <p><b>Rijbewijs:</b> {{ rijbewijs }}</p>
