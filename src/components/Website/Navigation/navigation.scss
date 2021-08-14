@@ -1,0 +1,130 @@
+
+
+ 
+
+    .navPadding{
+        padding-top: 60px;
+    }
+    nav {
+        .navToggle:focus, .navToggle:focus-visible, a{
+            outline: none;
+            box-shadow: none;
+        }
+        .pageOverlay{
+            background-color: rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            @apply z-30;
+        }
+    .desktop{
+        @apply justify-between;
+        @apply px-32;
+        @apply hidden;
+        @apply fixed;
+        @apply w-full;
+        @apply z-50;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #f3f3f3;
+        top: 0;
+        box-shadow: 0 3px 3px -3px rgba(0,0,0,.2);
+
+        .links{
+            @apply self-center;
+            ul{
+                @apply flex;
+            }
+            li{
+                @apply mx-16;
+            }
+            a{
+                @apply uppercase;
+            }
+            a:hover, a:focus, .router-link-exact-active{
+                @apply text-main;
+            }
+        }
+        .logo img{
+            height: 50px;
+        }
+    }
+    .mobile{
+        @apply flex;
+        @apply px-16;
+        @apply justify-between;
+        @apply fixed;
+        @apply z-60;
+        @apply w-full;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        height: 60px;
+        top: 0;
+        background-color: #f3f3f3;
+        box-shadow: 0 3px 3px -3px rgba(0,0,0,.2);
+      
+        .logo img, .logo{
+            height: 50px;
+        }
+
+    }
+
+    .hamburgerLinks{
+        @apply self-center;
+        @apply w-2/3;
+        @apply fixed;
+        @apply h-full;
+        @apply z-50;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        right: 0;
+        background-color: #f3f3f3;
+
+
+        ul{
+            @apply text-left;
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+        li{
+            @apply my-32;
+        }
+        a{
+            @apply uppercase;
+                @apply flex;
+                @apply items-center;
+
+                i{
+                    margin-right: 3px;
+                }
+        }
+        .router-link-exact-active, .router-link-exact-active .v-icon{
+            @apply text-main;
+        }
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+      }
+      .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0;
+      }
+    }
+
+
+@screen sm{
+    nav .desktop{
+        @apply flex;
+    }
+    nav .mobile, nav .hamburgerLinks, .pageOverlay{
+        @apply hidden;
+    }
+}
+@screen md{
+
+}
+@screen lg {
+
+  }

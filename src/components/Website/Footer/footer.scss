@@ -1,0 +1,36 @@
+footer{
+  @apply p-32;
+}
+footer li{
+  @apply my-8;
+  @apply text-offwhite-700;
+}
+.footerBlock{
+  @apply w-full;
+  @apply my-16;
+}
+footer a:hover{
+  @apply text-white;
+}
+footer a{
+  @apply underline;
+}
+.footerHead{
+  @apply text-white;
+  @apply font-normal;
+  @apply uppercase;
+  @apply text-2xl;
+}
+
+@screen sm{
+
+}
+@screen md{
+  .footerBlock{
+    @apply w-1/3;
+    @apply my-0;
+  }
+}
+@screen lg {
+
+  }

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import '../../../node_modules/@mdi/font/css/materialdesignicons.min.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f3f3f3;
+}
+body .containerFull, body .container{
+    @apply w-full;
+    @apply p-0;
+    @apply mx-auto;
+    max-width: 1200px;
+}
+body .containerFull{
+  max-width: unset;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+a,p{
+    font-size: 16px;
+    @apply text-offwhite-800;
+}
+
+h1,h2{
+  @apply text-header;
+  @apply font-semibold;
+  @apply text-3xl;
+}
+.subtitle{
+  @apply uppercase;
+  @apply text-black-400;
+  @apply font-semibold;
+}
+.card h2{
+  @apply text-main;
+}
+.card{
+  @apply p-16;
+  @align-left;
+  transition: 300ms;
+  &:hover{
+    box-shadow: -3px -3px 20px 3px rgb(114, 81, 235), 3px 3px 20px 3px rgb(212, 61, 150);
+    transform: scale(1.05,1.05);
+  }
+}
+
+.ctaButton{
+    @apply inline-block;
+    @apply text-white;
+    @apply py-8;
+    @apply px-16;
+    border-radius: 1.5rem;
+    @apply font-semibold;
+    transition: 300ms;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(114, 81, 235), rgb(212, 61, 150)) repeat scroll 0% 0%;
+    &:hover{
+        box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+        transform: scale(1.05,1.05);
+    }
+}
+
+
+  
+  #nav {
+    padding: 30px;
+  
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+  
+      &.router-link-exact-active {
+        color: #42b983;
+      }
+    }
+  }
+
+  @screen sm{
+    body .container{
+      width: 95vw;
+    }
+}
+@screen md{
+
+}
+@screen lg {
+   
+  }
