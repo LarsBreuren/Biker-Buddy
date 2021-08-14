@@ -5,7 +5,8 @@
       <v-icon @click="resetSteps" size="35" class="
           backButton
           ">mdi-menu-left</v-icon>
-      <div class="step1" v-if="step1active">
+   
+      <div v-if="step1active" class="step1">
         <label for="voorNaam">Voornaam:</label><br>
         <input id="voorNaam" v-model="voorNaam" placeholder="Voornaam">
 
@@ -71,6 +72,7 @@
       <p><b>Leeftijd:</b> {{ leefTijd }}</p>
       <p><b>Rijbewijs:</b> {{ rijbewijs }}</p>
       <p><b>Meer info:</b> {{ info }}</p>
+
     </div>
   </div>
 </template>
