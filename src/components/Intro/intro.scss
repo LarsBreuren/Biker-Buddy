@@ -1,88 +1,10 @@
-.wrapper{
-    background-image: url('https://images.pexels.com/photos/2444429/pexels-photo-2444429.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    @apply bg-cover;
-    @apply bg-center; 
-    @apply w-full;
-    @apply relative;
-    height: 450px;
-}
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5); /*dim the background*/
-    @apply z-0;
-  }
-
-.pill1{
-    display: none;
-}
-div{
-    @apply z-10;
-}
-div p{
-    @apply  text-white;
-}
-.vertical-pill{
-    border-radius: 1.5rem;
-    // background-image: url('https://source.unsplash.com/random');
-    background-image: url('../../assets/images/features/gebouw.jpeg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    bottom: -5em;
-    height: 300px;
-    width: 30vw;
-    display: none;
-}
- .pill2 {
-    background-image: url('https://images.pexels.com/photos/2444429/pexels-photo-2444429.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    top: 0;
-}
-
 
 @screen sm{
-    .vertical-pill{
-      display: block;
-    }
-    div p{
-       @apply text-header;
-    }
-    .wrapper{
-        background-image: none;
-    }
-    .overlay{
-        display: none;
-    }
-    .wrapper{
-        border-radius: 1.5rem;
-        height: unset;
-        margin-top: 30px;
-      }
-      
+
 }
 @screen md{
-    .vertical-pill{
-    height: 500px;
-    width: 260px;
-    }
+
 }
 @screen lg {
-    .wrapper{
-        margin-top: 90px;
-    }
-    .pill1{
-       display: block;
-    }
-    .pill2{
-        top: -4em;
-    }
-    .vertical-pill{
-        border-top-left-radius: 200px;
-        border-top-right-radius: 200px;
-        border-bottom-left-radius: 200px;
-        border-bottom-right-radius: 200px;
-    }
+
   }

@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <h1 class="text-white pt-64"> Welkom bij biker buddy! </h1>
+    <router-link to="/Details">Begin</router-link>
   </div>
 </template>
 

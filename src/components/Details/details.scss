@@ -1,0 +1,22 @@
+.stepWrapper{
+  @apply w-1/2; 
+  @apply text-center;
+  @apply mx-auto;
+  @apply bg-black-600;
+  @apply p-16;
+  @apply rounded-md;
+}
+
+@screen sm{
+  .stepWrapper{
+    @apply w-1/4; 
+    @apply text-center;
+    @apply mx-auto;
+  }
+}
+@screen md{
+
+}
+@screen lg {
+
+  }
