@@ -1,17 +1,46 @@
 .stepWrapper{
-  @apply w-1/2; 
-  @apply text-center;
+  @apply w-2/3; 
   @apply mx-auto;
   @apply bg-black-600;
-  @apply p-16;
+  @apply p-32;
   @apply rounded-md;
+  @apply text-left;
+
+  .ctaNext{
+    @apply mx-auto;
+    @apply block;
+    @apply w-2/3;
+    @apply text-center;
+  }
+}
+.detailProgress{ 
+  @apply mt-16;
+  
+  .progressWrapper{
+    @apply flex;
+    @apply justify-between;
+    @apply w-1/3; 
+    @apply mx-auto;
+    @apply mt-8;
+
+    .circle{
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      @apply bg-black-600;
+    }
+  }
 }
 
 @screen sm{
   .stepWrapper{
-    @apply w-1/4; 
-    @apply text-center;
-    @apply mx-auto;
+    @apply w-1/3; 
+    @apply px-64;
+    @apply p-32;
+
+    .ctaNext{
+      @apply w-1/2;
+    }
   }
 }
 @screen md{
