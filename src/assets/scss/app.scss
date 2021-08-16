@@ -75,6 +75,10 @@ body select{
         transform: scale(1.05,1.05);
         @apply cursor-pointer;
     }
+    &:disabled{
+          background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(114, 81, 235, 0.5), rgb(212, 61, 150, 0.5)) repeat scroll 0% 0%;
+
+    }
 }
 
 

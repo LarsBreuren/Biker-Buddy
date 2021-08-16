@@ -2,10 +2,13 @@ import { Component, Vue } from "vue-property-decorator";
 
 @Component({})
 export default class Headless extends Vue {
-    protected voorNaam = "Voornaam"
-    protected leefTijd = "leeftijd"
-    protected rijbewijs = "rijbewijs"
-    protected info = "info"
+
+    protected driverInfo = {
+        Voornaam: "",
+        Leeftijd: "",
+        Rijbewijs: "",
+        Info: ""
+    }
 
     protected detailsDone = false;
     protected step1Done = false;

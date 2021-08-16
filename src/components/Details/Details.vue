@@ -1,27 +1,28 @@
 <template>
   <div class="container ">
-    <h1 class="text-white pt-64 mb-32"> Details </h1>
+    <h1 class="text-white pt-16 mb-32"> Details </h1>
     <div class="stepWrapper" v-if="!detailsDone">
       <v-icon @click="resetSteps" size="35" class="
           backButton
           ">mdi-menu-left</v-icon>
-   
+
       <div v-if="step1active" class="step1">
         <label for="voorNaam">Voornaam:</label><br>
-        <input id="voorNaam" v-model="voorNaam" placeholder="Voornaam">
+        <input id="voorNaam" v-model="driverInfo.Voornaam" placeholder="Voornaam">
 
         <label for="leeftijd">Leeftijd:</label><br>
-        <input id="leeftijd" type="number" v-model="leefTijd" placeholder="20">
+        <input id="leeftijd" type="number" v-model="driverInfo.Leeftijd" placeholder="20">
 
-        <div class="ctaNext ctaButton" @click="next1">
-          Volgende stap
-        </div>
+        <button button :disabled='!driverInfo.Voornaam || !driverInfo.Leeftijd' class="ctaNext ctaButton"
+          @click="next1">
+          Volgende stap {{ driverInfo.Voornaam }} {{ driverInfo.Leeftijd }}
+        </button>
       </div>
 
       <div class="step2" v-if="step2active">
         <label for="rijbewijs">Welk rijbewijs heb je?</label><br>
 
-        <select v-model="rijbewijs" id="rijbewijs" class="select">
+        <select v-model="driverInfo.Rijbewijs" id="rijbewijs" class="select">
           <option disabled value="">Kies een optie</option>
           <option>Nog geen rijbewijs</option>
           <option>Aan het lessen</option>
@@ -38,7 +39,7 @@
       <div class="step3" v-if="step3active">
         <label for="info">Waar wil je meer over weten?</label><br>
 
-        <select v-model="info" id="info" class="select">
+        <select v-model="driverInfo.Info" id="info" class="select">
           <option disabled value="">Kies een optie</option>
           <option>Onderhoud</option>
           <option>Rijvaardigheid</option>
@@ -58,21 +59,21 @@
       <div class="progressWrapper">
         <div v-bind:class="(step1Done)?'greenCircle':'circle'">1</div>
         <div v-bind:class="(step2Done)?'greenCircle':'circle'">2</div>
-        <div v-bind:class="(step3Done)?'greenCircle':'circle'">2</div> 
+        <div v-bind:class="(step3Done)?'greenCircle':'circle'">2</div>
       </div>
 
     </div>
 
-    <div class="profile mt-64 w-1/2 mx-auto py-32" style="border: 2px solid white;">
-      <h2 class="mb-32">Jouw biker profiel:</h2>
-       <v-icon v-if="detailsDone" @click="resetSteps" size="35" class="
+    <div v-if="detailsDone" class="profile mt-64 w-5/6 mx-auto py-32" style="border: 2px solid white;">
+      <h2 class="mb-32">Jouw biker profiel</h2>
+      <v-icon @click="resetSteps" size="35" class="
           backButton
           ">mdi-menu-left</v-icon>
-      <p><b>Voornaam:</b> {{ voorNaam }}</p>
-      <p><b>Leeftijd:</b> {{ leefTijd }}</p>
-      <p><b>Rijbewijs:</b> {{ rijbewijs }}</p>
-      <p><b>Meer info:</b> {{ info }}</p>
-
+      <ul>
+        <li class=" w-full p-8 " v-for="(value, detail) in driverInfo" :key="value.id">
+          {{ detail }} : {{ value }}
+          </li>
+      </ul>
     </div>
   </div>
 </template>
