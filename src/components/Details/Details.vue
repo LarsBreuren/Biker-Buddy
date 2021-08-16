@@ -15,7 +15,7 @@
 
         <button button :disabled='!driverInfo.Voornaam || !driverInfo.Leeftijd' class="ctaNext ctaButton"
           @click="next1">
-          Volgende stap {{ driverInfo.Voornaam }} {{ driverInfo.Leeftijd }}
+          Volgende stap
         </button>
       </div>
 
