@@ -4,14 +4,20 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
-    name: "",
-    age: 0,
+    driverInfo: {
+      Voornaam: "",
+      Leeftijd: 0,
+      Rijbewijs: "",
+      Info: []
+  }
   },
   getters: {
 
   },
   mutations: {
-
+    updatedriverInfo (state, driverInfo) {
+      state.driverInfo = driverInfo
+    }
   },
   actions: {
  

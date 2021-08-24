@@ -2,12 +2,16 @@ import { Component, Vue } from "vue-property-decorator";
 
 @Component({})
 export default class Headless extends Vue {
-
     protected driverInfo = {
-        Voornaam: "",
-        Leeftijd: "",
-        Rijbewijs: "",
-        Info: []
+        Voornaam: this.$store.state.driverInfo.Voornaam,
+        Leeftijd: this.$store.state.driverInfo.Leeftijd,
+        Rijbewijs: this.$store.state.driverInfo.Rijbewijs,
+        Info: this.$store.state.driverInfo.Info
+    }
+
+    protected updateStore(){
+        this.$store.commit('updatedriverInfo', this.driverInfo)
+        console.log('Store details: ' + this.$store.state.driverInfo.Voornaam + this.driverInfo.Info)
     }
 
     protected detailsDone = false;

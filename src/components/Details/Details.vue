@@ -84,7 +84,7 @@
 
     </div>
 
-    <div v-if="detailsDone" class="profile mt-64 w-5/6 mx-auto py-32" style="border: 2px solid white;">
+    <div v-if="detailsDone" class="profile">
       <h2 class="mb-32">Jouw biker profiel</h2>
       <v-icon @click="resetSteps" size="35" class="
           backButton
@@ -94,6 +94,8 @@
           {{ detail }} : {{ value }}
           </li>
       </ul>
+
+      <button class="ctaButton" @click="updateStore"> Opslaan & doorgaan </button>
     </div>
   </div>
 </template>
