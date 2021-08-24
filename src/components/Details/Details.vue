@@ -1,6 +1,5 @@
 <template>
-  <div class="container ">
-    <h1 class="text-white pt-16 mb-32"> Details </h1>
+  <div class="container pt-32">
     <div class="stepWrapper" v-if="!detailsDone">
       <v-icon @click="resetSteps" size="35" class="
           backButton
@@ -41,19 +40,27 @@
         <div class="optionContainer">
           <div class="option">
             <input type="checkbox" id="Onderhoud" value="Onderhoud" v-model="driverInfo.Info">
-            <label  for="Onderhoud">Onderhoud</label>
+            <p class="labelText">Onderhoud</p>
+                  <v-icon @click="resetSteps" size="35" class="labelIcon">mdi-hammer-screwdriver</v-icon>
+            <label  for="Onderhoud"></label>
           </div>
           <div class="option">
             <input type="checkbox" id="Rijvaardigheid" value="Rijvaardigheid" v-model="driverInfo.Info">
-            <label  for="Rijvaardigheid">Rijvaardigheid</label>
+            <p class="labelText">Rijvaardigheid</p>
+                  <v-icon @click="resetSteps" size="35" class="labelIcon">mdi-road-variant</v-icon>
+            <label  for="Rijvaardigheid"></label>
           </div>
           <div class="option">
             <input type="checkbox" id="Aankoop" value="Aankoop" v-model="driverInfo.Info">
-            <label  for="Aankoop">Aankoop</label>
+                   <p class="labelText">Aankoop advies</p>
+                  <v-icon @click="resetSteps" size="35" class="labelIcon">mdi-currency-usd</v-icon>
+            <label  for="Aankoop"></label>
           </div>
           <div class="option">
             <input type="checkbox" id="Rijbewijs" value="Rijbewijs" v-model="driverInfo.Info">
-            <label  for="Rijbewijs">Rijbewijs</label>
+                   <p class="labelText">Rijbewijs coaching</p>
+                  <v-icon @click="resetSteps" size="35" class="labelIcon">mdi-poll</v-icon>
+            <label  for="Rijbewijs"></label>
           </div>
         </div>
         <br>
