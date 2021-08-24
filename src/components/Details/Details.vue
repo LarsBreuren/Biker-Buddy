@@ -19,7 +19,7 @@
       </div>
 
       <div class="step2" v-if="step2active">
-        <label for="rijbewijs">Welk rijbewijs heb je?</label><br>
+        <label for="rijbewijs">Welk rijbewijs heb je {{ driverInfo.Voornaam }}?</label><br>
 
         <select v-model="driverInfo.Rijbewijs" id="rijbewijs" class="select">
           <option disabled value="">Kies een optie</option>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="step3" v-if="step3active">
-        <label for="info">Waar wil je meer over weten?</label><br>
+        <label for="info">Waar wil je graag meer over weten {{ driverInfo.Voornaam }}?</label><br>
         <div class="optionContainer">
           <div class="option">
             <input type="checkbox" id="Onderhoud" value="Onderhoud" v-model="driverInfo.Info">
