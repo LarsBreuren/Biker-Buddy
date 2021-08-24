@@ -8,7 +8,7 @@
 
       <div v-if="step1active" class="step1">
         <label for="voorNaam">Voornaam:</label><br>
-        <input id="voorNaam" v-model="driverInfo.Voornaam" placeholder="Voornaam">
+        <input type="text" id="voorNaam" v-model="driverInfo.Voornaam" placeholder="Voornaam">
 
         <label for="leeftijd">Leeftijd:</label><br>
         <input id="leeftijd" type="number" v-model="driverInfo.Leeftijd" placeholder="20">
@@ -38,14 +38,27 @@
 
       <div class="step3" v-if="step3active">
         <label for="info">Waar wil je meer over weten?</label><br>
+        <div class="optionContainer">
+          <div class="option">
+            <input type="checkbox" id="Onderhoud" value="Onderhoud" v-model="driverInfo.Info">
+            <label  for="Onderhoud">Onderhoud</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="Rijvaardigheid" value="Rijvaardigheid" v-model="driverInfo.Info">
+            <label  for="Rijvaardigheid">Rijvaardigheid</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="Aankoop" value="Aankoop" v-model="driverInfo.Info">
+            <label  for="Aankoop">Aankoop</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="Rijbewijs" value="Rijbewijs" v-model="driverInfo.Info">
+            <label  for="Rijbewijs">Rijbewijs</label>
+          </div>
+        </div>
+        <br>
 
-        <select v-model="driverInfo.Info" id="info" class="select">
-          <option disabled value="">Kies een optie</option>
-          <option>Onderhoud</option>
-          <option>Rijvaardigheid</option>
-          <option>Aankoop tips</option>
-          <option>Rijbewijs</option>
-        </select>
+        <!-- <span>Checked names: {{ driverInfo.Info }}</span> -->
 
         <div class="ctaNext ctaButton" @click="next3">
           Afronden

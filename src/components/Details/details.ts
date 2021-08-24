@@ -7,7 +7,7 @@ export default class Headless extends Vue {
         Voornaam: "",
         Leeftijd: "",
         Rijbewijs: "",
-        Info: ""
+        Info: []
     }
 
     protected detailsDone = false;
