@@ -11,7 +11,7 @@ export default class Headless extends Vue {
 
     protected updateStore(){
         this.$store.commit('updatedriverInfo', this.driverInfo)
-        console.log('Store details: ' + this.$store.state.driverInfo.Voornaam + this.driverInfo.Info)
+        this.$router.push({ name: 'Homepagina' })
     }
 
     protected detailsDone = false;
