@@ -95,7 +95,9 @@
           </li>
       </ul>
 
-      <button class="ctaButton" @click="updateStore"> Opslaan & doorgaan </button>
+      <button class="ctaButton" @click="updateStore"> Opslaan </button>
+      <router-link class="ctaButton" to="/homepage">Volgende</router-link>
+
     </div>
   </div>
 </template>
