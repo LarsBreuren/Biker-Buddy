@@ -86,14 +86,14 @@
 
     <div class="detailProgress">
 
-    <div v-if="detailsDone" class="profile">
-      <h2 class="mb-32">Jouw biker profiel</h2>
+    <div v-if="detailsDone" >
+     
       <v-icon @click="resetSteps" size="35" class="
           backButton
           ">mdi-menu-left</v-icon>
         <Profile></Profile>
       
-       <router-link to="Homepagina" class="ctaButton">
+       <router-link to="Homepagina" class="ctaButton my-16">
           Ok, doorgaan 
         </router-link>
     </div>
