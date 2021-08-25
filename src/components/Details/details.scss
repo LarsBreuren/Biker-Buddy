@@ -55,7 +55,7 @@
     input{ display: none;}
 
     input[type=checkbox]:checked + .labelText, input[type=checkbox]:checked + .labelText + .labelIcon {
-      color: green;
+      @apply text-yellow;
       font-weight: bold;
     }
 

@@ -12,7 +12,7 @@
         <label for="leeftijd">Leeftijd:</label><br>
         <input id="leeftijd" type="number" v-model="driverInfo.Leeftijd" placeholder="20">
 
-        <button button :disabled='!driverInfo.Voornaam || !driverInfo.Leeftijd' class="ctaNext ctaButton"
+        <button button :disabled='!driverInfo.Voornaam || driverInfo.Leeftijd < 17' class="ctaNext ctaButton"
           @click="next1">
           Volgende stap
         </button>
@@ -24,11 +24,16 @@
         <select v-model="driverInfo.Rijbewijs" id="rijbewijs" class="select">
           <option disabled value="">Kies een optie</option>
           <option>Nog geen rijbewijs</option>
-          <option>Aan het lessen</option>
+          <option>Bezig met rijbewijs</option>
           <option>A1</option>
           <option>A2</option>
           <option>A</option>
         </select>
+
+          <div class="ervaring" v-if="checkLicense(driverInfo.Rijbewijs)">
+            <label for="Ervaring">Aantal jaar rijbewijs in bezit:</label><br>
+            <input id="Ervaring" type="number" v-model="driverInfo.Ervaring" placeholder="1">
+          </div>
 
           <button button :disabled='!driverInfo.Rijbewijs' class="ctaNext ctaButton"
           @click="next2">
@@ -68,9 +73,10 @@
 
         <!-- <span>Checked names: {{ driverInfo.Info }}</span> -->
 
-        <div class="ctaNext ctaButton" @click="next3">
+    <button button :disabled='!driverInfo.Info' class="ctaNext ctaButton"
+          @click="next3">
           Afronden
-        </div>
+        </button>
       </div>
 
     </div>

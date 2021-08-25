@@ -8,6 +8,7 @@ export default new Vuex.Store({
       Voornaam: "",
       Leeftijd: 0,
       Rijbewijs: "",
+      Ervaring: 0,
       Info: []
   }
   },

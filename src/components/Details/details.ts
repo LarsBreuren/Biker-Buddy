@@ -6,12 +6,19 @@ export default class Headless extends Vue {
         Voornaam: this.$store.state.driverInfo.Voornaam,
         Leeftijd: "",
         Rijbewijs: this.$store.state.driverInfo.Rijbewijs,
+        Ervaring: this.$store.state.driverInfo.Ervaring,
         Info: this.$store.state.driverInfo.Info
     }
 
     protected updateStore(){
         this.$store.commit('updatedriverInfo', this.driverInfo)
         this.$router.push({ name: 'Homepagina' })
+    }
+
+    protected checkLicense(license){
+        if (license == 'A1' || license == 'A2' || license == 'A'){
+            return true;
+        };
     }
 
     protected detailsDone = false;
