@@ -4,7 +4,7 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Headless extends Vue {
     protected driverInfo = {
         Voornaam: this.$store.state.driverInfo.Voornaam,
-        Leeftijd: this.$store.state.driverInfo.Leeftijd,
+        Leeftijd: "",
         Rijbewijs: this.$store.state.driverInfo.Rijbewijs,
         Info: this.$store.state.driverInfo.Info
     }

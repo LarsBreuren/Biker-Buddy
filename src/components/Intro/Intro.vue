@@ -9,7 +9,7 @@
       <div class="blur"></div>
     </div>
     <router-link style="width: 100px;" class="z-10 fixed ctaButton bottom-0 mb-64 left-0 right-0 mx-auto" to="/Details">Begin</router-link>
-   <p class="text-sm px-32 z-10 fixed bottom-0 mb-32 left-0 right-0 mx-auto"> Gebruik een mobiele telefoon voor de beste ervaring ( niet optimized voor tablet/laptops/desktops). </p>
+   <p class="text-sm px-32 z-10 fixed bottom-0 mb-32 left-0 right-0 mx-auto"> Gebruik een mobiele telefoon voor de beste ervaring (niet geoptimaliseerd voor tablet/laptops/desktops). </p>
     <div class="bg"> </div>
   </div>
 </template>

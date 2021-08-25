@@ -1,11 +1,11 @@
 <template>
   <div class="container pt-32">
     <div class="stepWrapper" v-if="!detailsDone">
-      <v-icon @click="resetSteps" size="35" class="
+              <v-icon @click="resetSteps" size="35" class="
           backButton
           ">mdi-menu-left</v-icon>
-
       <div v-if="step1active" class="step1">
+        <h1> Who are you? </h1>
         <label for="voorNaam">Voornaam:</label><br>
         <input type="text" id="voorNaam" v-model="driverInfo.Voornaam" placeholder="Voornaam">
 
@@ -18,9 +18,9 @@
         </button>
       </div>
 
-      <div class="step2" v-if="step2active">
+      <div class="step2 text-center" v-if="step2active">
+        <h2 class="text-3xl mb-8"> Rijbewijs en papieren graag </h2>
         <label for="rijbewijs">Welk rijbewijs heb je {{ driverInfo.Voornaam }}?</label><br>
-
         <select v-model="driverInfo.Rijbewijs" id="rijbewijs" class="select">
           <option disabled value="">Kies een optie</option>
           <option>Nog geen rijbewijs</option>
@@ -30,9 +30,10 @@
           <option>A</option>
         </select>
 
-        <div class="ctaNext ctaButton" @click="next2">
+          <button button :disabled='!driverInfo.Rijbewijs' class="ctaNext ctaButton"
+          @click="next2">
           Volgende stap
-        </div>
+        </button>
       </div>
 
       <div class="step3" v-if="step3active">
@@ -79,7 +80,7 @@
       <div class="progressWrapper">
         <div v-bind:class="(step1Done)?'greenCircle':'circle'">1</div>
         <div v-bind:class="(step2Done)?'greenCircle':'circle'">2</div>
-        <div v-bind:class="(step3Done)?'greenCircle':'circle'">2</div>
+        <div v-bind:class="(step3Done)?'greenCircle':'circle'">3</div>
       </div>
 
     </div>
