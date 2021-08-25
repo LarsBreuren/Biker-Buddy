@@ -79,10 +79,9 @@
     @apply mx-auto;
     @apply mt-8;
 
-    .circle{
-      width: 50px;
-      height: 50px;
-      border-radius: 100%;
+    .bar{
+      width: 30%;
+      height: 10px;
       @apply bg-black-600;
       @apply flex;
       @apply justify-center;
@@ -90,11 +89,10 @@
       @apply font-semibold;
     }
 
-    .greenCircle{
-      @apply bg-success-600;
-      width: 50px;
-      height: 50px;
-      border-radius: 100%;
+    .yellowBar{
+      @apply bg-yellow;
+      width: 30%;
+      height: 10px;
       @apply flex;
       @apply justify-center;
       @apply items-center;

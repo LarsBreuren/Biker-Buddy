@@ -6,7 +6,7 @@ export default class Headless extends Vue {
         Voornaam: this.$store.state.driverInfo.Voornaam,
         Leeftijd: "",
         Rijbewijs: this.$store.state.driverInfo.Rijbewijs,
-        Ervaring: this.$store.state.driverInfo.Ervaring,
+        Ervaring: "",
         Info: this.$store.state.driverInfo.Info
     }
 
@@ -18,7 +18,10 @@ export default class Headless extends Vue {
     protected checkLicense(license){
         if (license == 'A1' || license == 'A2' || license == 'A'){
             return true;
-        };
+        } else{
+            return false;
+            this.driverInfo.Ervaring = "0";
+        }
     }
 
     protected detailsDone = false;

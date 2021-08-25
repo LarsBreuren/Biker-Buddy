@@ -35,7 +35,12 @@
             <input id="Ervaring" type="number" v-model="driverInfo.Ervaring" placeholder="1">
           </div>
 
-          <button button :disabled='!driverInfo.Rijbewijs' class="ctaNext ctaButton"
+        <button v-if="!checkLicense(driverInfo.Rijbewijs)"  button :disabled='!driverInfo.Rijbewijs' class="ctaNext ctaButton"
+          @click="next2">
+          Volgende stap 
+        </button>
+
+          <button v-if="checkLicense(driverInfo.Rijbewijs)" button :disabled='!driverInfo.Rijbewijs || !driverInfo.Ervaring' class="ctaNext ctaButton"
           @click="next2">
           Volgende stap
         </button>
@@ -84,9 +89,9 @@
     <div class="detailProgress">
       <h2> Stap </h2>
       <div class="progressWrapper">
-        <div v-bind:class="(step1Done)?'greenCircle':'circle'">1</div>
-        <div v-bind:class="(step2Done)?'greenCircle':'circle'">2</div>
-        <div v-bind:class="(step3Done)?'greenCircle':'circle'">3</div>
+        <div v-bind:class="(step1Done)?'yellowBar':'bar'"></div>
+        <div v-bind:class="(step2Done)?'yellowBar':'bar'"></div>
+        <div v-bind:class="(step3Done)?'yellowBar':'bar'"></div>
       </div>
 
     </div>
