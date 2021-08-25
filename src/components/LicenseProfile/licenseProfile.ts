@@ -1,15 +1,7 @@
 import { Component, Vue } from "vue-property-decorator";
-import Profile from "../LicenseProfile/LicenseProfile.vue";
 
-@Component({
-    components: {
-        Profile,
-      }
-})
+@Component({})
 export default class Headless extends Vue {
-
-
-
     protected driverInfo = {
         Voornaam: this.$store.state.driverInfo.Voornaam,
         Leeftijd: "",

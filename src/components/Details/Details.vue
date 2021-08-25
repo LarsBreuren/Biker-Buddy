@@ -76,10 +76,8 @@
         </div>
         <br>
 
-        <!-- <span>Checked names: {{ driverInfo.Info }}</span> -->
-
     <button button :disabled='!driverInfo.Info' class="ctaNext ctaButton"
-          @click="next3">
+          @click="updateStore">
           Afronden
         </button>
       </div>
@@ -87,6 +85,19 @@
     </div>
 
     <div class="detailProgress">
+
+    <div v-if="detailsDone" class="profile">
+      <h2 class="mb-32">Jouw biker profiel</h2>
+      <v-icon @click="resetSteps" size="35" class="
+          backButton
+          ">mdi-menu-left</v-icon>
+        <Profile></Profile>
+      
+       <router-link to="Homepagina" class="ctaButton">
+          Ok, doorgaan 
+        </router-link>
+    </div>
+
       <h2> Stap </h2>
       <div class="progressWrapper">
         <div v-bind:class="(step1Done)?'yellowBar':'bar'"></div>
@@ -96,21 +107,6 @@
 
     </div>
 
-    <div v-if="detailsDone" class="profile">
-      <h2 class="mb-32">Jouw biker profiel</h2>
-      <v-icon @click="resetSteps" size="35" class="
-          backButton
-          ">mdi-menu-left</v-icon>
-      <ul>
-        <li class=" w-full p-8 " v-for="(value, detail) in driverInfo" :key="value.id">
-          {{ detail }} : {{ value }}
-          </li>
-      </ul>
-
-      <button class="ctaButton" @click="updateStore"> Opslaan & doorgaan </button>
-
-
-    </div>
   </div>
 </template>
 
