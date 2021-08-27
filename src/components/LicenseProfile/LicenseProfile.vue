@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="profile">
-      <h2 class="mb-32 ">Jouw biker profiel</h2>
+      <h2 class="mb-16">Jouw biker profiel</h2>
       <!-- 
         <div class="line" v-for="(value, detail) in this.$store.state.driverInfo" :key="value.id">
           <div class="child"> {{ detail }} </div>

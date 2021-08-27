@@ -1,12 +1,13 @@
 .profile{
   @apply w-5/6;
   @apply mx-auto;
-  @apply py-32;
+  @apply pt-16;
   @apply bg-lightgrey;
+  @apply rounded-md;
 }
 .profileContainer{
 
-  :nth-child(odd){
+  .line:nth-child(odd){
     @apply bg-black-500;
   }
 

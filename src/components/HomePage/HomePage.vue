@@ -2,13 +2,12 @@
 
   <div class="container">
 
-    <h1 class="text-3xl"> Hi {{driverInfo.Voornaam}}, welkom op de homepagina! </h1>
+    <h1 class="text-3xl text-white"> Hi {{driverInfo.Voornaam}}, welkom op de homepagina! </h1>
 
-    <ul>
-      <li class=" w-full p-8 " v-for="(value, detail) in driverInfo" :key="value.id">
-        {{ detail }} : {{ value }}
-      </li>
-    </ul>
+     <Profile class="my-16"></Profile>
+
+     <h2> Artikelen </h2>
+     <p> Coming soon... </p>
   </div>
 </template>
 
