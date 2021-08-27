@@ -10,7 +10,14 @@ export default new Vuex.Store({
       Rijbewijs: "",
       Ervaring: 0,
       Info: []
-  }
+  },
+  driverScore: {
+    Onderhoud: 0,
+    Rijvaardigheid: 0,
+    Advies: 0,
+    Coaching: 0,
+  },
+
   },
   getters: {
 

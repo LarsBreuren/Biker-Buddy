@@ -105,6 +105,15 @@
         <div v-bind:class="(step3Done)?'yellowBar':'bar'"></div>
       </div>
 
+      <div class="score mt-16 text-left">
+          <p> Onderhoud: {{ this.driverScore.Onderhoud }} </p>
+          <p> Rijvaardigheid: {{ this.driverScore.Rijvaardigheid }} </p>
+          <p> Advies: {{ this.driverScore.Advies }} </p>
+          <p> Coaching: {{ this.driverScore.Coaching }} </p>
+
+          <button class="ctaButton" @click="calculateScores()"> Check scores </button>
+      </div>
+
     </div>
 
   </div>

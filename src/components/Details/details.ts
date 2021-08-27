@@ -8,18 +8,23 @@ import Profile from "../LicenseProfile/LicenseProfile.vue";
 })
 export default class Headless extends Vue {
 
-
-
     protected driverInfo = {
         Voornaam: this.$store.state.driverInfo.Voornaam,
-        Leeftijd: "",
+        Leeftijd: 0,
         Rijbewijs: this.$store.state.driverInfo.Rijbewijs,
-        Ervaring: "",
+        Ervaring: 0,
         Info: this.$store.state.driverInfo.Info
+    }
+    protected driverScore = {
+        Onderhoud: 0,
+        Rijvaardigheid: 0,
+        Advies: 0,
+        Coaching: 0,
     }
 
     protected updateStore(){
         this.$store.commit('updatedriverInfo', this.driverInfo)
+        this.calculateScores();
         this.next3();
     }
 
@@ -29,6 +34,14 @@ export default class Headless extends Vue {
         } else{
             return false;
         }
+    }
+
+    protected calculateScores(){
+        if (this.driverInfo.Leeftijd < 20){
+            this.driverScore.Rijvaardigheid += 15;
+        }
+        console.log( 'Current scores:' + this.driverScore.Rijvaardigheid);
+        
     }
 
     protected detailsDone = false;
