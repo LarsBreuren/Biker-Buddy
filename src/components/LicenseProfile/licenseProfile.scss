@@ -7,6 +7,28 @@
 }
 .profileContainer{
 
+  .scoreBars{
+    @apply p-16; 
+
+    .barContainer{
+      @apply bg-black-500;
+      @apply my-16;
+  
+    .bar{
+      @apply flex;
+      @apply items-center;
+      @apply px-16;
+      @apply text-left;
+      height: 30px; 
+      @apply bg-yellow;
+
+      .barText{
+        color: #000;
+        font-family: 'Bebas Neue', cursive;
+      }
+      }
+    }
+  }
   .line:nth-child(odd){
     @apply bg-black-500;
   }

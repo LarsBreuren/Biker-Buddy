@@ -9,4 +9,11 @@ export default class Headless extends Vue {
             return false;
         }
     }
+
+    protected Onderhoud = this.$store.state.driverScore.Onderhoud;
+    protected Rijvaardigheid = this.$store.state.driverScore.Rijvaardigheid;
+    protected Advies = this.$store.state.driverScore.Advies;
+    protected Coaching = this.$store.state.driverScore.Coaching;
+
 }
+

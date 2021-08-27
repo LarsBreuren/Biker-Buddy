@@ -25,6 +25,9 @@ export default new Vuex.Store({
   mutations: {
     updatedriverInfo (state, driverInfo) {
       state.driverInfo = driverInfo
+    },
+    updatedriverScore (state, driverScore) {
+      state.driverScore = driverScore
     }
   },
   actions: {

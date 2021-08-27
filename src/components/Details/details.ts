@@ -23,8 +23,9 @@ export default class Headless extends Vue {
     }
 
     protected updateStore(){
-        this.$store.commit('updatedriverInfo', this.driverInfo)
         this.calculateScores();
+        this.$store.commit('updatedriverInfo', this.driverInfo)
+        this.$store.commit('updatedriverScore', this.driverScore)
         this.next3();
     }
 
