@@ -16,9 +16,9 @@ export default class Headless extends Vue {
         Info: this.$store.state.driverInfo.Info
     }
     protected driverScore = {
-        Onderhoud: 0,
+        Onderhoud: 20,
         Rijvaardigheid: 0,
-        Advies: 0,
+        Advies: 15,
         Coaching: 0,
     }
 
@@ -39,13 +39,14 @@ export default class Headless extends Vue {
     protected calculateScores(){
         this.calculateAge();
         this.calculateLicense();
+        this.calculateExperience();
+        this.caculatePreferences();
 
     }
 
     calculateAge(){
         if (this.driverInfo.Leeftijd < 20){  //Jonger dan 20 -> +33 rijvaardigheid
             this.driverScore.Rijvaardigheid += 33.333;
-            console.log( 'Current rijbvaardigheid:' + this.driverScore.Rijvaardigheid);
         }
     }
     calculateLicense(){
@@ -53,19 +54,55 @@ export default class Headless extends Vue {
                 if (this.driverInfo.Rijbewijs == 'Nog geen rijbewijs' || this.driverInfo.Rijbewijs == 'Bezig met rijbewijs'){
                     this.driverScore.Coaching += 50;
                     this.driverScore.Rijvaardigheid += 33.333;
+                    this.driverScore.Advies += 33.333;
                 }
-                //a1 -> + 30 op onderhoud & +20 op rijvaardigheid
+                //a1 -> + 30 op onderhoud & op rijvaardigheid
                 else if (this.driverInfo.Rijbewijs == 'A1'){
-                    this.driverScore.Rijvaardigheid += 20;
+                    this.driverScore.Rijvaardigheid += 33.333;
                     this.driverScore.Onderhoud += 30;
                 }
-                //Wel rijbewijs -> + 30 op onderhoud
+                //Wel rijbewijs -> + 30 op onderhoud op rijvaardigheid
                 else if (this.driverInfo.Rijbewijs == 'A2' || this.driverInfo.Rijbewijs == 'A'){
+                    this.driverScore.Rijvaardigheid += 25;
                     this.driverScore.Onderhoud +=30;
                 }
+    }
 
-                console.log( 'Current coaching:' + this.driverScore.Coaching);
-                console.log( 'Current Onderhoud:' + this.driverScore.Onderhoud);
+    calculateExperience(){
+        console.log('Ervaring: ' + this.driverInfo.Ervaring)
+        if( this.driverInfo.Ervaring <= 0){
+            console.log( 'no experience');
+        }
+        else if( this.driverInfo.Ervaring <= 1){
+            this.driverScore.Rijvaardigheid -= 10;
+        }
+        else if( this.driverInfo.Ervaring  <= 3){
+            this.driverScore.Rijvaardigheid -= 15;
+        }
+        else if( this.driverInfo.Ervaring  > 3){
+            this.driverScore.Onderhoud +=25;
+            this.driverScore.Rijvaardigheid -= 25;
+        }
+    }
+    caculatePreferences(){
+        console.log('Wilt meer weten over: ' + this.driverInfo.Info)
+
+        if (this.driverInfo.Info.includes("Onderhoud")){
+            this.driverScore.Onderhoud += 33.333;
+            console.log('Onderhoud, komt voor de bakker!');
+        }
+        if (this.driverInfo.Info.includes("Rijvaardigheid")){
+            this.driverScore.Rijvaardigheid += 33.333;
+            console.log('Rijvaardigheid, komt voor de bakker!');
+        }
+        if (this.driverInfo.Info.includes("Aankoop")){
+            this.driverScore.Advies += 33.333;
+            console.log('Aankoop, komt voor de bakker!');
+        }
+        if (this.driverInfo.Info.includes("Rijbewijs")){
+            this.driverScore.Coaching += 33.333;
+            console.log('Rijbewijs, komt voor de bakker!');
+        }
     }
 
     protected detailsDone = false;
