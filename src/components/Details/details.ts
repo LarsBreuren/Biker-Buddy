@@ -37,11 +37,35 @@ export default class Headless extends Vue {
     }
 
     protected calculateScores(){
-        if (this.driverInfo.Leeftijd < 20){
-            this.driverScore.Rijvaardigheid += 15;
+        this.calculateAge();
+        this.calculateLicense();
+
+    }
+
+    calculateAge(){
+        if (this.driverInfo.Leeftijd < 20){  //Jonger dan 20 -> +33 rijvaardigheid
+            this.driverScore.Rijvaardigheid += 33.333;
+            console.log( 'Current rijbvaardigheid:' + this.driverScore.Rijvaardigheid);
         }
-        console.log( 'Current scores:' + this.driverScore.Rijvaardigheid);
-        
+    }
+    calculateLicense(){
+                // Geen rijbewijs -> + 50 op coaching en 33 rijvaardigheid
+                if (this.driverInfo.Rijbewijs == 'Nog geen rijbewijs' || this.driverInfo.Rijbewijs == 'Bezig met rijbewijs'){
+                    this.driverScore.Coaching += 50;
+                    this.driverScore.Rijvaardigheid += 33.333;
+                }
+                //a1 -> + 30 op onderhoud & +20 op rijvaardigheid
+                else if (this.driverInfo.Rijbewijs == 'A1'){
+                    this.driverScore.Rijvaardigheid += 20;
+                    this.driverScore.Onderhoud += 30;
+                }
+                //Wel rijbewijs -> + 30 op onderhoud
+                else if (this.driverInfo.Rijbewijs == 'A2' || this.driverInfo.Rijbewijs == 'A'){
+                    this.driverScore.Onderhoud +=30;
+                }
+
+                console.log( 'Current coaching:' + this.driverScore.Coaching);
+                console.log( 'Current Onderhoud:' + this.driverScore.Onderhoud);
     }
 
     protected detailsDone = false;
