@@ -64,7 +64,7 @@ export default class Headless extends Vue {
                 }
                 //Wel rijbewijs -> + 30 op onderhoud op rijvaardigheid
                 else if (this.driverInfo.Rijbewijs == 'A2' || this.driverInfo.Rijbewijs == 'A'){
-                    this.driverScore.Rijvaardigheid += 25;
+                    this.driverScore.Rijvaardigheid += 30;
                     this.driverScore.Onderhoud +=30;
                 }
     }
@@ -82,7 +82,7 @@ export default class Headless extends Vue {
         }
         else if( this.driverInfo.Ervaring  > 3){
             this.driverScore.Onderhoud +=25;
-            this.driverScore.Rijvaardigheid -= 25;
+            this.driverScore.Rijvaardigheid -= 20;
         }
     }
     caculatePreferences(){
