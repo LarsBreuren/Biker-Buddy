@@ -1,5 +1,6 @@
 import { Component, Vue } from "vue-property-decorator";
 import Profile from "../LicenseProfile/LicenseProfile.vue";
+import driverInfo from "../../interfaces/driverInfo";
 
 @Component({
     components: {
@@ -8,11 +9,11 @@ import Profile from "../LicenseProfile/LicenseProfile.vue";
 })
 export default class Headless extends Vue {
 
-    protected driverInfo = {
+    protected driverInfo: driverInfo = {
         Voornaam: this.$store.state.driverInfo.Voornaam,
-        Leeftijd: 0,
+        Leeftijd: "",
         Rijbewijs: this.$store.state.driverInfo.Rijbewijs,
-        Ervaring: 0,
+        Ervaring: "",
         Info: this.$store.state.driverInfo.Info
     }
     protected driverScore = {
@@ -45,9 +46,9 @@ export default class Headless extends Vue {
 
     }
 
-    calculateAge(){
-        if (this.driverInfo.Leeftijd < 20){  //Jonger dan 20 -> +33 rijvaardigheid
-            this.driverScore.Rijvaardigheid += 33.333;
+    calculateAge(){ 
+        if (  parseInt(this.driverInfo.Leeftijd, 10) < 20){  //Jonger dan 20 -> +33 rijvaardigheid
+            this.driverScore.Rijvaardigheid += 300.333;
         }
     }
     calculateLicense(){
@@ -71,16 +72,16 @@ export default class Headless extends Vue {
 
     calculateExperience(){
         console.log('Ervaring: ' + this.driverInfo.Ervaring)
-        if( this.driverInfo.Ervaring <= 0){
+        if(  parseInt(this.driverInfo.Ervaring, 10) <= 0){
             console.log( 'no experience');
         }
-        else if( this.driverInfo.Ervaring <= 1){
+        else if(  parseInt(this.driverInfo.Ervaring, 10) <= 1){
             this.driverScore.Rijvaardigheid -= 10;
         }
-        else if( this.driverInfo.Ervaring  <= 3){
+        else if(  parseInt(this.driverInfo.Ervaring, 10)  <= 3){
             this.driverScore.Rijvaardigheid -= 15;
         }
-        else if( this.driverInfo.Ervaring  > 3){
+        else if(  parseInt(this.driverInfo.Ervaring, 10)  > 3){
             this.driverScore.Onderhoud +=25;
             this.driverScore.Rijvaardigheid -= 20;
         }

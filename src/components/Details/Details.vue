@@ -7,10 +7,10 @@
       <div v-if="step1active" class="step1">
         <h1> Who are you? </h1>
         <label for="voorNaam">Voornaam:</label><br>
-        <input type="text" id="voorNaam" v-model="driverInfo.Voornaam" placeholder="Voornaam">
+        <input type="text" id="voorNaam" v-model.trim="driverInfo.Voornaam" placeholder="Voornaam">
 
         <label for="leeftijd">Leeftijd:</label><br>
-        <input id="leeftijd" type="number" v-model="driverInfo.Leeftijd" placeholder="20">
+        <input id="leeftijd" type="number" v-model.trim="driverInfo.Leeftijd" placeholder="20">
 
         <button button :disabled='!driverInfo.Voornaam || driverInfo.Leeftijd < 17' class="ctaNext ctaButton"
           @click="next1">
@@ -21,7 +21,7 @@
       <div class="step2 text-center" v-if="step2active">
         <h2 class="text-3xl mb-8"> Rijbewijs en papieren graag </h2>
         <label for="rijbewijs">Welk rijbewijs heb je {{ driverInfo.Voornaam }}?</label><br>
-        <select v-model="driverInfo.Rijbewijs" id="rijbewijs" class="select">
+        <select v-model.trim="driverInfo.Rijbewijs" id="rijbewijs" class="select">
           <option disabled value="">Kies een optie</option>
           <option>Nog geen rijbewijs</option>
           <option>Bezig met rijbewijs</option>
@@ -32,7 +32,7 @@
 
           <div class="ervaring" v-if="checkLicense(driverInfo.Rijbewijs)">
             <label for="Ervaring">Aantal jaar rijbewijs in bezit:</label><br>
-            <input id="Ervaring" type="number" v-model="driverInfo.Ervaring" placeholder="1">
+            <input id="Ervaring" type="number" v-model.trim="driverInfo.Ervaring" placeholder="1">
           </div>
 
         <button v-if="!checkLicense(driverInfo.Rijbewijs)"  button :disabled='!driverInfo.Rijbewijs' class="ctaNext ctaButton"
@@ -50,25 +50,25 @@
         <label for="info">Waar wil je graag meer over weten {{ driverInfo.Voornaam }}?</label><br>
         <div class="optionContainer">
           <div class="option">
-            <input type="checkbox" id="Onderhoud" value="Onderhoud" v-model="driverInfo.Info">
+            <input type="checkbox" id="Onderhoud" value="Onderhoud" v-model.trim="driverInfo.Info">
             <p class="labelText">Onderhoud</p>
                   <v-icon @click="resetSteps" size="35" class="labelIcon">mdi-hammer-screwdriver</v-icon>
             <label  for="Onderhoud"></label>
           </div>
           <div class="option">
-            <input type="checkbox" id="Rijvaardigheid" value="Rijvaardigheid" v-model="driverInfo.Info">
+            <input type="checkbox" id="Rijvaardigheid" value="Rijvaardigheid" v-model.trim="driverInfo.Info">
             <p class="labelText">Rijvaardigheid</p>
                   <v-icon @click="resetSteps" size="35" class="labelIcon">mdi-road-variant</v-icon>
             <label  for="Rijvaardigheid"></label>
           </div>
           <div class="option">
-            <input type="checkbox" id="Aankoop" value="Aankoop" v-model="driverInfo.Info">
+            <input type="checkbox" id="Aankoop" value="Aankoop" v-model.trim="driverInfo.Info">
                    <p class="labelText">Aankoop advies</p>
                   <v-icon @click="resetSteps" size="35" class="labelIcon">mdi-currency-usd</v-icon>
             <label  for="Aankoop"></label>
           </div>
           <div class="option">
-            <input type="checkbox" id="Rijbewijs" value="Rijbewijs" v-model="driverInfo.Info">
+            <input type="checkbox" id="Rijbewijs" value="Rijbewijs" v-model.trim="driverInfo.Info">
                    <p class="labelText">Rijbewijs coaching</p>
                   <v-icon @click="resetSteps" size="35" class="labelIcon">mdi-poll</v-icon>
             <label  for="Rijbewijs"></label>
@@ -115,4 +115,4 @@
 
 
 
-<!-- https://stackoverflow.com/questions/54928111/should-we-use-v-model-to-modify-vuex-store -->
+<!-- https://stackoverflow.com/questions/54928111/should-we-use-v-model.trim-to-modify-vuex-store -->

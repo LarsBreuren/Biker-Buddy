@@ -1,8 +1,8 @@
 
 export default interface driverInfo {
   Voornaam: string;
-  Leeftijd: number;
+  Leeftijd: string;
   Rijbewijs: string;
-  Ervaring: number;
+  Ervaring: string;
   Info: string;
 }
