@@ -23,10 +23,29 @@ export default class Headless extends Vue {
         Coaching: 0,
     }
 
+    protected driverScoreSorted= [] as any;
+    protected driverScoreSortedObject = {} as any;
+
+    protected sortScore(){
+        for (const item in this.driverScore) {
+            this.driverScoreSorted.push([item, this.driverScore[item]]);
+        }
+        this.driverScoreSorted.sort(function(a, b) {
+            return a[1] - b[1];
+        });
+
+        this.driverScoreSorted.forEach((item) =>{
+            this.driverScoreSortedObject[item[0]]=item[1]
+        })
+        console.log('sorted object:' + this.driverScoreSortedObject)
+    }
+
     protected updateStore(){
         this.calculateScores();
+        this.sortScore();
+
         this.$store.commit('updatedriverInfo', this.driverInfo)
-        this.$store.commit('updatedriverScore', this.driverScore)
+        this.$store.commit('updatedriverScore', this.driverScoreSortedObject)
         this.next3();
     }
 
@@ -48,7 +67,7 @@ export default class Headless extends Vue {
 
     calculateAge(){ 
         if (  parseInt(this.driverInfo.Leeftijd, 10) < 20){  //Jonger dan 20 -> +33 rijvaardigheid
-            this.driverScore.Rijvaardigheid += 300.333;
+            this.driverScore.Rijvaardigheid += 33.333;
         }
     }
     calculateLicense(){
@@ -87,23 +106,18 @@ export default class Headless extends Vue {
         }
     }
     caculatePreferences(){
-        console.log('Wilt meer weten over: ' + this.driverInfo.Info)
 
         if (this.driverInfo.Info.includes("Onderhoud")){
             this.driverScore.Onderhoud += 33.333;
-            console.log('Onderhoud, komt voor de bakker!');
         }
         if (this.driverInfo.Info.includes("Rijvaardigheid")){
             this.driverScore.Rijvaardigheid += 33.333;
-            console.log('Rijvaardigheid, komt voor de bakker!');
         }
         if (this.driverInfo.Info.includes("Aankoop")){
             this.driverScore.Advies += 33.333;
-            console.log('Aankoop, komt voor de bakker!');
         }
         if (this.driverInfo.Info.includes("Rijbewijs")){
             this.driverScore.Coaching += 33.333;
-            console.log('Rijbewijs, komt voor de bakker!');
         }
     }
 

@@ -92,7 +92,6 @@
           backButton
           ">mdi-menu-left</v-icon>
         <Profile></Profile>
-      
        <router-link to="Homepagina" class="ctaButton my-16">
           Ok, doorgaan 
         </router-link>
