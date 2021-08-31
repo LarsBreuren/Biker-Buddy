@@ -23,8 +23,17 @@ export default class Headless extends Vue {
         Coaching: 0,
     }
 
-    protected driverScoreSorted= [] as any;
-    protected driverScoreSortedObject = {} as any;
+    protected prios = {
+        prio1: "",
+        prio2: "",
+        prio3: "",
+    }
+
+
+    protected driverScoreSorted= [] as any; //array
+    protected driverScoreSortedReverse = [] as any; //array
+    protected driverScoreSortedObject = {} as any; //obj
+
 
     protected sortScore(){
         for (const item in this.driverScore) {
@@ -34,11 +43,21 @@ export default class Headless extends Vue {
             return a[1] - b[1];
         });
 
+        this.reverseScore()
+
         this.driverScoreSorted.forEach((item) =>{
             this.driverScoreSortedObject[item[0]]=item[1]
         })
-        console.log('sorted object:' + this.driverScoreSortedObject)
+
+        this.prios.prio1 = Object.keys(this.driverScoreSortedObject)[0]; 
+        this.prios.prio2 = Object.keys(this.driverScoreSortedObject)[1]; 
+        this.prios.prio3 = Object.keys(this.driverScoreSortedObject)[2]; 
+     }
+
+    protected reverseScore(){
+        this.driverScoreSortedReverse = this.driverScoreSorted.reverse();
     }
+
 
     protected updateStore(){
         this.calculateScores();
@@ -46,6 +65,7 @@ export default class Headless extends Vue {
 
         this.$store.commit('updatedriverInfo', this.driverInfo)
         this.$store.commit('updatedriverScore', this.driverScoreSortedObject)
+        this.$store.commit('updatePrios', this.prios)
         this.next3();
     }
 

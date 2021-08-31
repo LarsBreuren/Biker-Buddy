@@ -17,6 +17,11 @@ export default new Vuex.Store({
     Advies: 0,
     Coaching: 0,
   },
+  prio: {
+    prio1: "",
+    prio2: "",
+    prio3: "",
+  },
 
   },
   getters: {
@@ -28,6 +33,9 @@ export default new Vuex.Store({
     },
     updatedriverScore (state, driverScore) {
       state.driverScore = driverScore
+    },
+    updatePrios (state, prio) {
+      state.prio = prio
     }
   },
   actions: {
