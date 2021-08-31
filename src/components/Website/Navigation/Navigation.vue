@@ -51,15 +51,15 @@
             >mdi-home</v-icon>
           Home
         </router-link></li>
-          <li><router-link @click.native="toggle()" to="/details">
+          <li><router-link @click.native="toggle()" to="/Profile">
             <v-icon
             size="30"
             class="
               text-white
               cursor-pointer
             "
-            >mdi-pencil</v-icon>
-            Gegevens veranderen</router-link> </li>
+            >mdi-account</v-icon>
+            Mijn profiel</router-link> </li>
           <li><router-link @click.native="toggle()" to="/">
             <v-icon
             size="30"
