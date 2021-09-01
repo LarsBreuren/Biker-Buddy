@@ -17,10 +17,12 @@
     .bar{
       @apply flex;
       @apply items-center;
-      @apply px-16;
+      @apply px-4;
       @apply text-left;
       height: 30px; 
       @apply bg-yellow;
+      transition: 500ms;
+      transition-timing-function: cubic-bezier(.53,.92,.74,1.01);
 
       .barText{
         color: #000;
