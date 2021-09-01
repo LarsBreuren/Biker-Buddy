@@ -19,7 +19,7 @@ export default class Headless extends Vue {
     protected delay() {
         setTimeout( () => {
             this.applyScores();
-        }, 900);
+        }, 700);
     }
 
     protected applyScores(){
