@@ -17,7 +17,7 @@ export default class Headless extends Vue {
         Info: this.$store.state.driverInfo.Info
     }
     protected driverScore = {
-        Onderhoud: 20,
+        Onderhoud: 10,
         Rijvaardigheid: 0,
         Advies: 15,
         Coaching: 0,
