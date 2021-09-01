@@ -43,6 +43,19 @@
           </div>
         </div>
       </div>
+      <div class="mainArticle mx-8">
+        <div class="bannerContainer">
+          <img class="bannerImg" :src="weekly.banner" />
+          <div class="bannerTitle text-xl">Artikel vd week: {{ weekly.title }}</div>
+          <div class="bannerOverlay"></div>
+          <div class="bannerIcon">
+            <v-icon size="75" class="
+                bannerIcon
+                  text-white
+                ">mdi-{{ weekly.icon}}</v-icon>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>

@@ -15,6 +15,7 @@ protected prios = this.$store.state.prio;
 protected artikel1 = this.checkArticle(this.prios.prio1);
 protected artikel2 = this.checkArticle(this.prios.prio2);
 protected artikel3 = this.checkArticle(this.prios.prio3);
+protected weekly = this.checkArticle('weekly');
 
   protected checkArticle(prio){
     if (prio == 'Onderhoud'){
@@ -28,6 +29,9 @@ protected artikel3 = this.checkArticle(this.prios.prio3);
     }
     else if (prio == 'Coaching'){
       return this.getRandomArticle('coachingArtikelen');
+    }
+    else if (prio == 'weekly'){
+      return this.getRandomArticle('weeklyArtikelen');
     }
   }
 

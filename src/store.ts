@@ -71,6 +71,16 @@ export default new Vuex.Store({
         link: '/articles/onderhoud/'
       }
     ],
+    weeklyArtikelen : [
+      {
+        id: 1,
+        title: "KTM Korte Termijn Motor?",
+        banner:  require('./assets/images//articles/ktm.jpg'),
+        category: "weekly",
+        icon: 'hammer-screwdriver',
+        link: '/articles/onderhoud/'
+      }
+    ],
   }
 
   },
