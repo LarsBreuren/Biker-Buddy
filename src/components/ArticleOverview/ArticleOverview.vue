@@ -2,7 +2,7 @@
   <div class="container">
     <div class="articles">
 
-      <div class="mainArticle " :class="{ centered: showArtikel1 }">
+      <div class="mainArticle mx-8" :class="{ centered: showArtikel1 }">
         <div class="bannerContainer">
           <img class="bannerImg" :src="artikel1.banner" />
           <div class="bannerOverlay"></div>

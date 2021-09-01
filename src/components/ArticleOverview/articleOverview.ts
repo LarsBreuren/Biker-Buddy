@@ -50,7 +50,7 @@ protected showWeeklyText = false;
     setTimeout( () => {
         this.showArtikel1 = true;
         this.delay2();
-    }, 300);
+    }, 400);
   }
   protected delay2() {
     setTimeout( () => {
