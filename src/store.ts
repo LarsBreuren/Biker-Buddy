@@ -23,24 +23,49 @@ export default new Vuex.Store({
     prio3: "",
   },
   articles: {
+    onderhoudArtikelen : [
+      {
+        id: 1,
+        title: "ketting smeren als een baas",
+        banner:  require('./assets/images//articles/ketting.jpg'),
+        category: "Onderhoud",
+        link: '/articles/ketting'
+      },
+      {
+        id: 2,
+        title: "Banden checken doe je zo!",
+        banner:  require('./assets/images//articles/ketting.jpg'),
+        category: "Rijvaardigheid",
+        link: '/articles/ketting'
+      }
+    ],
     rijvaardigheidArtikelen : [
       {
         id: 1,
         title: "Remmen is angst",
         banner:  require('./assets/images//articles/remmen.jpg'),
-        catogory: "Rijvaardigheid",
-        link: '/articles/remmen'
+        category: "Rijvaardigheid",
+        link: '/articles/onderhoud/'
       }
     ],
-    onderhoudArtikelen : [
+    adviesArtikelen : [
       {
         id: 1,
         title: "ketting smeren als een baas",
         banner:  require('./assets/images//articles/remmen.jpg'),
-        catogory: "onderhoud",
+        category: "Advies",
         link: '/articles/onderhoud/'
       }
-    ]
+    ],
+    coachingArtikelen : [
+      {
+        id: 1,
+        title: "ketting smeren als een baas",
+        banner:  require('./assets/images//articles/remmen.jpg'),
+        category: "Coaching",
+        link: '/articles/onderhoud/'
+      }
+    ],
   }
 
   },
