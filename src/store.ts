@@ -22,6 +22,26 @@ export default new Vuex.Store({
     prio2: "",
     prio3: "",
   },
+  articles: {
+    rijvaardigheidArtikelen : [
+      {
+        id: 1,
+        title: "Remmen is angst",
+        banner:  require('./assets/images//articles/remmen.jpg'),
+        catogory: "Rijvaardigheid",
+        link: '/articles/remmen'
+      }
+    ],
+    onderhoudArtikelen : [
+      {
+        id: 1,
+        title: "ketting smeren als een baas",
+        banner:  require('./assets/images//articles/remmen.jpg'),
+        catogory: "onderhoud",
+        link: '/articles/onderhoud/'
+      }
+    ]
+  }
 
   },
   getters: {

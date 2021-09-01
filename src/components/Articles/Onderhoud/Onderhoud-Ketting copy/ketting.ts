@@ -1,9 +1,9 @@
 import { Component, Vue } from "vue-property-decorator";
-import ArticleOverview from "../ArticleOverview/ArticleOverview.vue";
+import Profile from "../LicenseProfile/LicenseProfile.vue";
 
 @Component({
     components: {
-        ArticleOverview,
+        Profile,
       }
 })
 export default class Headless extends Vue {

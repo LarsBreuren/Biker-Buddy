@@ -1,0 +1,23 @@
+
+.artikel{
+  .banner{
+    @apply w-full;
+    max-height: 300px;
+    @apply mb-16;
+  }
+}
+
+
+.content{
+  position: relative;
+}
+
+@screen sm{
+
+}
+@screen md{
+
+}
+@screen lg {
+
+  }

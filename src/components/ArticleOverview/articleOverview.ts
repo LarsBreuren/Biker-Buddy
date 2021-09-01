@@ -1,11 +1,16 @@
 import { Component, Vue } from "vue-property-decorator";
-import ArticleOverview from "../ArticleOverview/ArticleOverview.vue";
+import Profile from "../LicenseProfile/LicenseProfile.vue";
+import Remmen from "@/components/Articles/Rijvaardigheid/Rijvaardigheid-Remmen/Remmen.vue";
 
 @Component({
     components: {
-        ArticleOverview,
+        Profile,
+        Remmen,
       }
 })
+
 export default class Headless extends Vue {
 protected driverInfo = this.$store.state.driverInfo;
+
+
 }
