@@ -1,23 +1,66 @@
-.bg{
-  @apply h-full;
-  width: 100%;
-  @apply fixed;
-  background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/features/dirtbike.jpg);
-  background-size: cover;
-  background-position: center;
-  top: 0;
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
-}
+
 
 .contentcontainer{
   z-index: 10;
   @apply relative;
   @apply w-5/6;
   @apply mx-auto;
+}
+
+.articles{
+  .mainArticle, .secondArticle, .thirdArticle{
+    .bannerContainer{
+      height: 200px;
+      @apply relative;
+      .bannerImg{
+        height: 100%;
+        @apply w-full;
+        object-fit: cover;
+        @apply rounded-lg;
+        @apply my-16;
+      }
+      .bannerTitle{
+        @apply absolute;
+        @apply z-10;
+        left: 50%;                       
+        bottom: 0px;                       
+        transform: translate(-50%, -50%); 
+        font-family: 'Bebas Neue', cursive;
+        @apply font-semibold;
+        @apply text-3xl;
+        @apply w-5/6;
+      }
+      .bannerOverlay{
+        @apply absolute;
+        z-index: 5;
+        background-color: rgba( 0, 0, 0, 0.3);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        @apply rounded-lg;
+      }
+      .bannerIcon{
+        @apply absolute;
+        @apply z-10;
+        left: 50%;                       
+        top: 50%;                        
+        transform: translate(-50%, -50%); 
+      }
+    }
+  }
+  .secondArticle, .thirdArticle{
+    @apply w-1/2;
+    @apply mx-8;
+    .bannerContainer{
+      height: 150px;
+
+      .bannerTitle{
+        bottom: -10px;      
+        @apply text-2xl;
+      }
+    }
+  }
 }
 
 .content{

@@ -2,8 +2,7 @@
 
   <div class="container">
 
-    <h1 class="text-3xl text-white"> Hi {{driverInfo.Voornaam}}, welkom op de homepagina! </h1>
-    <p> De onderstaanda artikelen matchen met jouw scores! </p>
+    <h1 class="text-2xl text-white"> Hi {{driverInfo.Voornaam}}, deze zijn voor jou!</h1>
     <ArticleOverview></ArticleOverview>
 
   </div>

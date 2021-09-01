@@ -29,13 +29,15 @@ export default new Vuex.Store({
         title: "ketting smeren als een baas",
         banner:  require('./assets/images//articles/ketting.jpg'),
         category: "Onderhoud",
+        icon: 'motorbike',
         link: '/articles/ketting'
       },
       {
         id: 2,
         title: "Banden checken doe je zo!",
-        banner:  require('./assets/images//articles/ketting.jpg'),
+        banner:  require('./assets/images//articles/banden.jpg'),
         category: "Rijvaardigheid",
+        icon: 'hammer-screwdriver',
         link: '/articles/ketting'
       }
     ],
@@ -45,24 +47,27 @@ export default new Vuex.Store({
         title: "Remmen is angst",
         banner:  require('./assets/images//articles/remmen.jpg'),
         category: "Rijvaardigheid",
+        icon: 'road-variant',
         link: '/articles/onderhoud/'
       }
     ],
     adviesArtikelen : [
       {
         id: 1,
-        title: "ketting smeren als een baas",
-        banner:  require('./assets/images//articles/remmen.jpg'),
+        title: "Helm kiezen",
+        banner:  require('./assets/images//articles/helm.jpg'),
         category: "Advies",
+        icon: 'racing-helmet',
         link: '/articles/onderhoud/'
       }
     ],
     coachingArtikelen : [
       {
         id: 1,
-        title: "ketting smeren als een baas",
-        banner:  require('./assets/images//articles/remmen.jpg'),
+        title: "AVB pro tips",
+        banner:  require('./assets/images//articles/rijbewijs.jpg'),
         category: "Coaching",
+        icon: 'alpha-l-box',
         link: '/articles/onderhoud/'
       }
     ],
