@@ -34,7 +34,7 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        title: "Banden checken doe je zo!",
+        title: "DIY Banden checken!",
         banner:  require('./assets/images//articles/banden.jpg'),
         category: "Rijvaardigheid",
         icon: 'hammer-screwdriver',

@@ -1,55 +1,63 @@
 <template>
   <div class="container">
-    <div class="articles mt-8">
+    <div class="articles">
 
-      <div class="mainArticle mx-8">
+      <div class="mainArticle " :class="{ centered: showArtikel1 }">
         <div class="bannerContainer">
           <img class="bannerImg" :src="artikel1.banner" />
-          <div class="bannerTitle">{{ artikel1.title }}</div>
           <div class="bannerOverlay"></div>
-          <div class="bannerIcon">
-            <v-icon size="75" class="
-                bannerIcon
-                  text-white
-                ">mdi-{{ artikel1.icon}}</v-icon>
+          <div v-if="showArtikel2" class="bannerIcon">
+                        <v-icon size="75" class="
+                  bannerIcon
+                    text-white
+                  ">mdi-{{ artikel1.icon}}</v-icon>
+          </div>
+          <div v-if="showArtikel2" class="bannerContent">
+            <div class="bannerTitle">{{ artikel1.title }}</div>
           </div>
         </div>
       </div>
       <div class="flex">
-        <div class="secondArticle">
+        <div class="secondArticle" :class="{ centered: showArtikel2 }">
           <div class="bannerContainer">
             <img class="bannerImg" :src="artikel2.banner" />
-            <div class="bannerTitle">{{ artikel2.title }}</div>
             <div class="bannerOverlay"></div>
-            <div class="articleIcon">
+            <div v-if="showWeekly" class="articleIcon">
               <v-icon size="50" class="
-                bannerIcon
-                  text-white
-                ">mdi-{{ artikel2.icon}}</v-icon>
+                  bannerIcon
+                    text-white
+                  ">mdi-{{ artikel2.icon}}</v-icon>
+            </div>
+            <div v-if="showWeekly" class="bannerContent">
+              <div class="bannerTitle">{{ artikel2.title }}</div>
             </div>
           </div>
         </div>
-        <div class="thirdArticle">
+        <div class="thirdArticle" :class="{ centered: showArtikel3 }">
           <div class="bannerContainer">
             <img class="bannerImg" :src="artikel3.banner" />
-            <div class="bannerTitle">{{ artikel3.title }}</div>
             <div class="bannerOverlay"></div>
             <div class="articleIcon">
-              <v-icon size="50" class="
-                bannerIcon
-                  text-white
-                ">mdi-{{ artikel3.icon}}</v-icon>
+              <v-icon v-if="showWeekly" size="50" class="
+                  bannerIcon
+                    text-white
+                  ">mdi-{{ artikel3.icon}}</v-icon>
+            </div>
+            <div v-if="showWeekly" class="bannerContent">
+              <div class="bannerTitle">{{ artikel3.title }}</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="mainArticle mx-8">
+      <div class="mainArticle weekly mx-8" :class="{ centered: showWeekly }">
         <div class="bannerContainer">
           <img class="bannerImg" :src="weekly.banner" />
-          <div class="bannerTitle text-xl">Artikel vd week: {{ weekly.title }}</div>
           <div class="bannerOverlay"></div>
+          <div v-if="showWeeklyText" class="bannerContent">
+            <div class="bannerTitle text-xl">Artikel vd week: {{ weekly.title }}</div>
+          </div>
           <div class="bannerIcon">
-            <v-icon size="75" class="
+            <v-icon v-if="showWeeklyText" size="75" class="
                 bannerIcon
                   text-white
                 ">mdi-{{ weekly.icon}}</v-icon>

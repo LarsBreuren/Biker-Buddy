@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <Navigation></Navigation>
-    <div class="bg-main pt-8" style="margin-top: 60px; height: 100vh">
+    <div class="bg-main" style="margin-top: 60px; height: 100vh">
       <Home></Home>
     </div>
     <!-- <Footer></Footer> -->

@@ -6,7 +6,19 @@
   @apply w-5/6;
   @apply mx-auto;
 }
-
+.mainArticle, .secondArticle,.weekly{
+  position: relative;
+  padding-right: 500px;
+  transition: 300ms;
+}
+.thirdArticle{
+  position: relative;
+  padding-left: 500px;
+  transition: 300ms;
+}
+.articles .centered{
+  @apply px-0;
+}
 .articles{
   .mainArticle, .secondArticle, .thirdArticle{
     .bannerContainer{
@@ -57,7 +69,8 @@
 
       .bannerTitle{
         bottom: -10px;      
-        @apply text-2xl;
+        @apply text-xl;
+        @apply font-medium;
       }
     }
   }

@@ -17,7 +17,14 @@ protected artikel2 = this.checkArticle(this.prios.prio2);
 protected artikel3 = this.checkArticle(this.prios.prio3);
 protected weekly = this.checkArticle('weekly');
 
+protected showArtikel1 = false;
+protected showArtikel2 = false;
+protected showArtikel3 = false;
+protected showWeekly = false;
+protected showWeeklyText = false;
+
   protected checkArticle(prio){
+    this.delay1();
     if (prio == 'Onderhoud'){
       return this.getRandomArticle('onderhoudArtikelen');
     }
@@ -37,6 +44,31 @@ protected weekly = this.checkArticle('weekly');
 
   protected getRandomArticle(categoryName){
     return this.$store.state.articles[categoryName][Math.floor(Math.random()*this.$store.state.articles[categoryName].length)];
+  }
+
+  protected delay1() {
+    setTimeout( () => {
+        this.showArtikel1 = true;
+        this.delay2();
+    }, 300);
+  }
+  protected delay2() {
+    setTimeout( () => {
+        this.showArtikel2 = true;
+        this.showArtikel3 = true;
+        this.delay3();
+    }, 300);
+  }
+  protected delay3() {
+    setTimeout( () => {
+        this.showWeekly = true;
+        this.delay4();
+    }, 500);
+  }
+  protected delay4() {
+    setTimeout( () => {
+        this.showWeeklyText = true;
+    }, 500);
   }
 
 }
