@@ -45,30 +45,54 @@ export default new Vuex.Store({
       {
         id: 1,
         title: "Remmen is angst",
-        banner:  require('./assets/images//articles/remmen.jpg'),
+        banner:  require('./assets/images/articles/remmen.jpg'),
         category: "Rijvaardigheid",
         icon: 'road-variant',
-        link: '/articles/onderhoud/'
+        link: '/articles/rijvaardigheid/'
+      },
+      {
+        id: 2,
+        title: "Circuit ballerina",
+        banner:  require('./assets/images/articles/circuit.jpg'),
+        category: "Rijvaardigheid",
+        icon: 'flag-checkered',
+        link: '/articles/rijvaardigheid/'
       }
     ],
     adviesArtikelen : [
       {
         id: 1,
         title: "Helm kiezen",
-        banner:  require('./assets/images//articles/helm.jpg'),
+        banner:  require('./assets/images/articles/helm.jpg'),
         category: "Advies",
         icon: 'racing-helmet',
-        link: '/articles/onderhoud/'
+        link: '/articles/advies/'
+      },
+      {
+        id: 1,
+        title: "ATGAT??",
+        banner:  require('./assets/images/articles/atgat.jpg'),
+        category: "Advies",
+        icon: 'racing-helmet',
+        link: '/articles/advies/'
       }
     ],
     coachingArtikelen : [
       {
         id: 1,
         title: "AVB pro tips",
-        banner:  require('./assets/images//articles/rijbewijs.jpg'),
+        banner:  require('./assets/images/articles/rijbewijs.jpg'),
         category: "Coaching",
         icon: 'alpha-l-box',
-        link: '/articles/onderhoud/'
+        link: '/articles/coaching/'
+      },
+      {
+        id: 1,
+        title: "Theorie tricks",
+        banner:  require('./assets/images/articles/rijbewijs.jpg'),
+        category: "Coaching",
+        icon: 'alpha-l-box',
+        link: '/articles/coaching/'
       }
     ],
     weeklyArtikelen : [
