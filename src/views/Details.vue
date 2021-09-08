@@ -32,7 +32,7 @@
 <style scoped>
 .backgroundDetails{
     height: 100vh;
-    background-image: url('https://wallpaperaccess.com/full/1315789.jpg');
+    background-image: url('../assets/images/features/bgdetails.jpg');
     background-size: cover;
 }
 .bgOverlay{
