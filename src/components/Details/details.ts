@@ -82,7 +82,6 @@ export default class Headless extends Vue {
         this.calculateLicense();
         this.calculateExperience();
         this.caculatePreferences();
-
     }
 
     calculateAge(){ 

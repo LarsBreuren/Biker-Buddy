@@ -20,6 +20,20 @@
   @apply mx-auto;
 }
 
+.headsUp{
+  @apply px-32;
+  @apply z-10;
+  @apply fixed;
+  @apply bottom-0;
+  @apply mb-16;
+  @apply left-0;
+  @apply right-0;
+  @apply mx-auto;
+  p{
+    @apply text-sm;
+  }
+}
+
 .content{
   position: relative;
 }

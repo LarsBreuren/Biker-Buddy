@@ -75,10 +75,10 @@
           </div>
         </div>
         <br>
-
-    <button button :disabled='!driverInfo.Info' class="ctaNext ctaButton"
+        <button button :disabled='driverInfo.Info == ""' class="ctaNext ctaButton"
           @click="updateStore">
-          Afronden
+          <span v-if="driverInfo.Info == ''">Kies er minimaal één </span>
+          <span v-else>Afronden</span>
         </button>
       </div>
 
@@ -97,14 +97,6 @@
           Ok, doorgaan 
         </router-link>
     </div>
-
-      <h2> Stap </h2>
-      <div class="progressWrapper">
-        <div v-bind:class="(step1Done)?'yellowBar':'bar'"></div>
-        <div v-bind:class="(step2Done)?'yellowBar':'bar'"></div>
-        <div v-bind:class="(step3Done)?'yellowBar':'bar'"></div>
-      </div>
-
     </div>
 
   </div>
