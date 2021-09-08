@@ -53,25 +53,25 @@
           </div>
         </div>
         <div class="scoreBars">
+          <p class="barText"> Onderhoud</p>
+          <div class="barContainer w-full">
+            <div class="bar" v-bind:style="{width: this.Onderhoud + '%' }">  </div>
+          </div>
+          <p class="barText"> Rijvaardigheid</p>
+          <div class="barContainer w-full">
+            <div class="bar" v-bind:style="{width: this.Rijvaardigheid + '%' }">  </div>
+          </div>
+          <p class="barText"> Advies</p>
+          <div class="barContainer w-full">
+            <div class="bar" v-bind:style="{width: this.Advies + '%' }">  </div>
+          </div>
+          <p class="barText"> Coaching</p>
+          <div class="barContainer w-full">
+            <div class="bar" v-bind:style="{width: this.Coaching + '%' }">  </div>
+          </div>
 
-          <div class="barContainer w-full">
-            <div class="bar" v-bind:style="{width: this.Onderhoud + '%' }"> <p class="barText"> Onderhoud</p> </div>
-          </div>
-          <div class="barContainer w-full">
-            <div class="bar" v-bind:style="{width: this.Rijvaardigheid + '%' }"> <p class="barText"> Rijvaardigheid</p> </div>
-          </div>
-          <div class="barContainer w-full">
-            <div class="bar" v-bind:style="{width: this.Advies + '%' }"> <p class="barText"> Advies</p> </div>
-          </div>
-          <div class="barContainer w-full">
-            <div class="bar" v-bind:style="{width: this.Coaching + '%' }"> <p class="barText"> Coaching</p> </div>
-          </div>
-
-      
         </div>
-
       </div>
-
     </div>
   </div>
 </template>

@@ -1,9 +1,9 @@
 <template>
-  <div class="container pt-32">
+  <div class="container pt-16">
     <div class="stepWrapper" v-if="!detailsDone">
-              <v-icon @click="resetSteps" size="35" class="
+              <!-- <v-icon @click="resetSteps" size="35" class="
           backButton
-          ">mdi-menu-left</v-icon>
+          ">mdi-menu-left</v-icon> -->
       <div v-if="step1active" class="step1">
         <h1> Who are you? </h1>
         <label for="voorNaam">Voornaam:</label><br>
@@ -88,9 +88,9 @@
 
     <div v-if="detailsDone" >
      
-      <v-icon @click="resetSteps" size="35" class="
+      <!-- <v-icon @click="resetSteps" size="35" class="
           backButton
-          ">mdi-menu-left</v-icon>
+          ">mdi-menu-left</v-icon> -->
 
         <Profile></Profile>
        <router-link to="Homepagina" class="ctaButton my-16">
