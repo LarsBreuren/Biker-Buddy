@@ -29,11 +29,9 @@ export default class Headless extends Vue {
         prio3: "",
     }
 
-
     protected driverScoreSorted= [] as any; //array
     protected driverScoreSortedReverse = [] as any; //array
     protected driverScoreSortedObject = {} as any; //obj
-
 
     protected sortScore(){
         for (const item in this.driverScore) {
@@ -57,7 +55,6 @@ export default class Headless extends Vue {
     protected reverseScore(){
         this.driverScoreSortedReverse = this.driverScoreSorted.reverse();
     }
-
 
     protected updateStore(){
         this.calculateScores();
@@ -90,22 +87,22 @@ export default class Headless extends Vue {
         }
     }
     calculateLicense(){
-                // Geen rijbewijs -> + 50 op coaching en 33 rijvaardigheid
-                if (this.driverInfo.Rijbewijs == 'Nog geen rijbewijs' || this.driverInfo.Rijbewijs == 'Bezig met rijbewijs'){
-                    this.driverScore.Coaching += 50;
-                    this.driverScore.Rijvaardigheid += 33.333;
-                    this.driverScore.Advies += 33.333;
-                }
-                //a1 -> + 30 op onderhoud & op rijvaardigheid
-                else if (this.driverInfo.Rijbewijs == 'A1'){
-                    this.driverScore.Rijvaardigheid += 33.333;
-                    this.driverScore.Onderhoud += 30;
-                }
-                //Wel rijbewijs -> + 30 op onderhoud op rijvaardigheid
-                else if (this.driverInfo.Rijbewijs == 'A2' || this.driverInfo.Rijbewijs == 'A'){
-                    this.driverScore.Rijvaardigheid += 30;
-                    this.driverScore.Onderhoud +=30;
-                }
+        // Geen rijbewijs -> + 50 op coaching en 33 rijvaardigheid
+        if (this.driverInfo.Rijbewijs == 'Nog geen rijbewijs' || this.driverInfo.Rijbewijs == 'Bezig met rijbewijs'){
+            this.driverScore.Coaching += 50;
+            this.driverScore.Rijvaardigheid += 33.333;
+            this.driverScore.Advies += 33.333;
+        }
+        //a1 -> + 30 op onderhoud & op rijvaardigheid
+        else if (this.driverInfo.Rijbewijs == 'A1'){
+            this.driverScore.Rijvaardigheid += 33.333;
+            this.driverScore.Onderhoud += 30;
+        }
+        //Wel rijbewijs -> + 30 op onderhoud op rijvaardigheid
+        else if (this.driverInfo.Rijbewijs == 'A2' || this.driverInfo.Rijbewijs == 'A'){
+            this.driverScore.Rijvaardigheid += 30;
+            this.driverScore.Onderhoud +=30;
+        }
     }
 
     calculateExperience(){
@@ -125,7 +122,6 @@ export default class Headless extends Vue {
         }
     }
     caculatePreferences(){
-
         if (this.driverInfo.Info.includes("Onderhoud")){
             this.driverScore.Onderhoud += 33.333;
         }
