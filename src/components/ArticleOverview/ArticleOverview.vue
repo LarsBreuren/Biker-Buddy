@@ -19,7 +19,7 @@
       </div>
       <div class="flex">
         <div class="secondArticle" :class="{ centered: showArtikel2 }">
-          <div class="bannerContainer">
+          <div class="bannerContainer"  style="height: 180px;">
             <img class="bannerImg" :src="artikel2.banner" />
             <div class="bannerOverlay"></div>
             <div v-if="showWeekly" class="articleIcon">
@@ -29,12 +29,12 @@
                   ">mdi-{{ artikel2.icon}}</v-icon>
             </div>
             <div v-if="showWeekly" class="bannerContent">
-              <div class="bannerTitle">{{ artikel2.title }}</div>
+              <div class="bannerTitle " style="bottom: 0px">{{ artikel2.title }}</div>
             </div>
           </div>
         </div>
-        <div class="thirdArticle" :class="{ centered: showArtikel3 }">
-          <div class="bannerContainer">
+        <div  class="thirdArticle" :class="{ centered: showArtikel3 }">
+          <div class="bannerContainer" style="height: 180px;">
             <img class="bannerImg" :src="artikel3.banner" />
             <div class="bannerOverlay"></div>
             <div class="articleIcon">
@@ -44,7 +44,7 @@
                   ">mdi-{{ artikel3.icon}}</v-icon>
             </div>
             <div v-if="showWeekly" class="bannerContent">
-              <div class="bannerTitle">{{ artikel3.title }}</div>
+              <div class="bannerTitle " style="bottom: 0px">{{ artikel3.title }}</div>
             </div>
           </div>
         </div>
