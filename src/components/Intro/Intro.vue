@@ -10,7 +10,7 @@
     </div>
     <router-link style="width: 120px;" class="uppercase z-10 fixed ctaButton bottom-0 mb-64 left-0 right-0 mx-auto" to="/Details">Let's go!</router-link>
   <div class="headsUp">
-   <p> Gebruik een mobiele telefoon voor de beste ervaring (niet geoptimaliseerd voor tablet/laptops/desktops). </p>
+   <p> Gebruik een smartphone voor de beste ervaring (niet geoptimaliseerd voor tablet/laptops/desktops/ VR brillen). </p>
    </div>
     <div class="bg"> </div>
   </div>
