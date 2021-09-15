@@ -34,6 +34,6 @@ export default class  extends Vue {
   @apply bg-main;
   margin-top: 60px;
   height: 100%;
-  min-height: calc(100vh + 60px);
+  min-height: calc(100vh - 60px);
 }
 </style>
