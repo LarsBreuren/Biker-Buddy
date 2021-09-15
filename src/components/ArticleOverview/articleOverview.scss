@@ -16,20 +16,30 @@
   padding-left: 500px;
   transition: 300ms;
 }
+.articles{
+  .bannerOverlay{
+    opacity: 0;
+  }
+
+}
 .articles .centered{
   @apply px-0;
+  .bannerOverlay{
+    opacity: 1;
+  }
+
 }
 .articles{
-  .mainArticle, .secondArticle, .thirdArticle{
+  .mainArticle, .secondArticle, .thirdArticle, .weekly{
+    @apply my-8;
     .bannerContainer{
       height: 200px;
-      @apply relative;
       .bannerImg{
         height: 100%;
         @apply w-full;
         object-fit: cover;
         @apply rounded-lg;
-        @apply my-16;
+   
       }
       .bannerTitle{
         @apply absolute;
@@ -64,6 +74,7 @@
   .secondArticle, .thirdArticle{
     @apply w-1/2;
     @apply mx-8;
+    height: 150px;
     .bannerContainer{
       height: 150px;
 
@@ -73,6 +84,12 @@
         @apply font-medium;
       }
     }
+  }
+}
+.articles{
+  .weekly{
+    height: 200px;
+    @apply mb-0;
   }
 }
 

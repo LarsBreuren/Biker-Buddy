@@ -1,0 +1,39 @@
+.imgBlackWhite{
+    filter: grayscale(100%);
+  }
+  
+  .overlay{
+    background-color: rgba(0,0,0,0.5);
+  }
+  .bannerContainer{
+    height: 250px;
+  }
+  
+  .bannerTitle{
+    @apply uppercase;
+    @apply text-white;
+    @apply text-3xl;
+  }
+  
+  @screen sm{
+    .bannerContainer{
+      height: 400px;
+    }
+    .bannerTitle{
+      @apply uppercase;
+      @apply text-white;
+      @apply text-4xl;
+    }
+  }
+  @screen md{
+    .bannerImg{
+    @apply block;
+  }
+  
+  }
+  @screen lg {
+  
+  @screen xl {
+  
+  }
+  }

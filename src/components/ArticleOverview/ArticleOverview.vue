@@ -3,7 +3,7 @@
     <div class="articles">
 
       <div class="mainArticle mx-8" :class="{ centered: showArtikel1 }">
-        <div class="bannerContainer">
+      <router-link to="/articles/ketting" class="bannerContainer"> 
           <img class="bannerImg" :src="artikel1.banner" />
           <div class="bannerOverlay"></div>
           <div v-if="showArtikel2" class="bannerIcon">
@@ -15,11 +15,11 @@
           <div v-if="showArtikel2" class="bannerContent">
             <div class="bannerTitle">{{ artikel1.title }}</div>
           </div>
-        </div>
+        </router-link>
       </div>
       <div class="flex">
         <div class="secondArticle" :class="{ centered: showArtikel2 }">
-          <div class="bannerContainer"  style="height: 180px;">
+        <router-link to="/articles/ketting" class="bannerContainer">
             <img class="bannerImg" :src="artikel2.banner" />
             <div class="bannerOverlay"></div>
             <div v-if="showWeekly" class="articleIcon">
@@ -31,10 +31,10 @@
             <div v-if="showWeekly" class="bannerContent">
               <div class="bannerTitle " style="bottom: 0px">{{ artikel2.title }}</div>
             </div>
-          </div>
+          </router-link>
         </div>
         <div  class="thirdArticle" :class="{ centered: showArtikel3 }">
-          <div class="bannerContainer" style="height: 180px;">
+        <router-link to="/articles/ketting" class="bannerContainer">
             <img class="bannerImg" :src="artikel3.banner" />
             <div class="bannerOverlay"></div>
             <div class="articleIcon">
@@ -46,11 +46,11 @@
             <div v-if="showWeekly" class="bannerContent">
               <div class="bannerTitle " style="bottom: 0px">{{ artikel3.title }}</div>
             </div>
-          </div>
+          </router-link>
         </div>
       </div>
-      <div class="mainArticle weekly mx-8" :class="{ centered: showWeekly }">
-        <div class="bannerContainer">
+      <div class="weekly mx-8" :class="{ centered: showWeekly }">
+      <router-link to="/articles/ketting" class="bannerContainer">
           <img class="bannerImg" :src="weekly.banner" />
           <div class="bannerOverlay"></div>
           <div v-if="showWeeklyText" class="bannerContent">
@@ -62,7 +62,7 @@
                   text-white
                 ">mdi-{{ weekly.icon}}</v-icon>
           </div>
-        </div>
+        </router-link>
       </div>
 
     </div>

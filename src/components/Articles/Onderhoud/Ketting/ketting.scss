@@ -1,0 +1,28 @@
+.articleContainer{
+  @apply w-5/6;
+  @apply mx-auto;
+  @apply text-left;
+  @apply mt-16;
+
+  p{
+    @apply pb-16;
+  }
+}
+
+.back{
+  position: fixed;
+  top: 70px; 
+  left: 10px;
+  z-index: 20;
+}
+
+
+@screen sm{
+
+}
+@screen md{
+
+}
+@screen lg {
+
+  }
