@@ -11,4 +11,5 @@ protected driverInfo = this.$store.state.driverInfo;
 
 public imagelink1 = "articles/ketting.jpg";
 public imagelink2 = "articles/ketting2.jpg";
+public imagelink3 = "articles/ketting-gif.gif";
 }

@@ -30,6 +30,9 @@
 
 }
 .articles{
+  .mainArticle{
+    height: 200px;
+  }
   .mainArticle, .secondArticle, .thirdArticle, .weekly{
     @apply my-8;
     .bannerContainer{
@@ -74,14 +77,15 @@
   .secondArticle, .thirdArticle{
     @apply w-1/2;
     @apply mx-8;
-    height: 150px;
+    height: 180px;
+    @apply relative;
     .bannerContainer{
-      height: 150px;
-
-      .bannerTitle{
-        bottom: -10px;      
+      .bannerTitle{  
         @apply text-xl;
         @apply font-medium;
+        bottom: -50px;
+        position: absolute;
+        height: 40%;
       }
     }
   }

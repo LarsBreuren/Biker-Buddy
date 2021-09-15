@@ -28,9 +28,7 @@
                     text-white
                   ">mdi-{{ artikel2.icon}}</v-icon>
             </div>
-            <div v-if="showWeekly" class="bannerContent">
-              <div class="bannerTitle " style="bottom: 0px">{{ artikel2.title }}</div>
-            </div>
+              <div v-if="showWeekly"  class="bannerTitle">{{ artikel2.title }}</div>
           </router-link>
         </div>
         <div  class="thirdArticle" :class="{ centered: showArtikel3 }">
@@ -43,9 +41,7 @@
                     text-white
                   ">mdi-{{ artikel3.icon}}</v-icon>
             </div>
-            <div v-if="showWeekly" class="bannerContent">
-              <div class="bannerTitle " style="bottom: 0px">{{ artikel3.title }}</div>
-            </div>
+      <div v-if="showWeekly"  class="bannerTitle">{{ artikel3.title }}</div>
           </router-link>
         </div>
       </div>
