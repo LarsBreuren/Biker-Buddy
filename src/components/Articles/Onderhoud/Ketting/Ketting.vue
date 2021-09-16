@@ -13,7 +13,7 @@
         blootgesteld aan vocht en vuil. Zij wrijft zich letterlijk stuk voor ons. Bovendien is de kettingaandrijving nog
         steeds de meest eenvoudige manier om een motor aan te drijven.</p>
       <FullWidthImage style="height: 200px;" class="mb-16" v-bind:image-link="imagelink3"
-        text="Je ketting heeft wat te voorduren" :overlay="true" :blackWhite="false" />
+        text="Je ketting heeft wat te voorduren!" :overlay="true" :blackWhite="false" />
 
       <p>De kettingaandrijving is lichter en biedt een effectievere krachtoverbrenging dan de cardanaandrijving, is
         ongevoeliger dan de tandriem en dus technisch nog altijd bij de tijd. Daar moeten we dan maar wat onderhoudswerk

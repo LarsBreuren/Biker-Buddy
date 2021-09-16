@@ -60,6 +60,15 @@
             "
             >mdi-account</v-icon>
             Mijn profiel</router-link> </li>
+          <li><router-link @click.native="toggle()" to="/Categories">
+            <v-icon
+            size="30"
+            class="
+              text-white
+              cursor-pointer
+            "
+            >mdi-format-list-checkbox</v-icon>
+            Categorieën</router-link> </li>
           <li><router-link @click.native="toggle()" to="/">
             <v-icon
             size="30"
