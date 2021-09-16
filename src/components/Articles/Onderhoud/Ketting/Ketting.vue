@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <router-link to="/homepagina" class="back">
+    <a @click="$router.go(-1)" class="back">
       <v-icon size="30" class="text-white">mdi-arrow-left-circle</v-icon>
-    </router-link>
+    </a>
     <FullWidthImage v-bind:image-link="imagelink1" text="Ketting smeren als een baas" :overlay="true"
       :blackWhite="false" />
     <div class="articleContainer">

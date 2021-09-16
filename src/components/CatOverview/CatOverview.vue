@@ -1,23 +1,25 @@
 <template>
-  <div class="container">
+  <div class="container" style="padding-bottom: 75px;">
       <div class="catContainer pt-32">
       <h1 v-if="title" class="text-white "> {{ title }} </h1>
       <h1 v-else class="text-white "> Categorieën </h1>
 
-      <div class="article" v-for="article in currentCats" :key="article.id">
-      <router-link to="#" class="bannerContainer"> 
-          <img class="bannerImg" :src="article.banner" />
-          <div class="bannerOverlay"></div>
-          <div class="bannerIcon">
-                        <v-icon size="75" class="
-                  bannerIcon
-                    text-white
-                  ">mdi-{{ article.icon}}</v-icon>
-          </div>
-          <div class="bannerContent">
-            <div class="bannerTitle">{{ article.title }}</div>
-          </div>
-        </router-link>
+      <div v-if="title">
+        <div class="article" v-for="article in currentCats" :key="article.id">
+        <router-link to="/articles/ketting" class="bannerContainer"> 
+            <img class="bannerImg" :src="article.banner" />
+            <div class="bannerOverlay"></div>
+            <div class="bannerIcon">
+                          <v-icon size="75" class="
+                    bannerIcon
+                      text-white
+                    ">mdi-{{ article.icon}}</v-icon>
+            </div>
+            <div class="bannerContent">
+              <div class="bannerTitle">{{ article.title }}</div>
+            </div>
+          </router-link>
+        </div>
       </div>
 
         <div class="categoryMobileContainer" v-if="title">

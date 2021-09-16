@@ -39,6 +39,22 @@ export default new Vuex.Store({
         category: "Rijvaardigheid",
         icon: 'hammer-screwdriver',
         link: '/articles/ketting'
+      },
+      {
+        id: 3,
+        title: "ketting smeren als een baas",
+        banner:  require('./assets/images//articles/ketting.jpg'),
+        category: "Onderhoud",
+        icon: 'motorbike',
+        link: '/articles/ketting'
+      },
+      {
+        id: 4,
+        title: "DIY Banden checken!",
+        banner:  require('./assets/images//articles/banden.jpg'),
+        category: "Rijvaardigheid",
+        icon: 'hammer-screwdriver',
+        link: '/articles/ketting'
       }
     ],
     rijvaardigheidArtikelen : [
