@@ -23,14 +23,14 @@ export default class Headless extends Vue {
       catLink : "#"
     },
     {
-      catName : "Aankoop advies",
+      catName : "Aankoopadvies",
       catIcon : "currency-usd",
       catColor : "#019641",
       catLink : "#"
     },
     {
-      catName : "Rijbewijs coaching",
-      catIcon : "road-variant",
+      catName : "Rijbewijscoaching",
+      catIcon : "poll",
       catColor : "#f4743b",
       catLink : "#"
     },
