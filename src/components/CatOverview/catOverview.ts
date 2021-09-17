@@ -20,6 +20,16 @@ export default class Headless extends Vue {
     this.currentCats = eval(this.link)
   }
 
+  protected checkCat(cat){
+    if (cat == this.title){
+      console.log("does" + cat + "match with: " + this.title);
+      return true;
+    } else{
+      console.log('nuttin?')
+      return false;
+    }
+  }
+
   protected currentCats = [{
 
   }];
@@ -35,7 +45,7 @@ export default class Headless extends Vue {
     {
       catName : "Rijvaardigheid",
       catIcon : "road-variant",
-      catColor : "rgba(36, 37, 42, 1)",
+      catColor : "rgb(219, 15, 101)",
       catLink : "#",
       storeName : "rijvaardigheidArtikelen"
     },

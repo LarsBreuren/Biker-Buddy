@@ -22,8 +22,8 @@
         </div>
       </div>
 
-        <div class="categoryMobileContainer" v-if="title">
-          <div class="categoryMobile" v-for="category in cats" :key="category.message" @click="changeCat(category.storeName)"
+        <div class="categoryMobileContainer" v-if="title"> 
+          <div class="categoryMobile"  v-for="category in cats" :key="category.message" @click="changeCat(category.storeName)" :class="{ giveMeColor: checkCat(category.storeName) }"
             v-bind:style="{ 'background-color': category.catColor }">
             <div class="catIcon">
               <v-icon size="45" class="
