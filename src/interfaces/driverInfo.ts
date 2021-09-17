@@ -4,5 +4,5 @@ export default interface driverInfo {
   Leeftijd: string;
   Rijbewijs: string;
   Ervaring: string;
-  Info: string;
+  Info: [string, string];
 }

@@ -8,7 +8,10 @@
       </div>
       <div class="blur"></div>
     </div>
-    <router-link style="width: 120px;" class="uppercase z-10 fixed ctaButton bottom-0 mb-64 left-0 right-0 mx-auto" to="/Details">Let's go!</router-link>
+    <div class="buttons">
+      <div class="button ctaButton" @click="zeroFlow">Zero Flow</div>
+      <div class="button ctaButton" @click="returnFlow" >Return flow</div>
+    </div>
   <div class="headsUp">
    <p> Gebruik een smartphone voor de beste ervaring (niet geoptimaliseerd voor tablet/laptops/desktops/ VR brillen). </p>
    </div>

@@ -20,6 +20,31 @@
   @apply mx-auto;
 }
 
+.buttons{
+  @apply flex;
+  @apply flex-col;
+  @apply z-10;
+  @apply fixed;
+  @apply bottom-0;
+  @apply mb-64;
+  @apply left-0;
+  @apply right-0;
+  @apply w-1/2;
+  @apply mx-auto;
+
+  .button{
+    @apply uppercase;
+    @apply mx-auto;
+    @apply w-full;
+    @apply my-8;
+    @apply text-lg;
+    @apply z-20;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
 .headsUp{
   @apply px-32;
   @apply z-10;
