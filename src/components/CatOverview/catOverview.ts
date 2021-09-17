@@ -22,10 +22,8 @@ export default class Headless extends Vue {
 
   protected checkCat(cat){
     if (cat == this.title){
-      console.log("does" + cat + "match with: " + this.title);
       return true;
     } else{
-      console.log('nuttin?')
       return false;
     }
   }
