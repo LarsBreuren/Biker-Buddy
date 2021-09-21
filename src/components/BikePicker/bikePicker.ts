@@ -88,6 +88,15 @@ export default class Headless extends Vue {
     protected step8active = false;
 
     protected next1(){
+        this.answers = {
+            picks : [],
+            sporty : 50, //out of 100
+            price : 3500, 
+            height : 0,
+            commute : [],
+            comfort : "",
+            fun : 50, //out of 100
+        }
         this.step1Done = true;
         this.step1active = false;
         this.step2active = true;
@@ -147,5 +156,7 @@ export default class Headless extends Vue {
         this.step6active = false;
         this.step7active = false;
         this.step8active = false;
+
+        this.next1();
     }
 }

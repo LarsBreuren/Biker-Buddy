@@ -5,10 +5,6 @@
   @apply p-4;
   @apply py-32;
   @apply rounded-md;
-  @apply relative;
-  @apply flex;
-  @apply justify-between;
-  @apply text-left;
 }
 .stepWrapper{
   width: 95%; 
@@ -157,17 +153,76 @@
 }
 
 @screen sm{
-  .stepWrapper{
-    @apply w-1/3; 
-    @apply px-64;
-    @apply p-32;
-  }
-  .detailProgress{ 
-  .progressWrapper{
-    @apply w-1/3; 
+    .stepWrapper{
+      @apply w-1/3; 
+      @apply px-64;
+      @apply p-32;
+    }
+    .detailProgress{ 
+    .progressWrapper{
+      @apply w-1/3; 
+    }
   }
 }
+
+.profileContainer{
+
+  .scoreBars{
+    @apply p-16; 
+
+    .barText{
+      color: #fff;
+      font-family: 'Bebas Neue', cursive;
+      @apply text-left;
+    }
+
+    .barContainer{
+      @apply bg-black-500;
+      @apply mb-16;
+  
+    .bar{
+      @apply flex;
+      @apply items-center;
+      @apply px-4;
+      height: 30px; 
+      @apply bg-white;
+      transition: 500ms;
+      transition-timing-function: cubic-bezier(.53,.92,.74,1.01);
+
+      }
+    }
+  }
+  .line:nth-child(odd){
+    @apply bg-black-500;
+  }
+
+  .line{
+    @apply flex; 
+    @apply w-full;
+    @apply justify-between;
+    @apply text-center;
+
+    .child{
+      @apply w-1/2;
+      @apply my-8;
+      }
+      .infoList{
+        li:last-child .plus{
+          display: none;
+        }
+    }
+  }
 }
+
+@screen sm{
+
+}
+@screen md{
+
+}
+@screen lg {
+
+  }
 @screen md{
 
 }

@@ -128,7 +128,7 @@
             <label for="yes"></label>
           </div>
           <div class="option">
-            <input type="radio" id="no"  name="comfort" value="false" v-model.trim="answers.comfort">
+            <input type="radio" id="no"  name="comfort" value="nee" v-model.trim="answers.comfort">
             <p class="labelText">Nee</p>
                   <v-icon size="35" class="labelIcon">mdi-road-variant</v-icon>
             <label for="no"></label>
@@ -156,8 +156,81 @@
       </div>
     </div>
     <div class="preferences" v-if="answersDone">
-      Dit heb jij allemaal gekozen!<br>
-      {{answers}}
+      <h2>Dit heb jij allemaal gekozen!</h2>
+
+            <div class="profileContainer">
+        <div class="details">
+
+          <div class="line">
+            <div class="child">
+              Motortype:
+            </div>
+            <ul class="child infoList">
+              <li class="" v-for="(value) in answers.picks" :key="value.id">
+                {{ value }} <span class="plus">+</span></li>
+            </ul>
+          </div>
+
+          <div class="line">
+            <div class="child">
+              Sportief
+            </div>
+            <div class="child">
+              {{answers.sporty}}%
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="child">
+              Prijs:
+            </div>
+            <div class="child">
+              {{answers.price}},-
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="child">
+              lengte:
+            </div>
+            <div class="child">
+              {{answers.height}}
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="child">
+              Gebruik:
+            </div>
+            <ul class="child infoList">
+              <li class="" v-for="(value) in answers.commute" :key="value.id">
+                {{ value }} <span class="plus">+</span></li>
+            </ul>
+          </div>
+
+          <div class="line">
+            <div class="child">
+              Comfort:
+            </div>
+            <div class="child">
+              {{answers.comfort}}
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="child">
+                 Speelsheid: 
+            </div>
+            <div class="child">
+             {{answers.fun}}%
+            </div>
+          </div>
+
+        </div>
+      </div>
+          <div class="ctaButton my-16" @click="resetSteps">
+          Opnieuw
+        </div>
     </div>
 
   </div>
