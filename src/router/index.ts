@@ -36,6 +36,12 @@ const routes: Array<RouteConfig> = [
     import(/* webpackChunkName: "about" */ "../views/Categories.vue")
   },
   {
+    path: "/bikepicker",
+    name: "BikePicker",
+    component: () =>
+    import(/* webpackChunkName: "about" */ "../views/BikePicker.vue")
+  },
+  {
     path: "/articles/ketting",
     name: "Ketting",
     component: () =>

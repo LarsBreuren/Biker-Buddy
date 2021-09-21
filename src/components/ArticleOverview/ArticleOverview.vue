@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="weekly mx-8" :class="{ centered: showWeekly }">
-      <router-link to="/articles/ketting" class="bannerContainer">
+      <router-link to="/bikepicker" class="bannerContainer">
           <img class="bannerImg" :src="weekly.banner" />
           <div class="bannerOverlay"></div>
           <div v-if="showWeeklyText" class="bannerContent">
