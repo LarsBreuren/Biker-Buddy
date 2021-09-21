@@ -64,7 +64,7 @@
     }
   }
 
-  .step5{
+  .step5,.step6, .step7{
     @apply w-2/3;
     @apply mx-auto;
     .option{
@@ -104,6 +104,10 @@
       input{ display: none;}
 
       input[type=radio]:checked + .labelText, input[type=radio]:checked + .labelText + .labelIcon {
+        @apply text-yellow;
+        font-weight: bold;
+      }
+      input[type=checkbox]:checked + .labelText, input[type=checkbox]:checked + .labelText + .labelIcon {
         @apply text-yellow;
         font-weight: bold;
       }

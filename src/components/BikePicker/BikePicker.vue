@@ -94,6 +94,53 @@
         </button>
 
       </div>
+      <div class="step6 text-center" v-if="step6active">
+        <h2> Waarvoor ga je de motor gebruiken?</h2>
+        <p class="subtitle"> Meerdere opties mogelijk </p>
+          <div class="optionContainer">
+          <div class="option">
+            <input type="checkbox" id="commute" name="commute" value="commute" v-model.trim="answers.commute">
+            <p class="labelText">Woon-werkverker</p>
+                  <v-icon size="25" class="labelIcon">mdi-account-hard-hat</v-icon>
+            <label for="commute"></label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="hobby"  name="commute" value="hobby" v-model.trim="answers.commute">
+            <p class="labelText">Hobby</p>
+                  <v-icon size="35" class="labelIcon">mdi-road-variant</v-icon>
+            <label for="hobby"></label>
+          </div>
+        </div>
+        <button  class="ctaNext ctaButton"
+        :disabled='answers.commute == ""'
+          @click="next6">
+          <span v-if="answers.commute == ''"> Kies er minimaal één</span>
+          <span v-else> Volgende stap</span>
+        </button>
+      </div>
+      <div class="step7 text-center" v-if="step7active">
+        <h2> Hecht je waarde aan comfort?</h2>
+          <div class="optionContainer">
+          <div class="option">
+            <input type="radio" id="yes" name="comfort" value="ja" v-model.trim="answers.comfort">
+            <p class="labelText">Ja</p>
+                  <v-icon size="25" class="labelIcon">mdi-account-hard-hat</v-icon>
+            <label for="yes"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="no"  name="comfort" value="false" v-model.trim="answers.comfort">
+            <p class="labelText">Nee</p>
+                  <v-icon size="35" class="labelIcon">mdi-road-variant</v-icon>
+            <label for="no"></label>
+          </div>
+        </div>
+        <button  class="ctaNext ctaButton"
+        :disabled='answers.comfort == ""'
+          @click="next7">
+          <span v-if="answers.commute == ''"> Maak een keuze</span>
+          <span v-else> Volgende stap</span>
+        </button>
+      </div>
     </div>
 
   </div>

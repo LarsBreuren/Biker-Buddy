@@ -59,7 +59,7 @@ export default class Headless extends Vue {
         price : 3500,
         height : 0,
         commute : [],
-        comfort : 0,
+        comfort : "",
         fun : 0,
     }
     
