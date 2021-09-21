@@ -3,21 +3,32 @@
   @apply mx-auto;
   @apply bg-black-600;
   @apply p-4;
+  @apply py-32;
   @apply rounded-md;
   @apply relative;
   @apply flex;
   @apply justify-between;
   @apply text-left;
 
+  h2{
+    @apply text-3xl;
+    @apply mb-8;
+  }
+
   .ctaNext{
     @apply mx-auto;
     @apply block;
     width: 200px;
     @apply text-center;
+    @apply mt-16;
   }
   .optionContainer{
     @apply flex;
     flex-wrap: wrap;
+
+    .picked{
+      border: 2px solid #f4e216;
+    }
 
     .option{
       width: calc(50% - 10px);
@@ -30,7 +41,7 @@
       img{
         height: 120px;
         object-fit: cover;
-        background-position: center;;
+        background-position: center;
       }
       :hover{
         cursor: pointer;
@@ -50,11 +61,26 @@
 
       input{ display: none;}
 
-      input[type=checkbox]:checked + .labelText, input[type=checkbox]:checked + .labelText + .labelIcon {
-        @apply text-yellow;
-        font-weight: bold;
-      }
+    }
+  }
 
+  .rangeContainer{
+    @apply flex;
+    @apply justify-between;
+    .rangeLabel{
+      width: 20%;
+    }
+    input{ 
+      width: 60%;
+    }
+  }
+  .priceContainer{
+    @apply w-1/2;
+    @apply mx-auto;
+    @apply text-center;
+
+    input{
+      @apply w-full;
     }
   }
 }
