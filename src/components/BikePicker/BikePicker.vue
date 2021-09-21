@@ -17,7 +17,7 @@
         <h2> Kies 3 motoren</h2>
          <div class="optionContainer">
 
-          <div class="option" v-for="category in bikeCats" :key="category.id" @click="e => e.target.classList.toggle('picked')">
+          <div class="bike" v-for="category in bikeCats" :key="category.id" @click="e => e.target.classList.toggle('picked')">
               <label :for="category.name"></label> 
               <input type="checkbox" :id="category.name" :value="category.name" v-model.trim="answers.picks">
             <img class="bannerImg" :src="category.imgLink" />
@@ -50,7 +50,7 @@
         </button>
 
       </div>
-      <div class="step3 text-center w-full" v-if="step4active">
+      <div class="step4 text-center w-full" v-if="step4active">
         <h2> Maximaal bedrag</h2>
           <div class="priceContainer">
             <input v-model="answers.price" type="range" id="volume" name="volume"
@@ -58,7 +58,38 @@
             <input v-model="answers.price" type="number">
           </div>
         <button class="ctaNext ctaButton"
-          @click="next3">
+          @click="next4">
+          Volgende stap
+        </button>
+
+      </div>
+      <div class="step5 text-center" v-if="step5active">
+        <h2> Hoe groot ben je?</h2>
+
+          <div class="optionContainer">
+          <div class="option">
+            <input type="radio" id="small" name="height" value="small" v-model.trim="answers.height">
+            <p class="labelText">150-169cm</p>
+                  <v-icon size="25" class="labelIcon">mdi-human</v-icon>
+            <label for="small"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="medium"  name="height" value="medium" v-model.trim="answers.height">
+            <p class="labelText">170-185cm</p>
+                  <v-icon size="35" class="labelIcon">mdi-human</v-icon>
+            <label for="medium"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="large" name="height" value="large" v-model.trim="answers.height">
+                   <p class="labelText">185+ cm</p>
+                  <v-icon size="40" class="labelIcon">mdi-human</v-icon>
+            <label for="large"></label>
+          </div>
+        </div>
+
+        <button  class="ctaNext ctaButton"
+        :disabled='answers.height == 0'
+          @click="next5">
           Volgende stap
         </button>
 
