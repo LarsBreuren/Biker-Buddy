@@ -67,10 +67,3 @@
 
 <style scoped lang="scss" src="@/components/ArticleOverview/articleOverview.scss"></style>
 <script src="@/components/ArticleOverview/articleOverview.ts"></script>
-
-<!-- <ul id="example-1 ">
-          <li v-for="prio in this.$store.state.prio" :key="prio">
-            Artikel: {{ prio }} coming soon..
-          </li>
-        </ul>
-        -->
