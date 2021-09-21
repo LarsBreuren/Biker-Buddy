@@ -6,7 +6,7 @@
           ">mdi-menu-left</v-icon> -->
       <div v-if="step1active" class="step1 p-8">
         <h1> Motor keuzehulp </h1>
-        <p> Om jou aan de perfect motor te helpen volgen een paar vragen of jou (toekomstige) rijstijl.</p>
+        <p> Om jou aan de perfect motor te helpen volgen een paar vragen over jou (toekomstige) rijstijl.</p>
         <button button  class="mt-32 ctaNext ctaButton"
           @click="next1">
           begin!
@@ -55,7 +55,7 @@
           <div class="priceContainer">
             <input v-model="answers.price" type="range" id="volume" name="volume"
             min="1000" max="50000">
-            <input v-model="answers.price" type="number">
+            <input v-model="answers.price" type="number" min="1000">
           </div>
         <button class="ctaNext ctaButton"
           @click="next4">

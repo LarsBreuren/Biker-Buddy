@@ -31,7 +31,8 @@
 
 <style scoped>
 .backgroundDetails{
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     background-image: url('../assets/images/features/bgdetails.jpg');
     background-size: cover;
 }
