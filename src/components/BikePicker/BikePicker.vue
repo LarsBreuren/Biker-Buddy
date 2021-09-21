@@ -54,7 +54,7 @@
         <h2> Maximaal bedrag</h2>
           <div class="priceContainer">
             <input v-model="answers.price" type="range" id="volume" name="volume"
-            min="0" max="50000">
+            min="1000" max="50000">
             <input v-model="answers.price" type="number">
           </div>
         <button class="ctaNext ctaButton"
@@ -141,6 +141,23 @@
           <span v-else> Volgende stap</span>
         </button>
       </div>
+      <div class="step8 text-center w-full" v-if="step8active">
+        <h2> Speelse of serieuze motor?</h2>
+        <div class="rangeContainer mb-32">
+          <div class="rangeLabel"><p> Serieuze </p></div>
+          <input v-model="answers.fun" type="range" id="volume" name="volume"
+          min="0" max="100">
+          <div class="rangeLabel"><p> Speelse </p></div>
+        </div>
+        <button class="ctaNext ctaButton"
+          @click="next8">
+          Afronden
+        </button>
+      </div>
+    </div>
+    <div class="preferences" v-if="answersDone">
+      Dit heb jij allemaal gekozen!<br>
+      {{answers}}
     </div>
 
   </div>

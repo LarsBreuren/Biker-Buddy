@@ -55,12 +55,12 @@ export default class Headless extends Vue {
 
     protected answers = {
         picks : [],
-        sporty : 50,
-        price : 3500,
+        sporty : 50, //out of 100
+        price : 3500, 
         height : 0,
         commute : [],
         comfort : "",
-        fun : 0,
+        fun : 50, //out of 100
     }
     
     protected pickedBikes = [];
@@ -76,6 +76,7 @@ export default class Headless extends Vue {
     protected step5Done = false;
     protected step6Done = false;
     protected step7Done = false;
+    protected step8Done = false;
 
     protected step1active = true;
     protected step2active = false;
@@ -84,6 +85,7 @@ export default class Headless extends Vue {
     protected step5active = false;
     protected step6active = false;
     protected step7active = false;
+    protected step8active = false;
 
     protected next1(){
         this.step1Done = true;
@@ -118,6 +120,11 @@ export default class Headless extends Vue {
     protected next7(){
         this.step7Done = true;
         this.step7active = false;
+        this.step8active = true;
+    }
+    protected next8(){
+        this.step7Done = true;
+        this.step7active = false;
         this.answersDone = true;
     }
 
@@ -129,6 +136,7 @@ export default class Headless extends Vue {
         this.step5Done = false;
         this.step6Done = false;
         this.step7Done = false;
+        this.step8Done = false;
         this.answersDone = false;
     
         this.step1active = true;
@@ -138,5 +146,6 @@ export default class Headless extends Vue {
         this.step5active = false;
         this.step6active = false;
         this.step7active = false;
+        this.step8active = false;
     }
 }

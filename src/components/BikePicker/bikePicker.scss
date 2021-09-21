@@ -1,3 +1,15 @@
+.preferences{
+  width: 95%; 
+  @apply mx-auto;
+  @apply bg-black-600;
+  @apply p-4;
+  @apply py-32;
+  @apply rounded-md;
+  @apply relative;
+  @apply flex;
+  @apply justify-between;
+  @apply text-left;
+}
 .stepWrapper{
   width: 95%; 
   @apply mx-auto;
