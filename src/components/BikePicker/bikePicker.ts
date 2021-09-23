@@ -17,6 +17,7 @@ export default class Headless extends Vue {
         commute : this.$store.state.driverPrefs.commute,
         comfort : "",
         fun : 50, //out of 100
+        offroad: "",
     }
 
     protected bikeScores = {
@@ -40,6 +41,8 @@ export default class Headless extends Vue {
         this.calculateComfort();
 
         this.calculateFun();
+
+        this.calculateOffroad();
 
     }
 
@@ -134,28 +137,39 @@ export default class Headless extends Vue {
 
     protected calculateFun(){
             if ( this.answers.fun < 40){
-                console.log('funfactor 1')
                 this.bikeScores.Scrambler += 30;
                 this.bikeScores.Tourbike += 20;
                 this.bikeScores.Naked += 15;
                 this.bikeScores.Adventure += 15;
             }
             else if ( this.answers.fun < 80){
-                console.log('funfactor 2')
                 this.bikeScores.Naked += 30;
                 this.bikeScores.Adventure += 20;
                 this.bikeScores.Sportbike += 15;
                 this.bikeScores.Supermoto += 15;
             }
             else if ( this.answers.fun < 90){
-                console.log('funfactor 3')
                 this.bikeScores.Sportbike += 30;
                 this.bikeScores.Supermoto += 20;
             }
             else if ( this.answers.fun >= 90){
-                console.log('funfactor 4')
                 this.bikeScores.Supermoto += 50;
                 this.bikeScores.Sportbike += 25;
+        }
+    }
+
+    protected calculateOffroad(){
+        if (this.answers.offroad as any == 'ja'){
+            this.bikeScores.Adventure += 30;
+            this.bikeScores.Scrambler += 25;
+            this.bikeScores.Supermoto += 15;
+        }
+        else if (this.answers.offroad as any == 'nee'){
+
+            this.bikeScores.Naked += 20;
+            this.bikeScores.Sportbike += 20;
+            this.bikeScores.Scrambler += 15;
+            this.bikeScores.Tourbike += 15;
         }
     }
 
@@ -217,6 +231,7 @@ export default class Headless extends Vue {
     protected step6Done = false;
     protected step7Done = false;
     protected step8Done = false;
+    protected step9Done = false;
 
     protected step1active = true;
     protected step2active = false;
@@ -226,6 +241,7 @@ export default class Headless extends Vue {
     protected step6active = false;
     protected step7active = false;
     protected step8active = false;
+    protected step9active = false;
 
     protected next1(){
         this.step1Done = true;
@@ -263,35 +279,20 @@ export default class Headless extends Vue {
         this.step8active = true;
     }
     protected next8(){
-
+        this.step8Done = true;
+        this.step8active = false;
+        this.step9active = true;
+    }
+    protected next9(){
         this.$store.commit('updatedriverBikePref', this.answers)
         this.calculatePerfectBike();
 
-        this.step7Done = true;
-        this.step7active = false;
+        this.step9Done = true;
+        this.step9active = false;
         this.answersDone = true;
     }
 
     protected resetSteps(){
-        this.step1Done = false;
-        this.step2Done = false;
-        this.step3Done = false;
-        this.step4Done = false;
-        this.step5Done = false;
-        this.step6Done = false;
-        this.step7Done = false;
-        this.step8Done = false;
-        this.answersDone = false;
-    
-        this.step1active = true;
-        this.step2active = false;
-        this.step3active = false;
-        this.step4active = false;
-        this.step5active = false;
-        this.step6active = false;
-        this.step7active = false;
-        this.step8active = false;
-
-        this.next1();
+        window.location.reload()
     }
 }

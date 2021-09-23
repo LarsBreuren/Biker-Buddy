@@ -30,6 +30,7 @@ export default new Vuex.Store({
       commute : [],
       comfort : "",
       fun : 50, 
+      offroad: "",
   },
   articles: {
     onderhoudArtikelen : [

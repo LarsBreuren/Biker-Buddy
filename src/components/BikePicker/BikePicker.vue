@@ -118,6 +118,7 @@
           <span v-else> Volgende stap</span>
         </button>
       </div>
+      
       <div class="step7 text-center" v-if="step7active">
         <h2> Hecht je waarde aan comfort?</h2>
           <div class="optionContainer">
@@ -141,6 +142,7 @@
           <span v-else> Volgende stap</span>
         </button>
       </div>
+
       <div class="step8 text-center w-full" v-if="step8active">
         <h2> Speelse of serieuze motor?</h2>
         <div class="rangeContainer mb-32">
@@ -151,10 +153,38 @@
         </div>
         <button class="ctaNext ctaButton"
           @click="next8">
-          Afronden
+          Volgende stap
         </button>
       </div>
+
+      <div class="step9 text-center" v-if="step9active">
+        <h2> Wil je ook offroad rijden?</h2>
+          <div class="optionContainer">
+          <div class="option">
+            <input type="radio" id="yes" name="offroad" value="ja" v-model.trim="answers.offroad">
+            <p class="labelText">Jazeker!</p>
+                  <v-icon size="25" class="labelIcon">mdi-image-filter-hdr</v-icon>
+            <label for="yes"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="no"  name="offroad" value="nee" v-model.trim="answers.offroad">
+            <p class="labelText">Zeker niet</p>
+                  <v-icon size="35" class="labelIcon">mdi-road-variant</v-icon>
+            <label for="no"></label>
+          </div>
+        </div>
+        <button  class="ctaNext ctaButton"
+        :disabled='answers.offroad == ""'
+          @click="next9">
+          <span v-if="answers.commute == ''"> Maak een keuze</span>
+          <span v-else> Afronden</span>
+        </button>
+      </div>
+
     </div>
+
+
+
     <div class="preferences" v-if="answersDone">
       <h2>Dit heb jij allemaal gekozen!</h2>
 
@@ -223,6 +253,15 @@
             </div>
             <div class="child">
              {{answers.fun}}%
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="child">
+                 Offroad
+            </div>
+            <div class="child">
+             {{answers.offroad}}
             </div>
           </div>
 

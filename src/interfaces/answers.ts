@@ -7,4 +7,5 @@ export default interface answers {
   commute: [string, string];
   comfort : "";
   fun: number;
+  offroad: "";
 }
