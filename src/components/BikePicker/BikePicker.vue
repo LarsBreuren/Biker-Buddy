@@ -267,9 +267,9 @@
 
         </div>
       </div>
-          <div class="ctaButton my-16" @click="resetSteps">
-          Opnieuw
-        </div>
+          <router-link to="/perfectBike" class="ctaButton my-16">
+          Bekijk gekozen motoren
+        </router-link>
     </div>
 
   </div>

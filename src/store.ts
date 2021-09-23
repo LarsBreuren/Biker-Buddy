@@ -32,6 +32,58 @@ export default new Vuex.Store({
       fun : 50, 
       offroad: "",
   },
+  perfectBike: {
+    Sportbike : 0,
+    Tourbike : 0,
+    Scrambler : 0,
+    Naked : 0,
+    Supermoto : 0,
+    Adventure : 0,
+  },
+  pickedBikes: {
+    bike1: "",
+    bike2: "",
+    bike3: "",
+  },
+
+  bikeCats: [
+    {
+        id: 0,
+        name: "Sportbike",
+        imgLink: require('./assets/images/bikes/sportbike.jpg'),
+        description: "License loser",
+    },
+    {
+        id: 1,
+        name: "Tourbike",
+        imgLink: require('./assets/images/bikes/touring.jpg'),
+        description: "Rustig rijden & genieten",
+    },
+    {
+        id: 2,
+        name: "Scrambler",
+        imgLink: require('./assets/images/bikes/scrambler.jpg'),
+        description: "Off and on road fun",
+    },
+    {
+        id: 3,
+        name: "Naked",
+        imgLink: require('./assets/images/bikes/naked.jpg'),
+        description: "Één met de elementen",
+    },
+    {
+        id: 4,
+        name: "Supermoto",
+        imgLink: require('./assets/images/bikes/supermoto.jpg'),
+        description: "BRAAAAAP",
+    },
+    {
+        id: 5,
+        name: "Adventure",
+        imgLink: require('./assets/images/bikes/adventure.jpg'),
+        description: "Op avontuur met de motor!",
+    },
+],
   articles: {
     onderhoudArtikelen : [
       {
@@ -151,6 +203,12 @@ export default new Vuex.Store({
     },
     updatedriverBikePref (state, bikePrefs) {
       state.driverPrefs = bikePrefs
+    },
+    updatePerfectBike (state, bikeScores) {
+      state.perfectBike = bikeScores
+    },
+    updatePickedBike (state, pickedBikes) {
+      state.pickedBikes = pickedBikes
     },
     updatedriverScore (state, driverScore) {
       state.driverScore = driverScore

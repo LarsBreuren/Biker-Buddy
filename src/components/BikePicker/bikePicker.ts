@@ -20,6 +20,12 @@ export default class Headless extends Vue {
         offroad: "",
     }
 
+    protected pickedBikes = {
+        bike1: "",
+        bike2: "",
+        bike3: "",
+    }
+
     protected bikeScores = {
         Sportbike : 0,
         Tourbike : 0,
@@ -28,22 +34,50 @@ export default class Headless extends Vue {
         Supermoto : 0,
         Adventure : 0,
     }
+
+    protected bikeScoresSorted= [] as any; //array
+    protected bikeScoresSortedReverse = [] as any; //array
+    protected bikeScoresSortedObject = {} as any; //obj
+
+    protected sortScore(){
+        for (const item in this.bikeScores) {
+            this.bikeScoresSorted.push([item, this.bikeScores[item]]);
+        }
+        this.bikeScoresSorted.sort(function(a, b) {
+            return a[1] - b[1];
+        });
+
+        this.reverseScore()
+
+        this.bikeScoresSorted.forEach((item) =>{
+            this.bikeScoresSortedObject[item[0]]=item[1]
+        })
+
+        this.pickedBikes.bike1 = Object.keys(this.bikeScoresSortedObject)[0]; 
+        this.pickedBikes.bike2 = Object.keys(this.bikeScoresSortedObject)[1]; 
+        this.pickedBikes.bike3 = Object.keys(this.bikeScoresSortedObject)[2]; 
+
+     }
+
+     protected reverseScore(){
+        this.bikeScoresSortedReverse = this.bikeScoresSorted.reverse();
+    }
+
+   protected bikeCats = this.$store.state.bikeCats;
+
     protected calculatePerfectBike(){
-
         this.calculatePreferences();
-
         this.calculateSporty();
-
         this.calculateSize();
-
         this.calculateCommute();
-
         this.calculateComfort();
-
         this.calculateFun();
-
         this.calculateOffroad();
 
+        this.sortScore();
+
+        this.$store.commit('updatePerfectBike', this.bikeScoresSortedObject);
+        this.$store.commit('updatePickedBike', this.pickedBikes);
     }
 
     protected calculatePreferences(){
@@ -174,50 +208,6 @@ export default class Headless extends Vue {
     }
 
 
- 
-
-    protected bikeCats = [
-        {
-            id: 0,
-            name: "Sport",
-            imgLink: require('../../assets/images/bikes/sportBike.jpg'),
-            description: "Snelle sportieve motoren",
-        },
-        {
-            id: 1,
-            name: "Tour",
-            imgLink: require('../../assets/images/bikes/touring.jpg'),
-            description: "Rustig rijden & genieten",
-        },
-        {
-            id: 2,
-            name: "Scrambler",
-            imgLink: require('../../assets/images/bikes/scrambler.jpg'),
-            description: "Off and on road fun",
-        },
-        {
-            id: 3,
-            name: "Naked",
-            imgLink: require('../../assets/images/bikes/naked.jpg'),
-            description: "Één met de elementen",
-        },
-        {
-            id: 4,
-            name: "SuperMoto",
-            imgLink: require('../../assets/images/bikes/superMoto.jpg'),
-            description: "BRAAAAAP",
-        },
-        {
-            id: 5,
-            name: "Adventure",
-            imgLink: require('../../assets/images/bikes/adventure.jpg'),
-            description: "Op avontuur met de motor!",
-        },
-    ]
-
-
-    
-    protected pickedBikes = [];
 
     // protected calculateScores(){
     // }

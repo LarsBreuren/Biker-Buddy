@@ -42,6 +42,12 @@ const routes: Array<RouteConfig> = [
     import(/* webpackChunkName: "about" */ "../views/BikePicker.vue")
   },
   {
+    path: "/perfectBike",
+    name: "PerfectBike",
+    component: () =>
+    import(/* webpackChunkName: "about" */ "../views/perfectBike.vue")
+  },
+  {
     path: "/articles/ketting",
     name: "Ketting",
     component: () =>
