@@ -22,6 +22,15 @@ export default new Vuex.Store({
     prio2: "",
     prio3: "",
   },
+  driverPrefs: {
+      picks : [],
+      sporty : 50,
+      price : 3500, 
+      height: "",
+      commute : [],
+      comfort : "",
+      fun : 50, 
+  },
   articles: {
     onderhoudArtikelen : [
       {
@@ -138,6 +147,9 @@ export default new Vuex.Store({
   mutations: {
     updatedriverInfo (state, driverInfo) {
       state.driverInfo = driverInfo
+    },
+    updatedriverBikePref (state, bikePrefs) {
+      state.driverPrefs = bikePrefs
     },
     updatedriverScore (state, driverScore) {
       state.driverScore = driverScore

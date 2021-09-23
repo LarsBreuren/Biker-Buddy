@@ -14,7 +14,7 @@
       </div>
 
       <div class="step2 text-center" v-if="step2active">
-        <h2> Kies 3 motoren</h2>
+        <h2> Kies de 3 mooiste motoren</h2> 
          <div class="optionContainer">
 
           <div class="bike" v-for="category in bikeCats" :key="category.id" @click="e => e.target.classList.toggle('picked')">
