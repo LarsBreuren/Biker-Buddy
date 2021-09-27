@@ -6,7 +6,7 @@
 
       <div v-if="title">
         <div class="article" v-for="article in currentCats" :key="article.id">
-        <router-link to="/articles/ketting" class="bannerContainer"> 
+        <div @click="setArticle(article.title, article.category)" class="bannerContainer">
             <img class="bannerImg" :src="article.banner" />
             <div class="bannerOverlay"></div>
             <div class="bannerIcon">
@@ -18,7 +18,7 @@
             <div class="bannerContent">
               <div class="bannerTitle">{{ article.title }}</div>
             </div>
-          </router-link>
+          </div>
         </div>
       </div>
 

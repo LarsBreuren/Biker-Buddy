@@ -16,7 +16,7 @@
         :blackWhite="false" /> 
 
       <p class="text-m "> Teksten afkomstig van <a class="text-yellow" target="_blank"
-          :href="article.sourceLink">{{source}} {{ article.source }}</a></p>
+          :href="article.sourceLink">{{ article.source }}</a></p>
     </div>
   </div>
 </template>

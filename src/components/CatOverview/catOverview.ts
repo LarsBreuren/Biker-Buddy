@@ -1,3 +1,4 @@
+import router from "@/router";
 import { Component, Vue } from "vue-property-decorator";
 import Profile from "../LicenseProfile/LicenseProfile.vue";
 
@@ -24,6 +25,12 @@ export default class Headless extends Vue {
     } else{
       return false;
     }
+  }
+
+  protected setArticle(article, category){
+    this.$store.commit('updateCurrentArticle', article);
+    this.$store.commit('updatecurrentCategory', category);
+    router.push({ path: '/article' })
   }
 
   protected currentCats = [{
