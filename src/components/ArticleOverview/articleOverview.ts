@@ -1,11 +1,10 @@
+import router from "@/router";
 import { Component, Vue } from "vue-property-decorator";
 import Profile from "../LicenseProfile/LicenseProfile.vue";
-import Remmen from "@/components/Articles/Rijvaardigheid/Rijvaardigheid-Remmen/Remmen.vue";
 
 @Component({
     components: {
         Profile,
-        Remmen,
       }
 })
 
@@ -44,6 +43,12 @@ protected showWeeklyText = false;
 
   protected getRandomArticle(categoryName){
     return this.$store.state.articles[categoryName][Math.floor(Math.random()*this.$store.state.articles[categoryName].length)];
+  }
+
+  protected setArticle(article, category){
+    this.$store.commit('updateCurrentArticle', article);
+    this.$store.commit('updatecurrentCategory', category);
+    router.push({ path: '/article' })
   }
 
   protected delay1() {

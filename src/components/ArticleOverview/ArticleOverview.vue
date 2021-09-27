@@ -1,9 +1,8 @@
 <template>
   <div class="container">
     <div class="articles">
-
       <div class="mainArticle mx-8" :class="{ centered: showArtikel1 }">
-      <router-link to="/articles/ketting" class="bannerContainer"> 
+      <div @click="setArticle(artikel1.id, artikel1.category)" class="bannerContainer"> 
           <img class="bannerImg" :src="artikel1.banner" />
           <div class="bannerOverlay"></div>
           <div v-if="showArtikel2" class="bannerIcon">
@@ -15,11 +14,11 @@
           <div v-if="showArtikel2" class="bannerContent">
             <div class="bannerTitle">{{ artikel1.title }}</div>
           </div>
-        </router-link>
+        </div>
       </div>
       <div class="flex">
         <div class="secondArticle" :class="{ centered: showArtikel2 }">
-        <router-link to="/articles/ketting" class="bannerContainer">
+        <div @click="setArticle(artikel2.id, artikel2.category)" class="bannerContainer">
             <img class="bannerImg" :src="artikel2.banner" />
             <div class="bannerOverlay"></div>
             <div v-if="showWeekly" class="articleIcon">
@@ -29,10 +28,10 @@
                   ">mdi-{{ artikel2.icon}}</v-icon>
             </div>
               <div v-if="showWeekly"  class="bannerTitle">{{ artikel2.title }}</div>
-          </router-link>
+          </div>
         </div>
         <div  class="thirdArticle" :class="{ centered: showArtikel3 }">
-        <router-link to="/articles/ketting" class="bannerContainer">
+        <div @click="setArticle(artikel3.id, artikel3.category)" class="bannerContainer">
             <img class="bannerImg" :src="artikel3.banner" />
             <div class="bannerOverlay"></div>
             <div class="articleIcon">
@@ -42,7 +41,7 @@
                   ">mdi-{{ artikel3.icon}}</v-icon>
             </div>
       <div v-if="showWeekly"  class="bannerTitle">{{ artikel3.title }}</div>
-          </router-link>
+          </div>
         </div>
       </div>
       <div class="weekly mx-8" :class="{ centered: showWeekly }">

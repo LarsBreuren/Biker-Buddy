@@ -4,6 +4,8 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
+    currentArticle : "",
+    currentCategory : "",
     driverInfo: {
       Voornaam: "",
       Leeftijd: 0,
@@ -90,33 +92,41 @@ export default new Vuex.Store({
         id: 1,
         title: "ketting smeren als een baas",
         banner:  require('./assets/images//articles/ketting.jpg'),
-        category: "Onderhoud",
+        category: "onderhoudArtikelen",
         icon: 'motorbike',
-        link: '/articles/ketting'
+        link: '/articles/ketting',
+        text1: 'Here is the first alinea',
+        text2: 'Here is the second alinea',
       },
       {
         id: 2,
         title: "DIY Banden checken!",
         banner:  require('./assets/images//articles/banden.jpg'),
-        category: "Rijvaardigheid",
+        category: "onderhoudArtikelen",
         icon: 'hammer-screwdriver',
-        link: '/articles/ketting'
+        link: '/articles/ketting',
+        text1: 'Here is the first alinea',
+        text2: 'Here is the second alinea',
       },
       {
         id: 3,
         title: "ketting smeren als een baas",
         banner:  require('./assets/images//articles/ketting.jpg'),
-        category: "Onderhoud",
+        category: "onderhoudArtikelen",
         icon: 'motorbike',
-        link: '/articles/ketting'
+        link: '/articles/ketting',
+        text1: 'Here is the first alinea',
+        text2: 'Here is the second alinea',
       },
       {
         id: 4,
         title: "DIY Banden checken!",
         banner:  require('./assets/images//articles/banden.jpg'),
-        category: "Rijvaardigheid",
+        category: "onderhoudArtikelen",
         icon: 'hammer-screwdriver',
-        link: '/articles/ketting'
+        link: '/articles/ketting',
+        text1: 'Here is the first alinea',
+        text2: 'Here is the second alinea',
       }
     ],
     rijvaardigheidArtikelen : [
@@ -124,7 +134,7 @@ export default new Vuex.Store({
         id: 1,
         title: "Remmen is angst",
         banner:  require('./assets/images/articles/remmen.jpg'),
-        category: "Rijvaardigheid",
+        category: "rijvaardigheidArtikelen",
         icon: 'road-variant',
         link: '/articles/rijvaardigheid/'
       },
@@ -132,7 +142,7 @@ export default new Vuex.Store({
         id: 2,
         title: "Circuit ballerina",
         banner:  require('./assets/images/articles/circuit.jpg'),
-        category: "Rijvaardigheid",
+        category: "rijvaardigheidArtikelen",
         icon: 'flag-checkered',
         link: '/articles/rijvaardigheid/'
       }
@@ -142,15 +152,15 @@ export default new Vuex.Store({
         id: 1,
         title: "Helm kiezen",
         banner:  require('./assets/images/articles/helm.jpg'),
-        category: "Advies",
+        category: "adviesArtikelen",
         icon: 'racing-helmet',
         link: '/articles/advies/'
       },
       {
-        id: 1,
+        id: 2,
         title: "ATGAT??",
         banner:  require('./assets/images/articles/atgat.jpg'),
-        category: "Advies",
+        category: "adviesArtikelen",
         icon: 'racing-helmet',
         link: '/articles/advies/'
       }
@@ -160,15 +170,15 @@ export default new Vuex.Store({
         id: 1,
         title: "AVB pro tips",
         banner:  require('./assets/images/articles/rijbewijs.jpg'),
-        category: "Coaching",
+        category: "coachingArtikelen",
         icon: 'alpha-l-box',
         link: '/articles/coaching/'
       },
       {
-        id: 1,
+        id: 2,
         title: "Theorie tricks",
         banner:  require('./assets/images/articles/rijbewijs.jpg'),
-        category: "Coaching",
+        category: "coachingArtikelen",
         icon: 'alpha-l-box',
         link: '/articles/coaching/'
       }
@@ -215,7 +225,13 @@ export default new Vuex.Store({
     },
     updatePrios (state, prio) {
       state.prio = prio
-    }
+    },
+    updateCurrentArticle (state, article) {
+      state.currentArticle = article
+    },
+    updatecurrentCategory(state, category) {
+      state.currentCategory= category
+    },
   },
   actions: {
  

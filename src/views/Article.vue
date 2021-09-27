@@ -13,7 +13,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import Navigation from "@/components/Website/Navigation/Navigation.vue";
 import Footer from "@/components/Website/Footer/Footer.vue";
-import Article from "@/components/Articles/Onderhoud/Ketting/Ketting.vue";
+import Article from "@/components/Articles/Article.vue";
 
 @Component({
   components: {

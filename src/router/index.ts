@@ -48,10 +48,10 @@ const routes: Array<RouteConfig> = [
     import(/* webpackChunkName: "about" */ "../views/perfectBike.vue")
   },
   {
-    path: "/articles/ketting",
-    name: "Ketting",
+    path: "/article",
+    name: "Article",
     component: () =>
-    import(/* webpackChunkName: "about" */ "../views/Ketting.vue")
+    import(/* webpackChunkName: "about" */ "../views/Article.vue")
   },
 
 

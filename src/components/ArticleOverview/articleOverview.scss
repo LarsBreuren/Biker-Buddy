@@ -75,6 +75,7 @@
     }
   }
   .secondArticle, .thirdArticle{
+    display: inline-table;
     @apply w-1/2;
     @apply mx-8;
     height: 180px;
