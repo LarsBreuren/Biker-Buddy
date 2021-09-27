@@ -2,7 +2,7 @@
   <div class="container">
     <div class="articles">
       <div class="mainArticle mx-8" :class="{ centered: showArtikel1 }">
-      <div @click="setArticle(artikel1.id, artikel1.category)" class="bannerContainer"> 
+      <div @click="setArticle(artikel1.title, artikel1.category)" class="bannerContainer"> 
           <img class="bannerImg" :src="artikel1.banner" />
           <div class="bannerOverlay"></div>
           <div v-if="showArtikel2" class="bannerIcon">
@@ -18,7 +18,7 @@
       </div>
       <div class="flex">
         <div class="secondArticle" :class="{ centered: showArtikel2 }">
-        <div @click="setArticle(artikel2.id, artikel2.category)" class="bannerContainer">
+        <div @click="setArticle(artikel2.title, artikel2.category)" class="bannerContainer">
             <img class="bannerImg" :src="artikel2.banner" />
             <div class="bannerOverlay"></div>
             <div v-if="showWeekly" class="articleIcon">
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div  class="thirdArticle" :class="{ centered: showArtikel3 }">
-        <div @click="setArticle(artikel3.id, artikel3.category)" class="bannerContainer">
+        <div @click="setArticle(artikel3.title, artikel3.category)" class="bannerContainer">
             <img class="bannerImg" :src="artikel3.banner" />
             <div class="bannerOverlay"></div>
             <div class="articleIcon">

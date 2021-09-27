@@ -86,20 +86,19 @@ export default new Vuex.Store({
         description: "Op avontuur met de motor!",
     },
 ],
-  articles: {
-    onderhoudArtikelen : [
+  articles: [
       {
-        id: 1,
         title: "ketting smeren als een baas",
         banner:  require('./assets/images//articles/ketting.jpg'),
         category: "onderhoudArtikelen",
         icon: 'motorbike',
         link: '/articles/ketting',
-        text1: 'Here is the first alinea',
+        text1: 'Het onderhoud van de aandrijfketting wordt veelal beschouwd als een vervelende klus. Maar de ketting verdient juist een liefdevolle verzorging. \nZij moet elke dag de enorme koppels aankunnen waarmee de motor aan haar trekt en zij wordt voortdurend blootgesteld aan vocht en vuil. Zij wrijft zich letterlijk stuk voor ons. Bovendien is de kettingaandrijving nog steeds de meest eenvoudige manier om een motor aan te drijven.',
         text2: 'Here is the second alinea',
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/ketting.jpg'),
       },
       {
-        id: 2,
         title: "DIY Banden checken!",
         banner:  require('./assets/images//articles/banden.jpg'),
         category: "onderhoudArtikelen",
@@ -107,9 +106,10 @@ export default new Vuex.Store({
         link: '/articles/ketting',
         text1: 'Here is the first alinea',
         text2: 'Here is the second alinea',
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/ketting.jpg'),
       },
       {
-        id: 3,
         title: "ketting smeren als een baas",
         banner:  require('./assets/images//articles/ketting.jpg'),
         category: "onderhoudArtikelen",
@@ -117,9 +117,10 @@ export default new Vuex.Store({
         link: '/articles/ketting',
         text1: 'Here is the first alinea',
         text2: 'Here is the second alinea',
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/ketting.jpg'),
       },
       {
-        id: 4,
         title: "DIY Banden checken!",
         banner:  require('./assets/images//articles/banden.jpg'),
         category: "onderhoudArtikelen",
@@ -127,65 +128,76 @@ export default new Vuex.Store({
         link: '/articles/ketting',
         text1: 'Here is the first alinea',
         text2: 'Here is the second alinea',
-      }
-    ],
-    rijvaardigheidArtikelen : [
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/ketting.jpg'),
+      },
       {
-        id: 1,
         title: "Remmen is angst",
         banner:  require('./assets/images/articles/remmen.jpg'),
         category: "rijvaardigheidArtikelen",
         icon: 'road-variant',
-        link: '/articles/rijvaardigheid/'
+        link: '/articles/rijvaardigheid/',
+        text1: 'Here is the first alinea',
+        text2: 'Here is the second alinea',
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/ketting.jpg'),
       },
       {
-        id: 2,
         title: "Circuit ballerina",
         banner:  require('./assets/images/articles/circuit.jpg'),
         category: "rijvaardigheidArtikelen",
         icon: 'flag-checkered',
-        link: '/articles/rijvaardigheid/'
-      }
-    ],
-    adviesArtikelen : [
+        link: '/articles/rijvaardigheid/',
+        text1: 'Here is the first alinea',
+        text2: 'Here is the second alinea',
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/ketting.jpg'),
+      },
       {
-        id: 1,
         title: "Helm kiezen",
         banner:  require('./assets/images/articles/helm.jpg'),
         category: "adviesArtikelen",
         icon: 'racing-helmet',
-        link: '/articles/advies/'
+        link: '/articles/advies/',
+        text1: 'Here is the first alinea',
+        text2: 'Here is the second alinea',
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/ketting.jpg'),
       },
       {
-        id: 2,
         title: "ATGAT??",
         banner:  require('./assets/images/articles/atgat.jpg'),
         category: "adviesArtikelen",
         icon: 'racing-helmet',
-        link: '/articles/advies/'
-      }
-    ],
-    coachingArtikelen : [
+        link: '/articles/advies/',
+        text1: 'Here is the first alinea',
+        text2: 'Here is the second alinea',
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/ketting.jpg'),
+      },
       {
-        id: 1,
         title: "AVB pro tips",
         banner:  require('./assets/images/articles/rijbewijs.jpg'),
         category: "coachingArtikelen",
         icon: 'alpha-l-box',
-        link: '/articles/coaching/'
+        link: '/articles/coaching/',
+        text1: 'Here is the first alinea',
+        text2: 'Here is the second alinea',
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/ketting.jpg'),
       },
       {
-        id: 2,
         title: "Theorie tricks",
         banner:  require('./assets/images/articles/rijbewijs.jpg'),
         category: "coachingArtikelen",
         icon: 'alpha-l-box',
-        link: '/articles/coaching/'
-      }
-    ],
-    weeklyArtikelen : [
+        link: '/articles/coaching/',
+        text1: 'Here is the first alinea',
+        text2: 'Here is the second alinea',
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/ketting.jpg'),
+      },
       // {
-      //   id: 1,
       //   title: "KTM Korte Termijn Motor?",
       //   banner:  require('./assets/images//articles/ktm.jpg'),
       //   category: "weekly",
@@ -193,7 +205,6 @@ export default new Vuex.Store({
       //   link: '/articles/onderhoud/'
       // }
       {
-        id: 1,
         title: "Motor keuze hulp",
         banner:  require('./assets/images//articles/keuze.jpg'),
         category: "weekly",
@@ -201,7 +212,6 @@ export default new Vuex.Store({
         link: '/bikepicker'
       }
     ],
-  }
 
   },
   getters: {

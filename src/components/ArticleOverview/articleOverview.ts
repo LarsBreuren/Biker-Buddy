@@ -37,12 +37,13 @@ protected showWeeklyText = false;
       return this.getRandomArticle('coachingArtikelen');
     }
     else if (prio == 'weekly'){
-      return this.getRandomArticle('weeklyArtikelen');
+      return this.getRandomArticle('weekly');
     }
   }
 
   protected getRandomArticle(categoryName){
-    return this.$store.state.articles[categoryName][Math.floor(Math.random()*this.$store.state.articles[categoryName].length)];
+    const matchingCategory = this.$store.state.articles.filter(article => article.category === categoryName);
+    return matchingCategory[Math.floor(Math.random()*matchingCategory.length)];
   }
 
   protected setArticle(article, category){

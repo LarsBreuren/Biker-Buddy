@@ -5,13 +5,13 @@
     <img
       v-if="blackWhite"
       class="imgBlackWhite absolute h-full w-full object-cover z-0"
-      :src="require(`../../assets/images/${imageLink}`)"
+      :src="(`${imageLink}`)"
       alt="Banner background image"
     />
     <img
       v-else
       class="absolute h-full w-full object-cover z-0"
-      :src="require(`../../assets/images/${imageLink}`)"
+      :src="(`${imageLink}`)"
       alt="Banner background image"
     />
     <div class="container md:text-left text-center; relative z-20">

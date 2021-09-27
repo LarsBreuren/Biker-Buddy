@@ -3,17 +3,10 @@
     <a @click="$router.go(-1)" class="back">
       <v-icon size="30" class="text-white">mdi-arrow-left-circle</v-icon>
     </a>
-    <!-- <FullWidthImage v-bind:image-link="imagelink1" text="Ketting smeren als een baas" :overlay="true"
-      :blackWhite="false" /> -->
+    <FullWidthImage v-bind:image-link="article.banner" :text="article.title" :overlay="true"
+      :blackWhite="false" />
     <div class="articleContainer">
-      <!-- <p>test: {{ article.text1}} </p> -->
-      id: {{ articleId }}<br>
-      cat: {{articleCategory}}<br>
-     array: {{grabArray}}
-
-     text1: {{article.id}}
-
-
+      <p>{{ article.text1}} </p>
       <!-- <FullWidthImage style="height: 200px;" class="mb-16" v-bind:image-link="imagelink3"
         text="Je ketting heeft wat te voorduren!" :overlay="true" :blackWhite="false" />
 
@@ -34,8 +27,7 @@
 
 
 // <div class="articleContainer">
-//       <p>Het onderhoud van de aandrijfketting wordt veelal beschouwd als een vervelende klus. Maar de ketting verdient
-//         juist een liefdevolle verzorging. </p>
+//       <p> </p>
 
 //       <p>Zij moet elke dag de enorme koppels aankunnen waarmee de motor aan haar trekt en zij wordt voortdurend
 //         blootgesteld aan vocht en vuil. Zij wrijft zich letterlijk stuk voor ons. Bovendien is de kettingaandrijving nog
