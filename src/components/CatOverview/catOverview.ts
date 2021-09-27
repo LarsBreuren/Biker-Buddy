@@ -15,9 +15,7 @@ export default class Headless extends Vue {
 
   protected changeCat(cat){
      this.title = cat;
-     this.link = "this.$store.state.articles." + cat;
-
-    this.currentCats = eval(this.link)
+    this.currentCats = this.$store.state.articles.filter(article => article.category === cat);
   }
 
   protected checkCat(cat){
