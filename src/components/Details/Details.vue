@@ -18,6 +18,19 @@
         </button>
       </div>
 
+      <div v-if="zeroIntro" class="step1">
+        <h1> Welkom! </h1>
+        <p> Om jou de beste content te bieden worden er zo een paar
+          vragen gesteld om erachter te komen wat voor biker jij bent. 
+          <br><br> Na het invullen van deze vragen krijg je motorartikelen die speciaal voor jou gekozen zijn, gaaf toch!
+        </p>
+
+        <button class="mt-16 ctaNext ctaButton"
+          @click="introDone()">
+          Kom maar door!
+        </button>
+      </div>
+
       <div class="step2 text-center" v-if="step2active">
         <h2 class="text-3xl mb-8"> Rijbewijs en papieren graag </h2>
         <label for="rijbewijs">Welk rijbewijs heb je {{ driverInfo.Voornaam }}?</label><br>
