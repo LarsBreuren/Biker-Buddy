@@ -179,6 +179,19 @@ export default new Vuex.Store({
         sourceLink: "https://mannenstyle.nl/362594/tips-welk-type-motorhelm-kiezen/"
       },
       {
+        title: "Communicatie op de motor",
+        category: "adviesArtikelen",
+        icon: 'account-voice',
+        text1: 'Ben je het beu om steeds ergens te moeten stoppen om iets tegen je mede motorrijder te zeggen? Of om bij het stoplicht snel je zegje te moeten doen? Om die reden is communicatie voor op de motor uitgevonden! Met motor communicatiesystemen kun je heel gemakkelijk met 1 of meerdere andere motorrijders praten tijdens het motorrijden. Er zijn zeer veel verschillende mogelijkheden voor communicatie op de motor, waardoor je al snel door de bomen het bos niet meer ziet. Wij helpen je graag op weg! \n\n WELKE SOORTEN MOTORCOMMUNICATIE ZIJN ER? \n\n Er zijn verschillende soorten motor communicatiesystemen, verschillende motorrijders gebruiken ze namelijk voor verschillende doeleinden. Zo heb je ook motor communicatie voor solo motorrijders. Oké, dit is dan niet echt een motor communicatiesysteem te noemen maar eerder een headset waarmee diegene naar muziek of zijn navigatiesysteem kan luisteren. Je kunt gebruikers van motor communicatie in 4 groepen onderscheiden: \n\n Solo motorrijder \n\n Motorrijder met passagier \n\n Motorrijder die met een andere motorrijder rijdt \n\nMotorrijder die met een groep rijdt \n\n',
+        text2: 'De meesten motorrijders zullen het liefste willen communiceren met een andere motorrijder, dit wordt ook wel bike2bike communicatie genoemd. Overigens kun je met zo’n communicatiesysteem natuurlijk ook met een passagier praten. Bij deze systemen is kwaliteit wat meer van belang, je wilt namelijk niet dat de verbinding opeens verbroken wordt omdat je maatje net te laat was voor het groene verkeerslicht en jij wel bent doorgereden. En mocht het gebeuren dat de verbinding verbroken wordt, dan is het natuurlijk fijn wanneer deze automatisch hersteld wordt wanneer je weer dichter bij elkaar rijdt. \n\n De betere motor communicatiesystemen, zoals die van Cardosystems of Sena, zijn perfect voor bike2bike communicatie. Ze hebben zuiver geluid, een goede range en niet onbelangrijk: ze zijn gebruiksvriendelijk. Een aanrader als je met een andere motorrijder wilt communiceren is onderstaande duo set, de Cardo Freecom 2. Deel je gewoon de kosten met je maatje en dan heb je er allebei een. Zo’n duo set is ook nog eens goedkoper in aanschaf dan een los systeem!',
+        imgText: 'Welke type helm wil je?',
+        banner:  require('./assets/images/articles/communicatie.jpg'),
+        img1:  require('./assets/images//articles/communicatie2.jpg'),
+        img2:  require('./assets/images//articles/communicatie.jpg'),
+        source: 'rijdmotor',
+        sourceLink: "https://rijdmotor.nl/communicatie-op-de-motor/"
+      },
+      {
         title: "ATGAT??",
         category: "adviesArtikelen",
         icon: 'racing-helmet',
