@@ -221,7 +221,6 @@ export default class Headless extends Vue {
     protected step6Done = false;
     protected step7Done = false;
     protected step8Done = false;
-    protected step9Done = false;
 
     protected step1active = true;
     protected step2active = false;
@@ -231,7 +230,6 @@ export default class Headless extends Vue {
     protected step6active = false;
     protected step7active = false;
     protected step8active = false;
-    protected step9active = false;
 
     protected next1(){
         this.step1Done = true;
@@ -269,16 +267,11 @@ export default class Headless extends Vue {
         this.step8active = true;
     }
     protected next8(){
-        this.step8Done = true;
-        this.step8active = false;
-        this.step9active = true;
-    }
-    protected next9(){
         this.$store.commit('updatedriverBikePref', this.answers)
         this.calculatePerfectBike();
 
-        this.step9Done = true;
-        this.step9active = false;
+        this.step8Done = true;
+        this.step8active = false;
         this.answersDone = true;
     }
 

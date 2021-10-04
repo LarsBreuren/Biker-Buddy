@@ -50,20 +50,7 @@
         </button>
 
       </div>
-      <div class="step4 text-center w-full" v-if="step4active">
-        <h2> Maximaal bedrag</h2>
-          <div class="priceContainer">
-            <input v-model="answers.price" type="range" id="volume" name="volume"
-            min="1000" max="50000">
-            <input v-model="answers.price" type="number" min="1000">
-          </div>
-        <button class="ctaNext ctaButton"
-          @click="next4">
-          Volgende stap
-        </button>
-
-      </div>
-      <div class="step5 text-center" v-if="step5active">
+      <div class="step4 text-center" v-if="step4active">
         <h2> Hoe groot ben je?</h2>
 
           <div class="optionContainer">
@@ -89,12 +76,12 @@
 
         <button  class="ctaNext ctaButton"
         :disabled='answers.height == 0'
-          @click="next5">
+          @click="next4">
           Volgende stap
         </button>
 
       </div>
-      <div class="step6 text-center" v-if="step6active">
+      <div class="step5 text-center" v-if="step5active">
         <h2> Waarvoor ga je de motor gebruiken?</h2>
         <p class="subtitle"> Meerdere opties mogelijk </p>
           <div class="optionContainer">
@@ -113,13 +100,13 @@
         </div>
         <button  class="ctaNext ctaButton"
         :disabled='answers.commute == ""'
-          @click="next6">
+          @click="next5">
           <span v-if="answers.commute == ''"> Kies er minimaal één</span>
           <span v-else> Volgende stap</span>
         </button>
       </div>
       
-      <div class="step7 text-center" v-if="step7active">
+      <div class="step6 text-center" v-if="step6active">
         <h2> Hecht je waarde aan comfort?</h2>
           <div class="optionContainer">
           <div class="option">
@@ -137,13 +124,13 @@
         </div>
         <button  class="ctaNext ctaButton"
         :disabled='answers.comfort == ""'
-          @click="next7">
+          @click="next6">
           <span v-if="answers.commute == ''"> Maak een keuze</span>
           <span v-else> Volgende stap</span>
         </button>
       </div>
 
-      <div class="step8 text-center w-full" v-if="step8active">
+      <div class="step7 text-center w-full" v-if="step7active">
         <h2> Speelse of serieuze motor?</h2>
         <div class="rangeContainer mb-32">
           <div class="rangeLabel"><p> Serieuze </p></div>
@@ -152,12 +139,12 @@
           <div class="rangeLabel"><p> Speelse </p></div>
         </div>
         <button class="ctaNext ctaButton"
-          @click="next8">
+          @click="next7">
           Volgende stap
         </button>
       </div>
 
-      <div class="step9 text-center" v-if="step9active">
+      <div class="step8 text-center" v-if="step8active">
         <h2> Wil je ook offroad rijden?</h2>
           <div class="optionContainer">
           <div class="option">
@@ -175,7 +162,7 @@
         </div>
         <button  class="ctaNext ctaButton"
         :disabled='answers.offroad == ""'
-          @click="next9">
+          @click="next8">
           <span v-if="answers.commute == ''"> Maak een keuze</span>
           <span v-else> Afronden</span>
         </button>
