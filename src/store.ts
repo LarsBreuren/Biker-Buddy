@@ -114,9 +114,22 @@ export default new Vuex.Store({
         sourceLink: "https://www.louis.nl/magazin/rund-ums-bike/schraubertipps/oelwechsel"
       },
       {
-        title: "Remmen is een kunst",
+        title: "Bochten rijden tips",
         category: "rijvaardigheidArtikelen",
         icon: 'road-variant',
+        text1: 'Bij het motorrijden door bochten komt meer kijken dan je wellicht in eerst instantie zou denken. Wil je ontspannen en op een gecontroleerde manier door bochten motorrijden, dan zul je aan je bochtentechniek moeten werken. In deze blog vertel ik meer over de vaardigheden die je nodig hebt om met nóg meer controle en vertrouwen door bochten te rijden op je motor.',
+        text2: 'Kijktechniek voor bochten \n\n Om de juiste bochttechniek goed te begrijpen, deel ik deze blog op in vier stukken. Ik begin bij de kijktechniek voor een bocht.  Het is belangrijk om een bocht en het verloop ervan, op tijd te herkennen. Want, hoe eerder je een bocht doorziet, hoe meer tijd je hebt om je er goed op aan te passen. Borden langs de weg helpen je daarbij, maar ook de lijnen op de weg of herkenningspunten zoals bomen of lantaarnpalen kunnen je veel vertellen over een bocht.\n\n Om goed te bepalen met welke snelheid je door een bocht kunt rijden, zul je vóór de bocht dóór de bocht moeten kijken. Hiermee zet je je brein al aan het werk met het berekenen van de bocht. Ook kun je je alvast proberen in te stellen op de wegsituatie als je de bocht uitkomt. Na de bocht kun je bijvoorbeeld een stilstaand voertuig of ander obstakel tegenkomen, of misschien wel een volgende bocht. Houd hier rekening mee vóór je bocht.',
+        imgText: 'Klaar zijn voor een bocht',
+        banner:  require('./assets/images/articles/corner1.jpg'),
+        img1:  require('./assets/images//articles/corner2.jpg'),
+        img2:  require('./assets/images//articles/corner3.jpg'),
+        source: 'derijder',
+        sourceLink: "https://derijder.nl/door-bochten-rijden-met-motor/"
+      },
+      {
+        title: "Remmen is een kunst",
+        category: "rijvaardigheidArtikelen",
+        icon: 'car-brake-abs',
         text1: 'Voor je de veiligheid is een goede remtechniek op de motor onmisbaar. Als je vooruit wil komen, zul je ook moeten weten hoe je moet remmen. Vanwege de balans op de motor, komt hierbij meer kijken dan bij het remmen in een auto. In deze blog lees je alles over een goede remtechniek op de motor.',
         text2: 'De rem is verbonden aan het wiel van de motor. Door de rem te gebruiken vertraag je het wiel. Die vertraging brengt de band van het wiel over op de weg waar de motor op rijdt. \n\nDe weg biedt weerstand (grip) aan de band. Hierdoor neemt de snelheid af van de motor. En zolang er meer grip is dan de hoeveelheid vertraging van het wiel, remt de motor dus af.',
         imgText: 'Pas je rijstijl aan',
