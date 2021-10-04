@@ -15,7 +15,7 @@
   </div>
   
     <div class="mobile" >
-      <router-link to="/" title="home" class="logo">
+      <router-link to="/homepagina" title="home" class="logo">
         <p class="logo"> BB </p>
       </router-link>
       <button v-on:click="toggle()" class="navToggle"> 
