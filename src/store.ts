@@ -114,6 +114,19 @@ export default new Vuex.Store({
         sourceLink: "https://www.louis.nl/magazin/rund-ums-bike/schraubertipps/oelwechsel"
       },
       {
+        title: "Bobbins voor je motor",
+        category: "onderhoudArtikelen",
+        icon: 'screw-machine-round-top',
+        text1: 'Bobbins zorgen ervoor dat jij het achterwiel van jouw motor gemakkelijk met een paddockstand omhoog kunt liften. De voordelen hiervan spreken voor zich: je kunt snel je ketting reinigen en smeren, je velg schoonmaken en de achterrem reinigen. \nOok op het circuit worden bobbins en paddockstands vaak gebruikt om bandenwarmers op de wielen te bevestigen. Het is heel erg belangrijk dat bobbins van stevig materiaal gemaakt zijn, ze moeten er namelijk toe een staat zijn om een motor van ruim 200 kg te kunnen dragen! ',
+        text2: 'Wat zijn bobbins eigenlijk? \n\n Het omschrijven van bobbins is best lastig. Het zijn een soort ronde houdertjes waar een schroefdraadbout doorheen loopt. Op de houdertjes zit een uitsparing waar de haken van een paddockstand in passen. Op de afbeelding hiernaast zie je hoe bobbins eruitzien. Een foto zegt natuurlijk meer dan duizend woorden! De schroefdraadbout die door de bobbins heen loopt kan verschillende afmetingen hebben, dit ligt aan het merk of type motor. De vier maten zijn M6, M8, M10 en M12. Als je bobbins voor jouw motor wilt aanschaffen, zorg er dan voor dat je weet welke maat je nodig hebt. Dit kun je meestal opzoeken of anders kun je het vragen aan de verkoper. \n\n Omdat bobbins een motor moeten dragen, zijn ze gemaakt van aluminium. Aluminium staat erom bekend zowel licht als zeer sterk te zijn. Een strakke afwerking van de bobbins zorgt ervoor dat ze je motor niet kunnen beschadigen. Bobbins bevestig je aan beide kanten van je motor, ze worden dus altijd in een set van 2 geleverd.',
+        imgText: '',
+        banner:  require('./assets/images//articles/bobbins.jpg'),
+        img1:  require('./assets/images//articles/bobbins2.jpg'),
+        img2:  require('./assets/images//articles/bobbins.jpg'),
+        source: 'rijdmotor.nl',
+        sourceLink: "https://rijdmotor.nl/bobbins-voor-je-motor/"
+      },
+      {
         title: "Bochten rijden tips",
         category: "rijvaardigheidArtikelen",
         icon: 'road-variant',
@@ -179,7 +192,7 @@ export default new Vuex.Store({
         sourceLink: "https://blog.motorkledingcenter.nl/drie-betaalbare-motoroutfits-voor-de-beginnende-motorrijder/"
       },
       {
-        title: "AVB pro tips",
+        title: "AVB tips",
         category: "coachingArtikelen",
         icon: 'alpha-l-box',
         text1: 'Het avb examen kan best spannend zijn. Eerder beschreef ik al hoe je de oefeningen moet uitvoeren, nu is het tijd om je voor te bereiden op het daadwerkelijke examen. \n\nOm voor je avb motor examen te slagen krijg je 4 verplichte oefeningen en 3 keuze oefeningen. Voor de 7 oefeningen krijg je twee kansen per oefening. In totaal moeten 5 oefeningen voldoende worden afgerond.\n\nEr zijn flink wat zaken waar je per oefening op moet letten. In dit artikel leren we je wat algemene dingen die jouw motorrijschool je misschien niet zal leren. Alles om er voor te zorgen dat jij je motor en je zenuwen zo goed mogelijk onder controle te houden. ',
@@ -192,7 +205,20 @@ export default new Vuex.Store({
         sourceLink: "https://klus-motor.nl/rijbewijs/avb-examen-tips-om-te-slagen/"
       },
       {
-        title: "Theorie tricks",
+        title: "Kosten motorrijbewijs",
+        category: "coachingArtikelen",
+        icon: 'cash',
+        text1: 'Om maar meteen met de deur in huis te vallen, de kosten voor een motorrijbewijs kunnen per persoon behoorlijk verschillen. De totale kosten zijn voornamelijk afhankelijk van hoeveel lessen je nodig hebt. En natuurlijk of je de examens in één keer haalt of een (paar) keer over moet doen. Gemiddeld gezien kost het halen van je motorrijbewijs tussen de €1000,- en €1500,-. We zullen alle kosten doornemen zodat je weet wat je kunt verwachten en begrijpt waarop dit gemiddelde gebaseerd is. \n\n WAT KOST MOTORRIJLES? \n\n Motorrijles kost ongeveer €35,- tot €50,- per uur. Dit uurtarief kan een beetje verschillen per rijschool maar als je hiervan uitgaat zit je goed. De meeste rijscholen laten je 2 uur per keer lessen, je bent dus zo’n €70,- tot €100,- kwijt per motorrijles. De gemiddelde persoon heeft in totaal zo’n 20 uur motorrijles nodig om beide examens te kunnen halen. Dit zou dan uitkomen op ongeveer €700,- tot €1000,- voor alle motorrijlessen. ',
+        text2: 'Wat zijn de totale kosten voor het halen van het motorrijbewijs? Alle kosten die je moet maken voor het halen van je motorrijbewijs zijn nu duidelijk. Laten we alles bij elkaar optellen om te zien hoeveel je gemiddeld kwijt bent voordat je op de motor mag stappen. Als we ervan uitgaan dat je 20 uur motorrijles nodig hebt, alle examens in één keer haalt, geen extra tijd nodig hebt en een uur rijles €40,- kost, kom je op het volgende uit: \n\n Motorrijles: €800,- bij 20 uur les van €40,- per uur \n\nTheorie examen: €37,- wanneer je deze zelf aanvraagt via het CBR \n\nTheorieboek en online examens: €30,49 (boek €25,- en 5 examens €5,49) \n\nAVB: €150,- gemiddeld \n\nAVD: €255,- gemiddeld \n\nGezondheidsverklaring: €39,30 \n\nAanvraag nieuw rijbewijs: €40,- \n\n In totaal kost het halen van je motorrijbewijs in dit voorbeeld €1351,79. Het kan dus zo zijn dat jij meer of juist minder kwijt bent maar als je rekening houdt met dit bedrag zit je waarschijnlijk wel goed. Waar we wel 100% zeker van kunnen zijn is dat het hebben van een motorrijbewijs veel meer waard is dan dit bedrag. Succes!' ,
+        imgText: '',
+        banner:  require('./assets/images/articles/money.jpg'),
+        img1:  require('./assets/images//articles/ketting.jpg'),
+        img2:  require('./assets/images//articles/rijbewijs.jpg'),
+        source: 'rijdmotor',
+        sourceLink: "https://rijdmotor.nl/kosten-motorrijbewijs/"
+      },
+      {
+        title: "Theorie tips",
         category: "coachingArtikelen",
         icon: 'alpha-l-box',
         text1: 'Heb je een stok achter de deur nodig om te beginnen met leren? Vraag het theorie examen dan alvast aan. Op deze manier heb je een datum om naar toe te werken wat over het algemeen erg prettig leert. Maak dus een inschatting voor jezelf op basis van je huidige kennis en je leervermogen. Om te kijken hoeveel kennis je al hebt opgedaan kun je bijvoorbeeld een motor theorie-examen afleggen, zo zie je direct waar je aandachtspunten liggen. Voor het leren zul je over het algemeen rekening moeten houden met minimaal 4-8 weken.',
