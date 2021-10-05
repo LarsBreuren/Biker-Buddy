@@ -87,32 +87,32 @@ export default new Vuex.Store({
     },
 ],
   articles: [
-      {
-        title: "ketting smeren als een baas",
-        category: "onderhoudArtikelen",
-        icon: 'motorbike',
-        text1: 'Het onderhoud van de aandrijfketting wordt veelal beschouwd als een vervelende klus. Maar de ketting verdient juist een liefdevolle verzorging. \n\n Zij moet elke dag de enorme koppels aankunnen waarmee de motor aan haar trekt en zij wordt voortdurend blootgesteld aan vocht en vuil. Zij wrijft zich letterlijk stuk voor ons. Bovendien is de kettingaandrijving nog steeds de meest eenvoudige manier om een motor aan te drijven.',
-        text2: 'De kettingaandrijving is lichter en biedt een effectievere krachtoverbrenging dan de cardanaandrijving, is ongevoeliger dan de tandriem en dus technisch nog altijd bij de tijd. Daar moeten we dan maar wat onderhoudswerk voor over hebben. Goed onderhouden gaat een ketting dubbel zo lang mee dan een verwaarloosd exemplaar en zal ook meer motorvermogen op het achterwiel overbrengen.',
-        imgText: 'Je ketting heeft wat te voorduren!',
-        banner:  require('./assets/images//articles/ketting.jpg'),
-        img1:  require('./assets/images/articles/ketting-gif.gif'),
-        img2:  require('./assets/images/articles/ketting2.jpg'),
-        source: 'Louis.nl',
-        sourceLink: "https://www.louis.nl/magazin/rund-ums-bike/schraubertipps/kettenpflege"
-      },
-      {
-        title: "Olie verversen",
-        category: "onderhoudArtikelen",
-        icon: 'hammer-screwdriver',
-        text1: 'Motorolie behoort tot de "slijtonderdelen" van een benzinemotor. Het aantal gereden kilometers, de thermische belasting en het rijgedrag zorgen dat de smerende eigenschappen van de olie en de additieven langzaamaan afnemen. Wie lang plezier wil beleven van zijn motor, zal de olie dus graag verversen volgens de intervallen die de fabrikant opgeeft in het onderhoudshandleiding.',
-        text2: 'Niets werkt zonder olie: de wrijving van de zuigers, de loopvlakken en de tandwielen zou iedere motor binnen de kortste keren vernielen. \n\n Regelmatige controle van het oliepeil is dus van levensbelang voor je tweewieler, net als regelmatig olie verversen. Want olie veroudert, raakt vervuild door metaaldeeltjes en verbrandingsresten en verliest gaandeweg zijn smerende vermogen. ',
-        imgText: 'Niet je olie verwisselen direct na het rijden!',
-        banner:  require('./assets/images//articles/olie.jpg'),
-        img1:  require('./assets/images//articles/olie.jpg'),
-        img2:  require('./assets/images//articles/olie2.jpg'),
-        source: 'Louis.nl',
-        sourceLink: "https://www.louis.nl/magazin/rund-ums-bike/schraubertipps/oelwechsel"
-      },
+    {
+      title: "Olie verversen",
+      category: "onderhoudArtikelen",
+      icon: 'hammer-screwdriver',
+      text1: 'Motorolie behoort tot de "slijtonderdelen" van een benzinemotor. Het aantal gereden kilometers, de thermische belasting en het rijgedrag zorgen dat de smerende eigenschappen van de olie en de additieven langzaamaan afnemen. Wie lang plezier wil beleven van zijn motor, zal de olie dus graag verversen volgens de intervallen die de fabrikant opgeeft in het onderhoudshandleiding.',
+      text2: 'Niets werkt zonder olie: de wrijving van de zuigers, de loopvlakken en de tandwielen zou iedere motor binnen de kortste keren vernielen. \n\n Regelmatige controle van het oliepeil is dus van levensbelang voor je tweewieler, net als regelmatig olie verversen. Want olie veroudert, raakt vervuild door metaaldeeltjes en verbrandingsresten en verliest gaandeweg zijn smerende vermogen. ',
+      imgText: 'Niet je olie verwisselen direct na het rijden!',
+      banner:  require('./assets/images//articles/olie.jpg'),
+      img1:  require('./assets/images//articles/olie.jpg'),
+      img2:  require('./assets/images//articles/olie2.jpg'),
+      source: 'Louis.nl',
+      sourceLink: "https://www.louis.nl/magazin/rund-ums-bike/schraubertipps/oelwechsel"
+    },
+    {
+      title: "ketting smeren als een baas",
+      category: "onderhoudArtikelen",
+      icon: 'motorbike',
+      text1: 'Het onderhoud van de aandrijfketting wordt veelal beschouwd als een vervelende klus. Maar de ketting verdient juist een liefdevolle verzorging. \n\n Zij moet elke dag de enorme koppels aankunnen waarmee de motor aan haar trekt en zij wordt voortdurend blootgesteld aan vocht en vuil. Zij wrijft zich letterlijk stuk voor ons. Bovendien is de kettingaandrijving nog steeds de meest eenvoudige manier om een motor aan te drijven.',
+      text2: 'De kettingaandrijving is lichter en biedt een effectievere krachtoverbrenging dan de cardanaandrijving, is ongevoeliger dan de tandriem en dus technisch nog altijd bij de tijd. Daar moeten we dan maar wat onderhoudswerk voor over hebben. Goed onderhouden gaat een ketting dubbel zo lang mee dan een verwaarloosd exemplaar en zal ook meer motorvermogen op het achterwiel overbrengen.',
+      imgText: 'Je ketting heeft wat te voorduren!',
+      banner:  require('./assets/images//articles/ketting.jpg'),
+      img1:  require('./assets/images/articles/ketting-gif.gif'),
+      img2:  require('./assets/images/articles/ketting2.jpg'),
+      source: 'Louis.nl',
+      sourceLink: "https://www.louis.nl/magazin/rund-ums-bike/schraubertipps/kettenpflege"
+    },
       {
         title: "Bobbins voor je motor",
         category: "onderhoudArtikelen",
@@ -138,6 +138,34 @@ export default new Vuex.Store({
         img2:  require('./assets/images//articles/corner3.jpg'),
         source: 'derijder',
         sourceLink: "https://derijder.nl/door-bochten-rijden-met-motor/"
+      },
+      {
+        title: "Motorvakantie voorbereiding",
+        category: "rijvaardigheidArtikelen",
+        icon: 'palm-tree',
+        text1: 'ZORG VOOR EEN GESCHIKTE MOTOR VOOR EEN LANGE TOCHT \n\n Om te beginnen kijken we naar de motor, aangezien je er lange afstanden mee gaat afleggen, is een goede motor van belang. Het maakt hierbij niet uit of je een toermotor of een gewone motor hebt. Elke motor is een lange afstand motor, als er maar een stevig zadel op zit. Het ligt namelijk meer aan de weg die gereden wordt. Er kan via de snelweg gereden worden om zo snel mogelijk van A naar B te gaan (hiervoor zou dan wel een toermotor het meest geschikt zijn), maar meestal wil iemand die met de motor op vakantie gaat juist de binnenwegen zien. Bij een motorvakantie is de reis tenslotte belangrijker dan het eindpunt. Dus neem de tijd en geniet van de binnenwegen, waarbij het dan wel belangrijk is te weten welke route je gaat rijden. \n\n EEN GOEDE PLANNING VAN DE ROUTE IS BELANGRIJK \n\n Bij het uitstippelen van de route kun je denken aan twee dingen: navigatie en de kaart. Een navigatie zal het zo makkelijk mogelijk maken om de snelste route uit te kiezen, terwijl bij een kaart ook wat andere dingen komen kijken. Bij een kaart is het, vaak bij kleine wegen, bij ieder kruispunt controleren welke kant de groep op moet. Het is daarom slim om, voordat er ’s ochtends weggereden wordt, een lijn te trekken die aangeeft welke route er wordt gevolgd. Een duidelijke lijn heeft natuurlijk ook een duidelijke kaart nodig.',
+        text2Head: 'Bepakking',
+        text2: 'NEEM ETEN MEE OF EET ONDERWEG \n\n Het eten en drinken is een essentieel onderdeel van de motorvakantie. Dit zal je voor een deel weerhouden om moe te worden onderweg. Koop genoeg makkelijke snacks en pakjes drinken. Als deze langzaam leeg raakt, vul de tas dan opnieuw bij het eerstvolgende tankstation. Probeer ook te rusten voordat je moe wordt en te eten voordat je honger krijgt. Maak er dus gebruik van wanneer je een mooie rustplaats tegenkomt. \n\n VERPAKKING VAN DE BESTUURDER EN DE BAGAGE \n\n Tot slot de kleding en andere bagage. Zorg ervoor dat je gekleed bent voor de juiste weersomstandigheden. Controleer de weersvoorspellingen en pas hier de kleding op aan. Dit zal voorkomen dat er iemand gaat zweten of rillen. De bagage moet ook ingepakt zijn voor het weer, het moet in ieder geval goed vastgebonden zitten aan de motor of in een goede rugtas zitten. Als het gaat regenen, is het ook handig om een regen verpakking om de tas te doen. Dit zal voorkomen dat de zowel de bagage als de tas nat worden. Een goede helm is hierbij ook belangrijk.',
+        imgText: '',
+        banner:  require('./assets/images/articles/trip.jpg'),
+        img1:  require('./assets/images//articles/trip3.jpg'),
+        img2:  require('./assets/images//articles/trip2.jpg'),
+        source: 'helmonline.nl',
+        sourceLink: "https://www.helmonline.nl/hoe-bereid-je-je-voor-op-motorvakantie"
+      },
+      {
+        title: "Ongeval preventie",
+        category: "rijvaardigheidArtikelen",
+        icon: 'alert',
+        text1: 'Als je het hebt over veiligheid op de motor, denken de meeste motorrijders aan helmen, protectoren of leren pakken. \n\n En inderdaad, al die dingen hebben met veiligheid te maken. Maar vergeet niet dat er een directere manier is om aan je veiligheid te denken. \n\n Je veiligheid vergroten kun je doen door alles in het werk te stellen om een ongeluk te voorkomen (de primaire veiligheid), en door ervoor te zorgen dat de schade, wanneer het te laat is, zoveel mogelijk beperkt blijft (secundaire veiligheid). \n In feite is het grote verschil tussen autorijden en motorrijden dat je in een auto een enorme hoeveelheid secundaire veiligheid hebt (de hele auto is een soort van veiligheidscocon om je heen), terwijl je op de motor je veiligheid toch vooral in je eigen hand hebt (primaire veiligheid dus). \n\n  In 37% van de gevallen was de hoofdoorzaak van het ongeluk een menselijke fout bij de motorrijder. Zo een menselijke fout kon bestaan uit gebrekkige aandacht of gebrekkige vaardigheden.De onderzoekers merken op dat er soms vaardigheden nodig zijn die uitstijgen boven wat er voor examens nodig is. \n Als bijkomende oorzaken kwamen vaak voor: motorrijders die het andere voertuig over het hoofd zagen en het nemen van verkeerde beslissingen (ze kozen een niet-adequate strategie om het ongeluk te voorkomen).In 13% van alle gevallen was er zo een beslissingsfout bij de motorrijder.',
+        text2Head: 'Voorkomen',
+        text2: 'Als motorrijder moet je het toch vooral van je primaire veiligheid hebben, want motoren zullen bij een ongeluk nooit net zo "veilig" zijn als een auto. Voor die primaire veiligheid zul je moeten werken! \n\n MOTOR CONDITIE \n Uiteraard zorg je ervoor dat je motor je niet onderweg met vervelende kuren kan verrassen, dat je banden op spanning zijn, dat je lichten het doen, en dat je remblokjes niet versleten zijn en dergelijke. \n Maar ongelukken die gebeuren doordat er iets mis is met de motor komen nauwelijks voor. \n\n Aandacht erbij houden is een belangrijk ingrediënt van ongelukken. Dit betekend dat je jezelf in goede conditie houdt en dus optijd eet en drinkt en niet te moe op pad gaat. \n Het lijkt overdreven om dit soort dingen op te sommen, maar veel mensen vergeten hoe belangrijk het is. Vooral het laatste item wordt vaak vergeten. Bedenk ook wat een beloning je krijgt wanneer je er in slaagt je problemen van je af te zetten: op een Zen-achtige manier ben je dan aan het motorrijden, en ben je niks anders aan het doen. ',
+        imgText: 'Houd marge',
+        banner:  require('./assets/images/articles/preventie3.jpg'),
+        img1:  require('./assets/images/articles/preventie.jpg'),
+        img2:  require('./assets/images/articles/preventie2.jpg'),
+        source: 'luiemotorfiets.nl',
+        sourceLink: "https://www.luiemotorfiets.nl/tips/safety/"
       },
       {
         title: "Remmen is een kunst",

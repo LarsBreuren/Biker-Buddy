@@ -9,7 +9,8 @@
       <p>{{ article.text1}} </p>
       <FullWidthImage style="height: 200px;" class="mb-16" v-bind:image-link="article.img1"
         :text="article.imgText" :overlay="true" :blackWhite="false" />
-
+       
+       <h2 v-if="article.text2Head"> {{article.text2Head}} </h2>
        <p>{{ article.text2}} </p>
 
       <FullWidthImage style="height: 200px;" class="mb-16" v-bind:image-link="article.img2" text="" :overlay="false"
