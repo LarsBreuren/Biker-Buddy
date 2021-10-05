@@ -69,6 +69,24 @@
             "
             >mdi-format-list-checkbox</v-icon>
             Categorieën</router-link> </li>
+          <li><router-link @click.native="toggle()" to="/bikepicker">
+            <v-icon
+            size="30"
+            class="
+              text-white
+              cursor-pointer
+            "
+            >mdi-motorbike</v-icon>
+            Keuzehulp</router-link> </li>
+          <li><router-link @click.native="toggle()" to="/quiz">
+            <v-icon
+            size="30"
+            class="
+              text-white
+              cursor-pointer
+            "
+            >mdi-message-question</v-icon>
+            Quiz</router-link> </li>
           <li><router-link @click.native="toggle()" to="/">
             <v-icon
             size="30"
