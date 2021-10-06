@@ -9,70 +9,23 @@ import quiz from "../../interfaces/quiz";
 })
 export default class Headless extends Vue {
 
-    protected apexImg = ('./assets/images/quiz/quiz.jpg');
-
-    protected answers: quiz = {
-        picks : this.$store.state.driverPrefs.picks,
-        sporty : 50, //out of 100
-        price : 3500, 
-        apex : "",
-        commute : this.$store.state.driverPrefs.commute,
-        comfort : "",
-        fun : 50, //out of 100
-        offroad: "",
-    }
-
-    protected pickedBikes = {
-        bike1: "",
-        bike2: "",
-        bike3: "",
-    }
-
-    protected bikeScores = {
-        Sportbike : 0,
-        Tourbike : 0,
-        Scrambler : 0,
-        Naked : 0,
-        Supermoto : 0,
-        Adventure : 0,
-    }
-
-    protected bikeScoresSorted= [] as any; //array
-    protected bikeScoresSortedReverse = [] as any; //array
-    protected bikeScoresSortedObject = {} as any; //obj
-
-    protected sortScore(){
-        for (const item in this.bikeScores) {
-            this.bikeScoresSorted.push([item, this.bikeScores[item]]);
-        }
-        this.bikeScoresSorted.sort(function(a, b) {
-            return a[1] - b[1];
-        });
-
-        this.reverseScore()
-
-        this.bikeScoresSorted.forEach((item) =>{
-            this.bikeScoresSortedObject[item[0]]=item[1]
-        })
-
-        this.pickedBikes.bike1 = Object.keys(this.bikeScoresSortedObject)[0]; 
-        this.pickedBikes.bike2 = Object.keys(this.bikeScoresSortedObject)[1]; 
-        this.pickedBikes.bike3 = Object.keys(this.bikeScoresSortedObject)[2]; 
-
-     }
-
-     protected reverseScore(){
-        this.bikeScoresSortedReverse = this.bikeScoresSorted.reverse();
+    protected answers = {
+       question1: "",
+       question2: "",
+       question3: "",
+       question4: "",
+       question5: "",
+       question6: "",
+       question7: "",
+       question8: "",
     }
 
    protected bikeCats = this.$store.state.bikeCats;
 
     protected calculatePerfectBike(){
 
-        this.sortScore();
-
-        this.$store.commit('updatePerfectBike', this.bikeScoresSortedObject);
-        this.$store.commit('updatePickedBike', this.pickedBikes);
+        // this.$store.commit('updatePerfectBike', this.bikeScoresSortedObject);
+        // this.$store.commit('updatePickedBike', this.pickedBikes);
     }
 
 

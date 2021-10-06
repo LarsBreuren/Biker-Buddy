@@ -30,50 +30,10 @@
     @apply text-center;
     @apply mt-16;
   }
-  .optionContainer{
-    @apply flex;
-    flex-wrap: wrap;
 
-    .picked{
-      border: 2px solid #f4e216;
-    }
-
-    .bike{
-      width: calc(50% - 10px);
-      @apply p-8;
-      margin: 15px 5px;
-      background-color: #2c2c2c;
-      position: relative;
-      font-family: 'Alegreya Sans', sans-serif;
-
-      img{
-        height: 120px;
-        object-fit: cover;
-        background-position: center;
-      }
-      :hover{
-        cursor: pointer;
-      }
-      
-      p{
-        @apply w-2/3;
-      }
-
-      label{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      input{ display: none;}
-
-    }
-  }
 
   .step{
-    @apply w-2/3;
+    @apply w-5/6;
     @apply mx-auto;
     .option{
       @apply w-full;
@@ -82,7 +42,7 @@
       @apply flex;
       @apply justify-center;
       @apply items-center;
-      height: 75px;
+      height: 60px;
       margin: 10px 0;
       background-color: #2c2c2c;
       position: relative;
