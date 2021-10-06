@@ -3,7 +3,7 @@
   @apply mx-auto;
   @apply bg-black-600;
   @apply p-4;
-  @apply py-32;
+  @apply pt-8;
   @apply rounded-md;
 }
 .stepWrapper{
@@ -167,6 +167,19 @@
     @apply w-full;
     @apply justify-between;
     @apply text-center;
+    @apply py-4;
+
+    .question{
+      @apply text-base;
+    }
+
+    .answer{
+      color: red;
+    }
+
+    .correct{
+      @apply text-success-500;
+    }
 
     .child{
       @apply w-1/2;

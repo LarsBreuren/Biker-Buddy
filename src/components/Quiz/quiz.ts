@@ -22,6 +22,7 @@ export default class Headless extends Vue {
 
         protected correct = 0;
         protected wrong = 0;
+        protected precent = 0;
   
     protected calcedAnswers = {
         question1: false,
@@ -46,11 +47,17 @@ export default class Headless extends Vue {
         this.question6();
         this.question7();
         this.question8();
+        this.precent = this.percentage(this.correct, 8);
+
     }
+
+    protected percentage(good, total) {
+        return (100 * good) / total;
+     } 
 
 
     protected question1(){
-        if (this.answers.question1 as any == 'ja'){
+        if (this.answers.question1 as any == 'Ja'){
             this.correct += 1
             this.calcedAnswers.question1 = true;
         }
@@ -59,7 +66,7 @@ export default class Headless extends Vue {
         }
     }
     protected question2(){
-        if (this.answers.question2 as any == 'honda'){
+        if (this.answers.question2 as any == 'Honda'){
             this.correct += 1
             this.calcedAnswers.question2 = true;
         }
@@ -68,7 +75,7 @@ export default class Headless extends Vue {
         }
     }
     protected question3(){
-        if (this.answers.question3 as any == 'triumph'){
+        if (this.answers.question3 as any == 'Triumph'){
             this.correct += 1
             this.calcedAnswers.question3 = true;
         }
@@ -77,7 +84,7 @@ export default class Headless extends Vue {
         }
     }
     protected question4(){
-        if (this.answers.question4 as any == 'paddock'){
+        if (this.answers.question4 as any == 'Paddock'){
             this.correct += 1
             this.calcedAnswers.question4 = true;
         }
@@ -86,7 +93,7 @@ export default class Headless extends Vue {
         }
     }
     protected question5(){
-        if (this.answers.question5 as any == 'banden'){
+        if (this.answers.question5 as any == 'Banden'){
             this.correct += 1
             this.calcedAnswers.question5 = true;
         }
@@ -95,7 +102,7 @@ export default class Headless extends Vue {
         }
     }
     protected question6(){
-        if (this.answers.question6 as any == '7000ej'){
+        if (this.answers.question6 as any == 'Elke 7000km of elk jaar'){
             this.correct += 1
             this.calcedAnswers.question6 = true;
         }
@@ -104,7 +111,7 @@ export default class Headless extends Vue {
         }
     }
     protected question7(){
-        if (this.answers.question7 as any == 'integraal'){
+        if (this.answers.question7 as any == 'Integraal'){
             this.correct += 1
             this.calcedAnswers.question7 = true;
         }
@@ -113,7 +120,7 @@ export default class Headless extends Vue {
         }
     }
     protected question8(){
-        if (this.answers.question8 as any == 'automobilist'){
+        if (this.answers.question8 as any == 'Automobilist'){
             this.correct += 1
             this.calcedAnswers.question8 = true;
         }

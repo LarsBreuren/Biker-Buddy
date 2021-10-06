@@ -175,7 +175,7 @@
     <div class="preferences" v-if="answersDone">
       <h2>Dit heb jij allemaal gekozen!</h2>
 
-            <div class="profileContainer">
+      <div class="profileContainer">
         <div class="details">
 
           <div class="line">
