@@ -4,28 +4,40 @@
               <!-- <v-icon @click="resetSteps" size="35" class="
           backButton
           ">mdi-menu-left</v-icon> -->
-      <div v-if="step1active" class="step1 p-8">
+      <div v-if="step1active" class="step1 px-32">
         <h1> Motorquiz </h1>
         <p> Korte wekelijkse quiz om jouw motorkennis te testen</p>
         <button button  class="mt-32 ctaNext ctaButton"
           @click="next1">
-          begin!
+          begin! <v-icon size="25" class="
+              text-black
+              cursor-pointer
+            ">mdi-arrow-right-bold</v-icon>
         </button>
+        <router-link class="ctaButton ctaNext mt-16 bg-gray-700" @click.native="toggle()" to="/homepagina">
+        Home <v-icon size="25" class="
+              text-black
+              cursor-pointer
+            ">mdi-home</v-icon>
+      </router-link>
       </div>
 
       <div class="step step2 text-center" v-if="step2active">
+        <div class="stepBack" @click="resetSteps">
+            <v-icon size="25" class="labelIcon text-white">mdi-arrow-left-circle</v-icon>
+        </div>
         <h2> Is dit een goede apex?</h2>
             <img class="mb-16" src="../../assets/images/quiz/apex.jpg" />
           <div class="optionContainer">
           <div class="option">
             <input type="radio" id="ja"  name="apex" value="ja" v-model.trim="answers.question1">
-            <p class="labelText">Ja</p>
+            <p class="labelText">Jazeker</p>
               <v-icon size="25" class="labelIcon">mdi-check</v-icon>
             <label for="ja"></label>
           </div>
           <div class="option">
             <input type="radio" id="nee" name="apex" value="nee" v-model.trim="answers.question1">
-                   <p class="labelText">Nee</p>
+                   <p class="labelText">Nee!</p>
                 <v-icon size="25" class="labelIcon">mdi-close</v-icon>
             <label for="nee"></label>
           </div>
@@ -40,6 +52,9 @@
 
       </div>
       <div class="step step3 text-center" v-if="step3active">
+        <div class="stepBack" @click="next1">
+            <v-icon size="25" class="labelIcon text-white">mdi-arrow-left-circle</v-icon>
+        </div>
         <h2 class="text-xl"> Welk bedrijf is sinds 1959 de grootste motorfietsfabrikant ter wereld, met eind 2019 ongeveer 400 miljoen modellen in productie? </h2>
             <img class="mb-16" src="../../assets/images/quiz/bike.jpg" />
           <div class="optionContainer">
@@ -63,8 +78,6 @@
             <p class="labelText">Kawasaki</p>
             <label for="kawasaki"></label>
           </div>
-
-
         </div>
 
         <button  class="ctaNext ctaButton"
@@ -75,9 +88,201 @@
         </button>
 
       </div>
+      <div class="step step4 text-center" v-if="step4active">
+        <div class="stepBack" @click="next2">
+            <v-icon size="25" class="labelIcon text-white">mdi-arrow-left-circle</v-icon>
+        </div>
+        <h2 class="text-xl">Welke van de volgende merken is Brits? </h2>
+            <img class="mb-16" src="../../assets/images/quiz/brits.jpg" />
+          <div class="optionContainer">
+          <div class="option">
+            <input type="radio" id="indian"  name="apex" value="indian" v-model.trim="answers.question3">
+            <p class="labelText">Indian</p>
+            <label for="indian"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="triumph"  name="apex" value="triumph" v-model.trim="answers.question3">
+            <p class="labelText">Triumph</p>
+            <label for="triumph"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="royalEnfield"  name="apex" value="royalEnfield" v-model.trim="answers.question3">
+            <p class="labelText">Royal Enfield</p>
+            <label for="royalEnfield"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="harleyDavidson"  name="apex" value="harleyDavidson" v-model.trim="answers.question3">
+            <p class="labelText">Harley Davidson</p>
+            <label for="harleyDavidson"></label>
+          </div>
+        </div>
 
+        <button  class="ctaNext ctaButton"
+        :disabled="answers.question3 == ''"
+          @click="next4">
+         <span v-if="answers.question3 == ''"> Vul een antwoord in </span>
+         <span v-else>  Volgende stap </span>
+        </button>
+
+      </div>
+      <div class="step step5 text-center" v-if="step5active">
+        <div class="stepBack" @click="next3">
+            <v-icon size="25" class="labelIcon text-white">mdi-arrow-left-circle</v-icon>
+        </div>
+        <h2 class="text-xl">Wat doen bobbins? </h2>
+            <img class="mb-16" src="../../assets/images/articles/atgat.jpg" />
+          <div class="optionContainer">
+          <div class="option">
+            <input type="radio" id="ontsteking"  name="apex" value="ontsteking" v-model.trim="answers.question4">
+            <p class="labelText w-full">Zorgen voor ontsteking in de cilinder</p>
+            <label for="ontsteking"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="ketting"  name="apex" value="ketting" v-model.trim="answers.question4">
+            <p class="labelText w-full">Ankeren de ketting op het frame</p>
+            <label for="ketting"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="paddock"  name="apex" value="paddock" v-model.trim="answers.question4">
+            <p class="labelText w-full">Houden de achterband omhoog icm paddock</p>
+            <label for="paddock"></label>
+          </div>
+        </div>
+
+        <button  class="ctaNext ctaButton"
+        :disabled="answers.question4 == ''"
+          @click="next5">
+         <span v-if="answers.question4 == ''"> Vul een antwoord in </span>
+         <span v-else>  Volgende stap </span>
+        </button>
+
+      </div>
+      <div class="step step6 text-center" v-if="step6active">
+        <div class="stepBack" @click="next4">
+            <v-icon size="25" class="labelIcon text-white">mdi-arrow-left-circle</v-icon>
+        </div>
+        <h2 class="text-xl">Wat is niet standaard in een kleine beurt? </h2>
+            <img class="mb-16" src="../../assets/images/articles/olie.jpg" />
+          <div class="optionContainer">
+          <div class="option">
+            <input type="radio" id="banden"  name="apex" value="banden" v-model.trim="answers.question5">
+            <p class="labelText w-full">Nieuwe banden </p>
+            <label for="banden"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="olie"  name="apex" value="olie" v-model.trim="answers.question5">
+            <p class="labelText w-full">Olie verwisselen</p>
+            <label for="olie"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="filter"  name="apex" value="filter" v-model.trim="answers.question5">
+            <p class="labelText w-full">Oliefilter verwisselen</p>
+            <label for="filter"></label>
+          </div>
+        </div>
+
+        <button  class="ctaNext ctaButton"
+        :disabled="answers.question5 == ''"
+          @click="next6">
+         <span v-if="answers.question5 == ''"> Vul een antwoord in </span>
+         <span v-else>  Volgende stap </span>
+        </button>
+
+      </div>
+      <div class="step step7 text-center" v-if="step7active">
+        <div class="stepBack" @click="next5">
+            <v-icon size="25" class="labelIcon text-white">mdi-arrow-left-circle</v-icon>
+        </div>
+        <h2 class="text-xl">Hoe vaak moet ongeveer je olie wisselen? </h2>
+            <img class="mb-16" src="../../assets/images/articles/olie2.jpg" />
+          <div class="optionContainer">
+          <div class="option">
+            <input type="radio" id="7000"  name="apex" value="7000" v-model.trim="answers.question6">
+            <p class="labelText w-full">Elke ~7000km </p>
+            <label for="7000"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="7000ej"  name="apex" value="7000ej" v-model.trim="answers.question6">
+            <p class="labelText w-full">Elke 7000km of elke jaar </p>
+            <label for="7000ej"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="jaar"  name="apex" value="jaar" v-model.trim="answers.question6">
+            <p class="labelText w-full">Elk jaar ongeacht de km stand</p>
+            <label for="jaar"></label>
+          </div>
+        </div>
+
+        <button  class="ctaNext ctaButton"
+        :disabled="answers.question6 == ''"
+          @click="next7">
+         <span v-if="answers.question6 == ''"> Vul een antwoord in </span>
+         <span v-else>  Volgende stap </span>
+        </button>
+
+      </div>
+      <div class="step step8 text-center" v-if="step8active">
+        <div class="stepBack" @click="next6">
+            <v-icon size="25" class="labelIcon text-white">mdi-arrow-left-circle</v-icon>
+        </div>
+        <h2 class="text-xl">Welk type helm is het meest beschermend?  </h2>
+            <img class="mb-16" src="../../assets/images/articles/helm.jpg" />
+          <div class="optionContainer">
+          <div class="option">
+            <input type="radio" id="integraal"  name="apex" value="integraal" v-model.trim="answers.question7">
+            <p class="labelText w-full">Integraal  </p>
+            <label for="integraal"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="systeemhelm"  name="apex" value="systeemhelm" v-model.trim="answers.question7">
+            <p class="labelText w-full">Systeemhelm </p>
+            <label for="systeemhelm"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="jet"  name="apex" value="jet" v-model.trim="answers.question7">
+            <p class="labelText w-full">Jet</p>
+            <label for="jet"></label>
+          </div>
+        </div>
+
+        <button  class="ctaNext ctaButton"
+        :disabled="answers.question7 == ''"
+          @click="next8">
+         <span v-if="answers.question7 == ''"> Vul een antwoord in </span>
+         <span v-else>  Volgende stap </span>
+        </button>
+
+      </div>
+      <div class="step step9 text-center" v-if="step9active">
+        <div class="stepBack" @click="next7">
+            <v-icon size="25" class="labelIcon text-white">mdi-arrow-left-circle</v-icon>
+        </div>
+        <h2 class="text-xl">Wie veroorzaakt de meeste motorongelukken?  </h2>
+            <img class="mb-16" src="../../assets/images/articles/preventie3.jpg" />
+          <div class="optionContainer">
+          <div class="option">
+            <input type="radio" id="motorrijder"  name="apex" value="motorrijder" v-model.trim="answers.question8">
+            <p class="labelText w-full">Motorrijder  </p>
+            <label for="motorrijder"></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="automobilist "  name="apex" value="automobilist " v-model.trim="answers.question8">
+            <p class="labelText w-full">Automobilist  </p>
+            <label for="automobilist "></label> 
+          </div>
+        </div>
+
+        <button  class="ctaNext ctaButton"
+        :disabled="answers.question8 == ''"
+          @click="next9">
+         <span v-if="answers.question8 == ''"> Vul een antwoord in </span>
+         <span v-else>  Volgende stap </span>
+        </button>
+
+      </div>
 
     </div>
+          {{ answers }}
   </div>
 </template>
 
