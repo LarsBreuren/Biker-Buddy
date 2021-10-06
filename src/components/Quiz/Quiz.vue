@@ -171,12 +171,12 @@
           </div>
           <div class="option">
             <input type="radio" id="olie"  name="apex" value="Olie" v-model.trim="answers.question5">
-            <p class="labelText w-full">Olie verwisselen</p>
+            <p class="labelText w-full">Olie verversen</p>
             <label for="olie"></label>
           </div>
           <div class="option">
             <input type="radio" id="filter"  name="apex" value="Filter" v-model.trim="answers.question5">
-            <p class="labelText w-full">Oliefilter verwisselen</p>
+            <p class="labelText w-full">Oliefilter wisselen</p>
             <label for="filter"></label>
           </div>
         </div>
