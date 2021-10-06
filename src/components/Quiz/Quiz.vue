@@ -193,7 +193,7 @@
         <div class="stepBack" @click="next5">
             <v-icon size="25" class="labelIcon text-white">mdi-arrow-left-circle</v-icon>
         </div>
-        <h2 class="text-xl">Hoe vaak moet ongeveer je olie wisselen? </h2>
+        <h2 class="text-xl">Hoe vaak moet ongeveer je olie verversen? </h2>
             <img class="mb-16" src="../../assets/images/articles/olie2.jpg" />
           <div class="optionContainer">
           <div class="option">
@@ -342,7 +342,7 @@
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 6 | Hoe vaak moet ongeveer je olie wisselen?
+              Vraag 6 | Hoe vaak moet ongeveer je olie verversen?
             </div>
             <div class="child answer" :class="{ correct: calcedAnswers.question6 }">
               {{answers.question6}}
