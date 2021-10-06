@@ -20,17 +20,111 @@ export default class Headless extends Vue {
        question8: "",
     }
 
-   protected bikeCats = this.$store.state.bikeCats;
+        protected correct = 0;
+        protected wrong = 0;
+  
+    protected calcedAnswers = {
+        question1: false,
+        question2: false,
+        question3: false,
+        question4: false,
+        question5: false,
+        question6: false,
+        question7: false,
+        question8: false,
+    }
 
-    protected calculatePerfectBike(){
+    protected calculateQuiz(){
 
         // this.$store.commit('updatePerfectBike', this.bikeScoresSortedObject);
         // this.$store.commit('updatePickedBike', this.pickedBikes);
+        this.question1();
+        this.question2();
+        this.question3();
+        this.question4();
+        this.question5();
+        this.question6();
+        this.question7();
+        this.question8();
     }
 
 
-    // protected calculateScores(){
-    // }
+    protected question1(){
+        if (this.answers.question1 as any == 'ja'){
+            this.correct += 1
+            this.calcedAnswers.question1 = true;
+        }
+        else{
+            this.wrong += 1
+        }
+    }
+    protected question2(){
+        if (this.answers.question2 as any == 'honda'){
+            this.correct += 1
+            this.calcedAnswers.question2 = true;
+        }
+        else{
+            this.wrong += 1
+        }
+    }
+    protected question3(){
+        if (this.answers.question3 as any == 'triumph'){
+            this.correct += 1
+            this.calcedAnswers.question3 = true;
+        }
+        else{
+            this.wrong += 1
+        }
+    }
+    protected question4(){
+        if (this.answers.question4 as any == 'paddock'){
+            this.correct += 1
+            this.calcedAnswers.question4 = true;
+        }
+        else{
+            this.wrong += 1
+        }
+    }
+    protected question5(){
+        if (this.answers.question5 as any == 'banden'){
+            this.correct += 1
+            this.calcedAnswers.question5 = true;
+        }
+        else{
+            this.wrong += 1
+        }
+    }
+    protected question6(){
+        if (this.answers.question6 as any == '7000ej'){
+            this.correct += 1
+            this.calcedAnswers.question6 = true;
+        }
+        else{
+            this.wrong += 1
+        }
+    }
+    protected question7(){
+        if (this.answers.question7 as any == 'integraal'){
+            this.correct += 1
+            this.calcedAnswers.question7 = true;
+        }
+        else{
+            this.wrong += 1
+        }
+    }
+    protected question8(){
+        if (this.answers.question8 as any == 'automobilist'){
+            this.correct += 1
+            this.calcedAnswers.question8 = true;
+        }
+        else{
+            this.wrong += 1
+        }
+    }
+
+
+
+
 
     protected answersDone = false;
     protected step1Done = false;
@@ -165,11 +259,10 @@ export default class Headless extends Vue {
         this.step9active = true;
     }
     protected next9(){
-        this.$store.commit('updatedriverBikePref', this.answers)
-        this.calculatePerfectBike();
+        this.calculateQuiz();
 
-        this.step8Done = true;
-        this.step8active = false;
+        this.step9Done = true;
+        this.step9active = false;
         this.answersDone = true;
     }
 

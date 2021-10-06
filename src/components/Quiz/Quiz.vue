@@ -203,7 +203,7 @@
           </div>
           <div class="option">
             <input type="radio" id="7000ej"  name="apex" value="7000ej" v-model.trim="answers.question6">
-            <p class="labelText w-full">Elke 7000km of elke jaar </p>
+            <p class="labelText w-full">Elke 7000km of elk jaar </p>
             <label for="7000ej"></label>
           </div>
           <div class="option">
@@ -266,7 +266,7 @@
             <label for="motorrijder"></label>
           </div>
           <div class="option">
-            <input type="radio" id="automobilist "  name="apex" value="automobilist " v-model.trim="answers.question8">
+            <input type="radio" id="automobilist "  name="apex" value="automobilist" v-model.trim="answers.question8">
             <p class="labelText w-full">Automobilist  </p>
             <label for="automobilist "></label> 
           </div>
@@ -282,7 +282,21 @@
       </div>
 
     </div>
-          {{ answers }}
+
+    <div v-if="answersDone" class="quizOverview">
+      Correct: {{correct}}<br>
+      Wrong: {{wrong}}<br><br>
+      {{answers}} <br><br>
+      {{calcedAnswers}}
+
+      <router-link class="ctaButton ctaNext mt-16 bg-gray-700" @click.native="toggle()" to="/homepagina">
+        Home <v-icon size="25" class="
+              text-black
+              cursor-pointer
+            ">mdi-home</v-icon>
+      </router-link>
+
+    </div>
   </div>
 </template>
 
