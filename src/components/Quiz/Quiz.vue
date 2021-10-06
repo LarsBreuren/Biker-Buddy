@@ -318,7 +318,7 @@
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 2 | Welk merk is brits?:
+              Vraag 3 | Welk merk is brits?:
             </div>
             <div class="child answer" :class="{ correct: calcedAnswers.question3 }">
               {{answers.question3}}
@@ -326,7 +326,7 @@
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 2 | Wat doen Bobbins?:
+              Vraag 4 | Wat doen Bobbins?:
             </div>
             <div class="child answer" :class="{ correct: calcedAnswers.question4 }">
               {{answers.question4}}
@@ -334,7 +334,7 @@
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 2 | Wat is niet standaard in een kleine beurt?:
+              Vraag 5 | Wat is niet standaard in een kleine beurt?:
             </div>
             <div class="child answer" :class="{ correct: calcedAnswers.question5 }">
               {{answers.question5}}
@@ -342,7 +342,7 @@
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 2 | Hoe vaak moet ongeveer je olie wisselen?
+              Vraag 6 | Hoe vaak moet ongeveer je olie wisselen?
             </div>
             <div class="child answer" :class="{ correct: calcedAnswers.question6 }">
               {{answers.question6}}
@@ -350,7 +350,7 @@
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 2 | Welk type helm is het meest beschermend? 
+              Vraag 7 | Welk type helm is het meest beschermend? 
             </div>
             <div class="child answer" :class="{ correct: calcedAnswers.question7 }">
               {{answers.question7}}
@@ -358,7 +358,7 @@
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 2 | Wie veroorzaakt de meeste motorongelukken?
+              Vraag 8 | Wie veroorzaakt de meeste motorongelukken?
             </div>
             <div class="child answer" :class="{ correct: calcedAnswers.question8 }">
               {{answers.question8}}
