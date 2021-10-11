@@ -16,7 +16,7 @@
   
     <div class="mobile" >
       <router-link to="/homepagina" title="home" class="logo">
-        <p class="logo"> BB </p>
+        <img class="logo" :src="logo" />
       </router-link>
       <button v-on:click="toggle()" class="navToggle"> 
         <v-icon
