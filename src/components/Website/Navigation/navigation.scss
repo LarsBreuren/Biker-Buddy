@@ -50,10 +50,11 @@
     }
     .logo img{
         height: 50px;
+        @apply p-8;
     }
     .mobile{
         @apply flex;
-        @apply px-16;
+        @apply px-8;
         @apply justify-between;
         @apply items-center;
         @apply fixed;

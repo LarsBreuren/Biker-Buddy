@@ -1,5 +1,18 @@
 <template>
-  <div class="container">
+  <div class="container relative pt-4">
+    <div class="popUpWrapper" v-if="showWeekly">
+      <div class="firstTime" v-if="this.$store.state.firstTime" @click="delPopUp">
+        <div class="content relative">
+           <v-icon size="30" class="
+                  closePopUp
+                    text-white
+                  ">mdi-close-circle</v-icon>
+          <h2 class="text-2xl"> Hi {{this.$store.state.driverInfo.Voornaam}}!</h2>
+          <p> Deze homepagina is speciaal voor jou samengesteld en biedt dynamisch de beste biker content!</p>
+        </div>
+      </div>
+    </div>
+
     <div class="articles">
       <div class="mainArticle mx-8" :class="{ centered: showArtikel1 }">
       <div @click="setArticle(artikel1.title, artikel1.category)" class="bannerContainer"> 

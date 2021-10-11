@@ -22,6 +22,10 @@ protected showArtikel3 = false;
 protected showWeekly = false;
 protected showWeeklyText = false;
 
+protected delPopUp(){
+  this.$store.commit('delPopUp');
+}
+
   protected checkArticle(prio){
     this.delay1();
     if (prio == 'Onderhoud'){

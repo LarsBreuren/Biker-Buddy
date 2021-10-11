@@ -4,6 +4,7 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
+    firstTime: true,
     currentArticle : "",
     currentCategory : "",
     driverInfo: {
@@ -336,6 +337,9 @@ export default new Vuex.Store({
     },
     updatecurrentCategory(state, category) {
       state.currentCategory= category
+    },
+    delPopUp(state) {
+      state.firstTime = false;
     },
   },
   actions: {
