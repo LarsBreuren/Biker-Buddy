@@ -293,75 +293,75 @@
         <div class="details">
 
           <div class="line">
-            <div class="child question">
-              Percentage goed:
+            <div class="child question text-left">
+              <p><b>Percentage goed:</b></p>
             </div>
             <div class="child answer" :class="{ correct: precent >= 80 }">
-              {{precent}}%
+               <p><b>{{precent}}%</b></p>
+            </div>
+          </div>
+          <div class="line">
+            <div class="child ">
+                <p class="question">1 | Is dit een goede apex?</p>
+            </div>
+            <div class="child" >
+             <p class="answer" :class="{ correct: calcedAnswers.question1 }"> {{answers.question1}}</p>
             </div>
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 1 | Is dit een goede apex?:
+                <p>2 | Grootste motorfietsfabrikant</p>
             </div>
-            <div class="child answer" :class="{ correct: calcedAnswers.question1 }">
-              {{answers.question1}}
-            </div>
-          </div>
-          <div class="line">
-            <div class="child question">
-              Vraag 2 | Grootste motorfietsfabrikant:
-            </div>
-            <div class="child answer" :class="{ correct: calcedAnswers.question2 }">
-              {{answers.question2}}
+            <div class="child" >
+              <p class="answer" :class="{ correct: calcedAnswers.question2 }"> {{answers.question2}}</p>
             </div>
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 3 | Welk merk is brits?:
+                <p>3 | Welk merk is brits?</p>
             </div>
-            <div class="child answer" :class="{ correct: calcedAnswers.question3 }">
-              {{answers.question3}}
-            </div>
-          </div>
-          <div class="line">
-            <div class="child question">
-              Vraag 4 | Wat doen Bobbins?:
-            </div>
-            <div class="child answer" :class="{ correct: calcedAnswers.question4 }">
-              {{answers.question4}}
+            <div class="child" >
+              <p class="answer" :class="{ correct: calcedAnswers.question3 }"> {{answers.question3}}</p>
             </div>
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 5 | Wat is niet standaard in een kleine beurt?:
+                <p>4 | Wat doen Bobbins?</p>
             </div>
-            <div class="child answer" :class="{ correct: calcedAnswers.question5 }">
-              {{answers.question5}}
-            </div>
-          </div>
-          <div class="line">
-            <div class="child question">
-              Vraag 6 | Hoe vaak moet ongeveer je olie verversen?
-            </div>
-            <div class="child answer" :class="{ correct: calcedAnswers.question6 }">
-              {{answers.question6}}
+            <div class="child" >
+              <p class="answer" :class="{ correct: calcedAnswers.question4 }"> {{answers.question4}}</p>
             </div>
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 7 | Welk type helm is het meest beschermend? 
+                <p>5 | Wat is niet standaard in een kleine beurt?</p>
             </div>
-            <div class="child answer" :class="{ correct: calcedAnswers.question7 }">
-              {{answers.question7}}
+             <div class="child" >
+              <p class="answer" :class="{ correct: calcedAnswers.question5 }"> {{answers.question5}}</p>
             </div>
           </div>
           <div class="line">
             <div class="child question">
-              Vraag 8 | Wie veroorzaakt de meeste motorongelukken?
+                <p>6 | Hoe vaak moet ongeveer je olie verversen?</p>
             </div>
-            <div class="child answer" :class="{ correct: calcedAnswers.question8 }">
-              {{answers.question8}}
+             <div class="child" >
+              <p class="answer" :class="{ correct: calcedAnswers.question6 }"> {{answers.question6}}</p>
+            </div>
+          </div>
+          <div class="line">
+            <div class="child question">
+                <p>7 | Welk type helm is het meest beschermend? </p>
+            </div>
+             <div class="child" >
+              <p class="answer" :class="{ correct: calcedAnswers.question7 }"> {{answers.question7}}</p>
+            </div>
+          </div>
+          <div class="line">
+            <div class="child question">
+                <p>8 | Wie veroorzaakt de meeste motorongelukken?</p>
+            </div>
+             <div class="child" >
+              <p class="answer" :class="{ correct: calcedAnswers.question8 }"> {{answers.question8}}</p>
             </div>
           </div>
         </div>

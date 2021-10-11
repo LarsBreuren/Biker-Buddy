@@ -172,15 +172,21 @@
     @apply flex; 
     @apply w-full;
     @apply justify-between;
-    @apply text-center;
     @apply py-4;
+    @apply text-base;
 
+      p{
+        margin: 0;
+      }
     .question{
-      @apply text-base;
+      @apply text-left;
+      @apply px-8;
     }
 
     .answer{
       color: red;
+      @apply pl-32;
+      @apply text-left;
     }
 
     .correct{
@@ -189,7 +195,9 @@
 
     .child{
       @apply w-1/2;
-      @apply my-8;
+      @apply my-4;
+      @apply flex;
+      @apply items-center;
       }
       .infoList{
         li:last-child .plus{
