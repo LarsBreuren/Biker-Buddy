@@ -18,9 +18,6 @@
         <p> {{bike3details.description}} </p>
     </div>
 
-
-       Scores:  {{bikeScore}}<br><br>
-
   </div>
 </template>
 
