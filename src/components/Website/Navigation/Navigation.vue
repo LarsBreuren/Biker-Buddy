@@ -87,7 +87,7 @@
             "
             >mdi-message-question</v-icon>
             Quiz</router-link> </li>
-          <li><router-link @click.native="toggle()" to="/">
+                      <li><a @click.native="toggle()" href="https://bikerbuddy.nl">
             <v-icon
             size="30"
             class="
@@ -95,7 +95,7 @@
               cursor-pointer
             "
             >mdi-reload</v-icon>
-            Intro scherm</router-link> </li>
+            Intro scherm</a> </li>
         </ul>
 
   </div>

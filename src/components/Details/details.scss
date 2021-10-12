@@ -1,5 +1,5 @@
 .progressWrapper{
-  @apply w-5/6;
+  @apply w-full; 
   @apply mx-auto;
   @apply pb-32;
   @apply flex;
@@ -16,8 +16,21 @@
     @apply bg-yellow;
   }
 }
+.detailsContainer{
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply flex-col;
+  @apply h-full;
+  @apply w-5/6;
+  @apply mx-auto;
+
+  div{
+    width: 100%;
+  }
+}
 .stepWrapper{
-  @apply w-5/6; 
+  @apply w-full; 
   @apply mx-auto;
   @apply bg-black-600;
   @apply p-32;

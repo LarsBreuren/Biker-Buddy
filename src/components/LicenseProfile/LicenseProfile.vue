@@ -1,13 +1,6 @@
-<template>
-  <div class="container">
+<template class="w-full">
     <div class="profile">
       <h2 class="mb-16">Jouw biker profiel</h2>
-      <!-- 
-        <div class="line" v-for="(value, detail) in this.$store.state.driverInfo" :key="value.id">
-          <div class="child"> {{ detail }} </div>
-          <div class="child"> {{ value }} </div>
-        </div> -->
-
       <div class="profileContainer">
         <div class="details">
           <div class="line">
@@ -73,7 +66,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped lang="scss" src="./licenseProfile.scss"></style>
