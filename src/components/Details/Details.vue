@@ -8,11 +8,9 @@
         <h1> Who are you? </h1>
         <label for="voorNaam">Voornaam:</label><br>
         <input type="text" id="voorNaam" v-model.trim="driverInfo.Voornaam" placeholder="Voornaam">
-
         <label for="leeftijd">Leeftijd:</label><br>
         <input id="leeftijd" type="number" v-model.trim="driverInfo.Leeftijd" placeholder="20">
-
-        <button button :disabled='!driverInfo.Voornaam || driverInfo.Leeftijd < 17' class="ctaNext ctaButton"
+        <button button :disabled='!driverInfo.Voornaam || driverInfo.Leeftijd < 16' class="ctaNext ctaButton"
           @click="next1">
           Volgende stap
         </button>
@@ -33,7 +31,7 @@
 
       <div class="step2 text-center" v-if="step2active">
         <h2 class="text-3xl mb-8"> Rijbewijs en papieren graag </h2>
-        <label for="rijbewijs">Welk rijbewijs heb je {{ driverInfo.Voornaam }}?</label><br>
+        <label for="rijbewijs">Welk rijbewijs heb je, {{ driverInfo.Voornaam }}?</label><br>
         <select v-model.trim="driverInfo.Rijbewijs" id="rijbewijs" class="select">
           <option disabled value="">Kies een optie</option>
           <option>Nog geen rijbewijs</option>
@@ -95,6 +93,12 @@
         </button>
       </div>
 
+    </div>
+
+    <div v-if="!detailsDone && !zeroIntro" class="progressWrapper">
+      <div class="step" :class="{ done: step1Done }"></div>
+      <div class="step" :class="{ done: step2Done }"></div>
+      <div class="step" :class="{ done: step3Done }"></div>
     </div>
 
     <div class="detailProgress">

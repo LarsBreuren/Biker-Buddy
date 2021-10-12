@@ -1,3 +1,21 @@
+.progressWrapper{
+  @apply w-5/6;
+  @apply mx-auto;
+  @apply pb-32;
+  @apply flex;
+  @apply justify-center;
+  @apply bg-black-600;
+  .step{
+    @apply mx-8;
+    @apply rounded-xl;
+    height: 15px;
+    width: 20%;
+    background-color: #2c2c2c;
+  }
+  .done{
+    @apply bg-yellow;
+  }
+}
 .stepWrapper{
   @apply w-5/6; 
   @apply mx-auto;
