@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <!-- <Navigation></Navigation> -->
-    <div class="bg-main backgroundDetails">
+    <Navigation></Navigation>
+    <div class="bg-main backgroundDetails" style=" padding-top: 60px; padding-bottom: 30px;">
     <div class="bgOverlay"></div>
       <Quiz style="z-index: 10; position: relative;"></Quiz>
     </div>
