@@ -74,11 +74,6 @@ export default class Headless extends Vue {
         }
     }
 
-    protected introDone(){
-        this.step1active = true;
-        this.zeroIntro = false;
-    }
-
     protected calculateScores(){
         this.calculateAge();
         this.calculateLicense();
@@ -152,13 +147,27 @@ export default class Headless extends Vue {
     protected step2active = false;
     protected step3active = false;
 
+    protected introDone(){
+        this.zeroIntro = false;
+        
+        this.step1active = true;
+        this.step2active = false;
+        this.step3active = false;
+    }
+
     protected next1(){
+        this.zeroIntro = false;
         this.step1Done = true;
+
         this.step1active = false;
         this.step2active = true;
+        this.step3active = false;
     }
     protected next2(){
+        this.zeroIntro = false;
         this.step2Done = true;
+
+        this.step1active = false;
         this.step2active = false;
         this.step3active = true;
     }
