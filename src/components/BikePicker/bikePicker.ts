@@ -233,37 +233,132 @@ export default class Headless extends Vue {
 
     protected next1(){
         this.step1Done = true;
+
         this.step1active = false;
+        this.step3active = false;
+        this.step4active = false;
+        this.step5active = false;
+        this.step6active = false;
+        this.step7active = false;
+        this.step8active = false;
+
+        this.step2Done= false;
+        this.step3Done= false;
+        this.step4Done= false;
+        this.step5Done= false;
+        this.step6Done= false;
+        this.step7Done= false;
+        this.step8Done= false;
+
         this.step2active = true;
     }
     protected next2(){
         this.step2Done = true;
+
+        this.step1active = false;
         this.step2active = false;
+        this.step4active = false;
+        this.step5active = false;
+        this.step6active = false;
+        this.step7active = false;
+        this.step8active = false;
+
+        
+        this.step3Done= false;
+        this.step4Done= false;
+        this.step5Done= false;
+        this.step6Done= false;
+        this.step7Done= false;
+        this.step8Done= false;
+
         this.step3active = true;
     }
     protected next3(){
         this.step3Done = true;
+
+        this.step1active = false;
+        this.step2active = false;
         this.step3active = false;
+        this.step5active = false;
+        this.step6active = false;
+        this.step7active = false;
+        this.step8active = false;
+
+        this.step4Done= false;
+        this.step5Done= false;
+        this.step6Done= false;
+        this.step7Done= false;
+        this.step8Done= false;
+
         this.step4active = true;
     }
     protected next4(){
         this.step4Done = true;
+
+        this.step1active = false;
+        this.step2active = false;
+        this.step3active = false;
         this.step4active = false;
+        this.step6active = false;
+        this.step7active = false;
+        this.step8active = false;
+
+        this.step5Done= false;
+        this.step6Done= false;
+        this.step7Done= false;
+        this.step8Done= false;
+
         this.step5active = true;
     }
     protected next5(){
         this.step5Done = true;
-        this.step5active = false;
+
+        this.step1active= false;
+        this.step2active= false;
+        this.step3active= false;
+        this.step4active= false;
+        this.step5active= false;
+        this.step7active= false;
+        this.step8active= false;
+
+        this.step6Done= false;
+        this.step7Done= false;
+        this.step8Done= false;
+
         this.step6active = true;
     }
     protected next6(){
         this.step6Done = true;
+
+        this.step1active = false;
+        this.step2active = false;
+        this.step3active = false;
+        this.step4active = false;
+        this.step5active = false;
         this.step6active = false;
+        this.step8active = false;
+
+        this.step7Done= false;
+        this.step8Done= false;
+
+
         this.step7active = true;
     }
     protected next7(){
         this.step7Done = true;
+
+        this.step1active = false;
+        this.step2active = false;
+        this.step3active = false;
+        this.step4active = false;
+        this.step5active = false;
+        this.step6active = false;
         this.step7active = false;
+
+        this.step8Done= false;
+
+
+
         this.step8active = true;
     }
     protected next8(){
