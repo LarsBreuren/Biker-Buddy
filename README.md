@@ -5,4 +5,3 @@ My final project for CMD.
 - Specific color themes for bike brands (kawa green. ducati red).
 - Local storage
 - Favourite articles
-- Bug where you can skip onboarding via steps
