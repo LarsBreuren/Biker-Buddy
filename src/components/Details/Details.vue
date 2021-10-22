@@ -96,8 +96,8 @@
     </div>
 
     <div v-if="!detailsDone && !zeroIntro" class="progressWrapper">
-      <div @click="introDone()" class="step" :class="{ done: step1Done }"></div>
-      <div @click="next1" class="step" :class="{ done: step2Done }"></div>
+      <div @click="introDoneStep()" class="step" :class="{ done: step1Done }"></div>
+      <div @click="next1Step" class="step" :class="{ done: step2Done }"></div>
       <div class="step" :class="{ done: step3Done }"></div>
     </div>
 

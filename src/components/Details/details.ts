@@ -163,6 +163,25 @@ export default class Headless extends Vue {
         this.step2active = true;
         this.step3active = false;
     }
+    protected introDoneStep(){
+        this.zeroIntro = false;
+        this.step1Done = false;
+        this.step2Done = false;
+        
+        this.step1active = true;
+        this.step2active = false;
+        this.step3active = false;
+    }
+
+    protected next1Step(){
+        this.zeroIntro = false;
+        this.step1Done = true;
+        this.step2Done = false;
+
+        this.step1active = false;
+        this.step2active = true;
+        this.step3active = false;
+    }
     protected next2(){
         this.zeroIntro = false;
         this.step2Done = true;
