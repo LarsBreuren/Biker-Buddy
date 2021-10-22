@@ -284,14 +284,29 @@
     </div>
 
     <div v-if="!answersDone && step1Done" class="progressWrapper">
-      <div @click="next1" class="step" :class="{ done: step2Done }"></div>
-      <div @click="next2" class="step" :class="{ done: step3Done }"></div>
-      <div @click="next3" class="step" :class="{ done: step4Done }"></div>
-      <div @click="next4" class="step" :class="{ done: step5Done }"></div>
-      <div @click="next5" class="step" :class="{ done: step6Done }"></div>
-      <div @click="next6" class="step" :class="{ done: step7Done }"></div>
-      <div @click="next7" class="step" :class="{ done: step8Done }"></div>
-      <div @click="next8" class="step" :class="{ done: step9Done }"></div>
+      <div v-if="step2Done" @click="next1" class="step" :class="{ done: step2Done }"></div>
+      <div v-else class="step" :class="{ done: step2Done }"></div>
+
+      <div v-if="step3Done" @click="next2" class="step" :class="{ done: step3Done }"></div>
+      <div v-else class="step" :class="{ done: step3Done }"></div>
+
+      <div v-if="step4Done" @click="next3" class="step" :class="{ done: step4Done }"></div>
+      <div v-else class="step" :class="{ done: step4Done }"></div>
+
+      <div v-if="step5Done" @click="next4" class="step" :class="{ done: step5Done }"></div>
+      <div v-else class="step" :class="{ done: step5Done }"></div>
+
+      <div v-if="step6Done" @click="next5" class="step" :class="{ done: step6Done }"></div>
+      <div v-else class="step" :class="{ done: step6Done }"></div>
+
+      <div v-if="step7Done" @click="next6" class="step" :class="{ done: step7Done }"></div>
+      <div v-else class="step" :class="{ done: step7Done }"></div>
+
+      <div v-if="step8Done" @click="next7" class="step" :class="{ done: step8Done }"></div>
+      <div v-else class="step" :class="{ done: step8Done }"></div>
+
+      <div v-if="step9Done" @click="next8" class="step" :class="{ done: step9Done }"></div>
+      <div v-else class="step" :class="{ done: step9Done }"></div>
     </div>
 
 
