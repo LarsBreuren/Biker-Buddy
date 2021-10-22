@@ -14,14 +14,16 @@
       </div>
 
       <div class="step2 text-center" v-if="step2active">
-        <h2> Kies de 3 mooiste motoren</h2> 
+        <h2> Kies de 3 mooiste motoren</h2>
          <div class="optionContainer">
 
-          <div class="bike" v-for="category in bikeCats" :key="category.id" @click="e => e.target.classList.toggle('picked')">
+          <div :class="{ picked: answers.picks.includes(category.name) }" class="bike" v-for="category in bikeCats" :key="category.id">
               <label :for="category.name"></label> 
               <input type="checkbox" :id="category.name" :value="category.name" v-model.trim="answers.picks">
             <img class="bannerImg" :src="category.imgLink" />
           </div>
+
+
           
         </div>
 
