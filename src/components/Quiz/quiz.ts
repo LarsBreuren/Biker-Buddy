@@ -166,6 +166,15 @@ export default class Headless extends Vue {
         this.step8active = false;
         this.step9active = false;
 
+        this.step2Done= false;
+        this.step3Done= false;
+        this.step4Done= false;
+        this.step5Done= false;
+        this.step6Done= false;
+        this.step7Done= false;
+        this.step8Done= false;
+        this.step9Done= false;
+
         this.step2active = true;
     }
     protected next2(){
@@ -179,6 +188,15 @@ export default class Headless extends Vue {
         this.step7active = false;
         this.step8active = false;
         this.step9active = false;
+
+        
+        this.step3Done= false;
+        this.step4Done= false;
+        this.step5Done= false;
+        this.step6Done= false;
+        this.step7Done= false;
+        this.step8Done= false;
+        this.step9Done= false;
 
         this.step3active = true;
     }
@@ -194,6 +212,13 @@ export default class Headless extends Vue {
         this.step8active = false;
         this.step9active = false;
 
+        this.step4Done= false;
+        this.step5Done= false;
+        this.step6Done= false;
+        this.step7Done= false;
+        this.step8Done= false;
+        this.step9Done= false;
+
         this.step4active = true;
     }
     protected next4(){
@@ -208,19 +233,30 @@ export default class Headless extends Vue {
         this.step8active = false;
         this.step9active = false;
 
+        this.step5Done= false;
+        this.step6Done= false;
+        this.step7Done= false;
+        this.step8Done= false;
+        this.step9Done= false;
+
         this.step5active = true;
     }
     protected next5(){
         this.step5Done = true;
 
-        this.step1active = false;
-        this.step2active = false;
-        this.step3active = false;
-        this.step4active = false;
-        this.step5active = false;
-        this.step7active = false;
-        this.step8active = false;
-        this.step9active = false;
+        this.step1active= false;
+        this.step2active= false;
+        this.step3active= false;
+        this.step4active= false;
+        this.step5active= false;
+        this.step7active= false;
+        this.step8active= false;
+        this.step9active= false;
+
+        this.step6Done= false;
+        this.step7Done= false;
+        this.step8Done= false;
+        this.step9Done= false;
 
         this.step6active = true;
     }
@@ -236,6 +272,11 @@ export default class Headless extends Vue {
         this.step8active = false;
         this.step9active = false;
 
+        this.step7Done= false;
+        this.step8Done= false;
+        this.step9Done= false;
+
+
         this.step7active = true;
     }
     protected next7(){
@@ -250,10 +291,14 @@ export default class Headless extends Vue {
         this.step7active = false;
         this.step9active = false;
 
+        this.step8Done= false;
+        this.step9Done= false;
+
+
         this.step8active = true;
     }
     protected next8(){
-        this.step7Done = true;
+        this.step8Done = true;
 
         this.step1active = false;
         this.step2active = false;
@@ -262,6 +307,9 @@ export default class Headless extends Vue {
         this.step5active = false;
         this.step6active = false;
         this.step8active = false;
+
+        this.step9Done= false;
+
 
         this.step9active = true;
     }
