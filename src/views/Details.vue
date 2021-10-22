@@ -32,8 +32,10 @@
 <style scoped>
 .backgroundDetails{
     height: 100vh;
+    min-height: 100vh;
     background-image: url('../assets/images/features/bgdetails.jpg');
     background-size: cover;
+    @apply relative;
 }
 .bgOverlay{
   position: absolute;

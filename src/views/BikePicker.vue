@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <Navigation></Navigation>
-    <div class="bg-main backgroundDetails" style=" padding-top: 60px; padding-bottom: 30px;">
+    <div class="bg-main backgroundDetails">
     <div class="bgOverlay"></div>
       <BikePicker style="z-index: 10; position: relative;"></BikePicker>
     </div>
@@ -35,6 +35,8 @@
     min-height: 100vh;
     background-image: url('../assets/images/features/bgdetails.jpg');
     background-size: cover;
+    margin-top: 60px;
+    @apply relative;
 }
 .bgOverlay{
   position: absolute;
