@@ -5,3 +5,5 @@ My final project for CMD.
 - Specific color themes for bike brands (kawa green. ducati red).
 - Local storage
 - Favourite articles
+- Profile gets driving license styling
+- Scores in profile should be sliders to adjust them
