@@ -1,6 +1,6 @@
 <template class="w-full">
     <div class="profile">
-      <h2 class="mb-16">Jouw biker profiel</h2>
+      <h2 class="header">Jouw biker profiel</h2>
       <div class="profileContainer">
         <div class="details">
           <div class="line">
@@ -46,6 +46,7 @@
           </div>
         </div>
         <div class="scoreBars">
+          <p class="text-left pb-8"> Content wordt gebaseerd op:</p>
           <p class="barText"> Onderhoud</p>
           <div class="barContainer w-full">
             <div class="bar" v-bind:style="{width: this.Onderhoud + '%' }">  </div>

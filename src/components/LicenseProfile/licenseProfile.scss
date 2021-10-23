@@ -1,14 +1,19 @@
 .profile{
   @apply w-full;
   @apply mx-auto;
-  @apply pt-16;
   @apply bg-lightgrey;
   @apply rounded-md;
+
+  .header{
+    padding-top: 5px;
+  }
 }
 .profileContainer{
 
   .scoreBars{
-    @apply p-16; 
+    @apply pt-16; 
+    @apply px-16;
+    @apply pb-8; 
 
     .barText{
       color: #fff;
