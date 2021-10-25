@@ -294,7 +294,7 @@ export default new Vuex.Store({
       //   link: '/articles/onderhoud/'
       // }
       {
-        title: "Motor keuze hulp",
+        title: "Motor keuzehulp",
         banner:  require('./assets/images//articles/keuze.jpg'),
         category: "weekly",
         icon: 'motorbike',

@@ -37,7 +37,7 @@
           </div>
           <div class="line">
             <div class="child">
-              Wilt info over:
+              Wil info over:
             </div>
             <ul class="child infoList">
               <li class="" v-for="(value) in this.$store.state.driverInfo.Info" :key="value.id">

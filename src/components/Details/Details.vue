@@ -19,7 +19,7 @@
       <div v-if="zeroIntro" class="step1">
         <h1> Welkom! </h1>
         <p> Om jou de beste content te bieden worden er zo een paar
-          vragen gesteld om erachter te komen wat voor biker jij bent. 
+          vragen gesteld om erachter te komen wat voor biker jij bent of wil worden. 
           <br><br> Na het invullen van deze vragen krijg je motorartikelen die speciaal voor jou gekozen zijn, gaaf toch!
         </p>
 
@@ -74,7 +74,7 @@
           </div>
           <div class="option">
             <input type="checkbox" id="Aankoop" value="Aankoop" v-model.trim="driverInfo.Info">
-                   <p class="labelText">Aankoop advies</p>
+                   <p class="labelText">Aankoopadvies</p>
                   <v-icon @click="resetSteps" size="35" class="labelIcon">mdi-currency-usd</v-icon>
             <label  for="Aankoop"></label>
           </div>
